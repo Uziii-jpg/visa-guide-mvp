@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import { AuthProvider } from "@/context/AuthContext";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Metadata } from "next";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -42,7 +43,12 @@ export default async function RootLayout({
           {/* Wrapping the app so Auth State is available everywhere */}
           <AuthProvider>
             <Navbar />
-            {children}
+            <div className="flex flex-col min-h-screen">
+              <main className="flex-grow">
+                {children}
+              </main>
+              <Footer />
+            </div>
           </AuthProvider>
         </NextIntlClientProvider>
       </body>
