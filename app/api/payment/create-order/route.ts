@@ -1,19 +1,27 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Razorpay from 'razorpay';
 
-const razorpay = new Razorpay({
-    key_id: process.env.RAZORPAY_KEY_ID || 'rzp_test_PLACEHOLDER', // Replace with env var
-    key_secret: process.env.RAZORPAY_KEY_SECRET || 'secret_PLACEHOLDER', // Replace with env var
-});
-
-const PLANS = {
-    '1_year': 250,
-    '6_months': 150,
-    '3_months': 100,
-};
-
 export async function POST(req: NextRequest) {
     try {
+        const key_id = process.env.RAZORPAY_KEY_ID;
+        const key_secret = process.env.RAZORPAY_KEY_SECRET;
+
+        if (!key_id || !key_secret) {
+            console.error('Razorpay keys not found in environment variables');
+            return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
+        }
+
+        const razorpay = new Razorpay({
+            key_id: key_id,
+            key_secret: key_secret,
+        });
+
+        const PLANS = {
+            '1_year': 250,
+            '6_months': 150,
+            '3_months': 100,
+        };
+
         const { planId } = await req.json();
 
         if (!planId || !PLANS[planId as keyof typeof PLANS]) {
@@ -34,7 +42,7 @@ export async function POST(req: NextRequest) {
             orderId: order.id,
             amount: amount,
             currency: 'INR',
-            keyId: process.env.RAZORPAY_KEY_ID || 'rzp_test_PLACEHOLDER'
+            keyId: key_id
         });
     } catch (error) {
         console.error('Error creating Razorpay order:', error);

@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
 import Script from 'next/script';
 import { useRouter } from 'next/navigation';
-import { doc, updateDoc, Timestamp } from 'firebase/firestore';
+import { doc, updateDoc, Timestamp, arrayUnion } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 
 declare global {
@@ -19,6 +18,7 @@ export default function Subscribe() {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [selectedPlan, setSelectedPlan] = useState<'1_year' | '6_months' | '3_months'>('1_year');
+    const [isRazorpayLoaded, setIsRazorpayLoaded] = useState(false);
 
     const PLANS = {
         '1_year': {
@@ -47,6 +47,11 @@ export default function Subscribe() {
     const handlePayment = async (planId: string) => {
         if (!user) {
             router.push('/login?redirect=/subscribe');
+            return;
+        }
+
+        if (!isRazorpayLoaded) {
+            alert('Payment system is loading, please try again in a moment.');
             return;
         }
 
@@ -82,7 +87,6 @@ export default function Subscribe() {
                                 razorpay_order_id: response.razorpay_order_id,
                                 razorpay_payment_id: response.razorpay_payment_id,
                                 razorpay_signature: response.razorpay_signature,
-                                userId: user.uid,
                                 planId: planId
                             }),
                         });
@@ -90,20 +94,19 @@ export default function Subscribe() {
                         const verifyData = await verifyRes.json();
 
                         if (verifyData.success) {
-                            // 4. Update Firestore (Client-side fallback/confirmation)
-                            // Ideally server does this, but we ensure it here for immediate UI update
+                            // 4. Update Firestore
                             const userRef = doc(db, 'users', user.uid);
                             await updateDoc(userRef, {
                                 subscription_tier: 'premium',
                                 subscription_plan: planId,
                                 subscription_expiry: Timestamp.fromDate(new Date(verifyData.expiry)),
-                                payment_history: [{
-                                    order_id: data.orderId,
+                                payment_history: arrayUnion({
+                                    order_id: response.razorpay_order_id,
                                     payment_id: response.razorpay_payment_id,
                                     amount: data.amount / 100,
                                     date: Timestamp.now(),
                                     plan: planId
-                                }]
+                                })
                             });
 
                             alert('Payment Successful! Welcome to Premium.');
@@ -138,7 +141,10 @@ export default function Subscribe() {
 
     return (
         <>
-            <Script src="https://checkout.razorpay.com/v1/checkout.js" />
+            <Script
+                src="https://checkout.razorpay.com/v1/checkout.js"
+                onLoad={() => setIsRazorpayLoaded(true)}
+            />
 
             <div className="relative flex min-h-screen w-full flex-col items-center p-4 sm:p-6 md:p-8 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display">
                 <div className="layout-content-container flex w-full max-w-5xl flex-1 flex-col items-center gap-10 py-5">
