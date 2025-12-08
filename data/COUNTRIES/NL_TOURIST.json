@@ -1,0 +1,40 @@
+{
+    "country_code": "NL",
+    "visa_type": "TOURIST",
+    "template_ref": "SCHENGEN_TOURIST",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "90 EUR + VFS Service Charge",
+            "processing_time_standard": "15-45 Calendar Days"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "nl_sponsorship",
+                    "title": "Proof of Sponsorship (Bewijs van garantstelling)",
+                    "description": "If staying with friends/family, the host must get this form legalized at their municipality.",
+                    "type": "document",
+                    "is_premium": true
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill Online Form",
+                "description": "Complete the application on the Netherlands Worldwide website."
+            },
+            {
+                "step_order": 2,
+                "title": "Book Appointment",
+                "description": "Book a slot with VFS Global (Netherlands)."
+            },
+            {
+                "step_order": 3,
+                "title": "Submit Application",
+                "description": "Submit documents and biometrics."
+            }
+        ]
+    },
+    "eligibility": null
+}

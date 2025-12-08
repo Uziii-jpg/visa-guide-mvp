@@ -1,0 +1,139 @@
+{
+    "country_code": "AT",
+    "visa_type": "TOURIST",
+    "template_ref": "SCHENGEN_TOURIST",
+    "description": "Short-stay Schengen Tourist visa for Austria (Type C). Standard application route for Indian applicants via VFS Global (Austria).",
+    "last_updated": "2024-11-30",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "90 EUR + VFS Service Charge (~€20)",
+            "fee_inr_approx": 9300,
+            "processing_time_standard": "15 Calendar Days (may vary; apply 4-6 weeks before travel)",
+            "max_stay": "90 Days in any 180-day period",
+            "passport_validity": "Minimum 3 months beyond intended departure from Schengen",
+            "photo_spec": "35x45mm, ICAO Standard, white background, not older than 6 months",
+            "min_funds_requirement": "Recommended ~€100/day or equivalent bank balance; if staying with host, an EVE (Electronic Declaration of Commitment) can substitute detailed proof of personal funds."
+        },
+        "documents": [
+            {
+                "id": "at_passport",
+                "title": "Original Passport",
+                "description": "Passport valid for at least 3 months after planned departure from Schengen, issued within last 10 years, with at least 2 blank pages. Provide photocopies of identity pages and previous Schengen/US/UK visas if any.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "at_form",
+                "title": "Schengen Application Form",
+                "description": "Completed and signed Schengen visa application form (C). Can be filled online via VFS and printed or filled by hand in black/blue ink as instructed.",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://visa.vfsglobal.com/ind/en/aut/apply-visa"
+            },
+            {
+                "id": "at_photos",
+                "title": "Passport-size Photos",
+                "description": "Two recent photos 35x45mm, white background, ICAO compliant, neutral expression.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "at_insurance",
+                "title": "Travel Medical Insurance",
+                "description": "Medical/travel insurance with minimum coverage of €30,000 valid for the entire Schengen area and for the full duration of stay.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "insurance_schengen_global"
+            },
+            {
+                "id": "at_flight",
+                "title": "Round Trip Flight Reservation",
+                "description": "Confirmed return or onward flight reservation showing entry to and exit from Austria/Schengen (dummy reservation acceptable in many cases).",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "flight_dummy_ticket"
+            },
+            {
+                "id": "at_accommodation",
+                "title": "Proof of Accommodation",
+                "description": "Hotel booking confirmation for the entire stay or address & proof of host if staying with family/friends.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "at_financials",
+                "title": "Proof of Sufficient Funds",
+                "description": "Bank statements for last 3 months (stamped if available), salary slips, ITR copies, or other proof of means to cover stay. For sponsored stays, EVE is primary proof.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "at_employment",
+                "title": "Employment Proof / NOC",
+                "description": "Employment letter stating leave sanction and designation; for students, a bonafide letter from institute; for self-employed, business registration/GST documents.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "at_cover_letter",
+                "title": "Cover Letter / Itinerary",
+                "description": "Brief personal cover letter describing purpose of travel, planned dates, itinerary and funding sources.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "at_eve",
+                "title": "Electronic Declaration of Commitment (EVE)",
+                "description": "If staying with a host in Austria, the host must obtain an EVE (Elektronische Verpflichtungserklärung) from the relevant Austrian authority (Aliens Police). You only need to provide the host's 8-digit EVE ID during application.",
+                "type": "document",
+                "is_premium": true,
+                "action_link": "https://www.oesterreich.gv.at/en/themen/menschen_aus_anderen_staaten/visum_fuer_oesterreich/1.html"
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill Application Form",
+                "description": "Complete the Schengen Visa application form for Austria. Use the VFS online form or download, fill and print as instructed.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/aut/apply-visa"
+            },
+            {
+                "step_order": 2,
+                "title": "Book Appointment (VFS Global)",
+                "description": "Create an account on the VFS Austria portal for India and book a Short Stay Visa appointment at your nearest VFS Global centre (Delhi, Mumbai, Chennai, Kolkata, Bengaluru, Hyderabad). Pay any required service fee during booking.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/aut/book-an-appointment"
+            },
+            {
+                "step_order": 3,
+                "title": "Gather Documents & Prepare Originals",
+                "description": "Collect all required originals and photocopies: passport, photos, insurance, flight reservation, accommodation, bank statements, employment/study proof, cover letter and EVE ID if applicable. Put them in the order specified by VFS checklist.",
+                "action_link": "https://visa.vfsglobal.com/one-pager/austria/india/english/"
+            },
+            {
+                "step_order": 4,
+                "title": "Submit Application & Biometrics",
+                "description": "Attend your VFS appointment in person. Submit documents, pay the consular fee (90 EUR) and VFS service charge, and provide biometric data (fingerprints & photo) if required. Keep the VFS receipt for tracking.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/aut/submit-application"
+            },
+            {
+                "step_order": 5,
+                "title": "Track Application & Await Decision",
+                "description": "Track application status on the VFS portal using your receipt number. Standard processing takes up to 15 calendar days; delays possible during peak season or additional checks.",
+                "action_link": "https://www.vfsvisaonline.com/Global-Passporttracking/Track/Index"
+            },
+            {
+                "step_order": 6,
+                "title": "Collect Passport / Visa",
+                "description": "Once processed, collect your passport from the VFS centre or receive it by courier if you opted for delivery. Inspect the visa sticker for correct dates and details before travel.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/aut/attend-centre/Mumbai"
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 50000,
+        "required_education": "none",
+        "required_employment_status": "any",
+        "max_age": "no_limit"
+    }
+}

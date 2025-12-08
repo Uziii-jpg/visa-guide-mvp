@@ -1,0 +1,41 @@
+{
+    "country_code": "TH",
+    "visa_type": "TOURIST",
+    "template_ref": "E_VISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Free (Visa Exemption for Indians until further notice)",
+            "fee_inr_approx": 0,
+            "processing_time_standard": "On Arrival",
+            "max_stay": "60 Days (Visa Exemption)",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "th_funds",
+                    "title": "Proof of Funds",
+                    "description": "10,000 THB per person or 20,000 THB per family (Cash/Forex Card). Randomly checked.",
+                    "type": "physical",
+                    "is_premium": false
+                }
+            ],
+            "remove": [
+                "evisa_photo"
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Travel",
+                "description": "Fly to Thailand with valid passport and return ticket."
+            },
+            {
+                "step_order": 2,
+                "title": "Immigration",
+                "description": "Proceed to immigration counter (Indian passport holders get 60-day stamp)."
+            }
+        ]
+    },
+    "eligibility": null
+}

@@ -1,0 +1,48 @@
+{
+    "country_code": "GH",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_CONSULATE",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Approx. 8000 INR (Single Entry)",
+            "fee_inr_approx": 8000,
+            "processing_time_standard": "5-7 Working Days",
+            "max_stay": "30 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "gh_references",
+                    "title": "References",
+                    "description": "Two references in Ghana with their contact details.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill Form",
+                "description": "Download or fill online form (ghana-mission.co.in)."
+            },
+            {
+                "step_order": 2,
+                "title": "Pay Fees",
+                "description": "Pay via Demand Draft or Bank Transfer."
+            },
+            {
+                "step_order": 3,
+                "title": "Submit",
+                "description": "Submit at the High Commission in New Delhi."
+            },
+            {
+                "step_order": 4,
+                "title": "Collect",
+                "description": "Collect passport after processing."
+            }
+        ]
+    },
+    "eligibility": null
+}

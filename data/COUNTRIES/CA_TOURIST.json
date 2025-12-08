@@ -1,0 +1,102 @@
+{
+    "country_code": "CA",
+    "visa_type": "TOURIST_VISITOR",
+    "description": "Temporary Resident Visa (TRV). Note: 10-Year Multiple Entry Visa is no longer standard (Discretionary as of Nov 2024).",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "100 CAD (Visa) + 85 CAD (Biometrics)",
+            "fee_inr_approx": 11500,
+            "processing_time_standard": "Standard: ~99 Days (High Volume). CAN+ (US Visa Holders): ~30 Days.",
+            "max_stay": "Up to 6 months (Officer's discretion at border)",
+            "passport_validity": "Must be valid for the entire duration of stay",
+            "photo_spec": "35mm x 45mm, White background, Frame size 35x45mm",
+            "min_funds_requirement": "**Standard Benchmark:** Closing balance of **CAD 10,000** (approx. ₹6 Lakhs) per person. *Note: If applying under CAN+, financial proof is WAIVED.*"
+        },
+        "documents": [
+            {
+                "id": "ca_passport",
+                "title": "Original Passport",
+                "description": "Scanned copies of ALL pages (Bio + Visas + Stamps). Validity must cover the trip. Old passports are critical for travel history score.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "ca_can_plus_proof",
+                "title": "CAN+ Eligibility Proof (Optional)",
+                "description": "**If you have a valid US Visa:** Upload a clear scan of the US Visa. This triggers 'CAN+' processing (No financials needed, Faster decision).",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "ca_financials",
+                "title": "Proof of Means (Standard Track)",
+                "description": "**Required if NO US Visa:** 1. Bank Statements (Last 4 months, stamped). 2. ITR (3 Years). 3. Employment Letter. *Goal: Show CAD 10,000+ liquid funds.*",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ca_purpose",
+                "title": "Purpose of Travel",
+                "description": "Day-wise Itinerary + Flight Reservation (Hold only) + Hotel Booking.",
+                "type": "document",
+                "is_premium": false,
+                "affiliate_key": "flight_dummy_ticket"
+            },
+            {
+                "id": "ca_ties",
+                "title": "Proof of Home Ties",
+                "description": "Crucial to avoid 'Section 179(b)' rejection. Upload: Property Deeds, CA Valuation Report, or Employer NOC stating return date.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ca_invitation",
+                "title": "Letter of Invitation",
+                "description": "If visiting family: Letter stating their status (PR/Citizen), address, and number of people in their household.",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Create IRCC Account",
+                "description": "Go to IRCC’s visitor-visa page — choose Visitor visa (Temporary Resident Visa – TRV). \n\nYou can apply online (recommended) — you need a valid passport, scanner/camera to upload docs, and a credit/debit card for payment. \n\nFill the application form IMM 5257 (the main form for TRV)",
+                "action_link": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/ircc-accounts.html"
+            },
+            {
+                "step_order": 2,
+                "title": "Upload Documents & Pay Fees",
+                "description": "You’ll need to upload scanned or photographed copies of: passport, photos, proof of funds, travel plan/itinerary (if any), proof of ties to India (job, assets, family, etc).Action: Create account & Start application for 'Visitor Visa'.\n\nVisa application fee: CAD 100 \nCanada\nBiometrics fee: CAD 85 (if biometrics required)",
+                "action_link": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html"
+            },
+            {
+                "step_order": 3,
+                "title": "Receive Biometric Instruction Letter (BIL)",
+                "description": "fter submission & payment, you’ll get a BIL from IRCC.",
+                "action_link": ""
+            },
+            {
+                "step_order": 4,
+                "title": "Wait for Processing",
+                "description": "After biometrics, IRCC processes your application. \nCanada\nProcessing time varies typical timeline given by IRCC",
+                "action_link": ""
+            },
+            {
+                "step_order": 5,
+                "title": "Passport Submission",
+                "description": "Wait for the **Passport Request Letter** (PPR).\n* **Standard:** ~100 Days.\n* **CAN+:** ~25 Days.\n* **Action:** Submit passport to VFS via 2-way courier service."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_liquid_savings": 600000,
+        "min_annual_income": 600000,
+        "required_employment_status": [
+            "salaried",
+            "business",
+            "retired"
+        ]
+    }
+}

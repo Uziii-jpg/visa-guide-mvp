@@ -1,0 +1,54 @@
+{
+    "country_code": "MU",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Free (Visa on Arrival)",
+            "fee_inr_approx": 0,
+            "processing_time_standard": "On Arrival",
+            "max_stay": "60 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "mu_all_in_one",
+                    "title": "Mauritius All-in-One Travel Form",
+                    "description": "Must be filled online before departure to generate a QR code.",
+                    "type": "digital",
+                    "is_premium": false
+                },
+                {
+                    "id": "mu_funds",
+                    "title": "Proof of Funds",
+                    "description": "100 USD per day expenses proof (Cash/Cards).",
+                    "type": "physical",
+                    "is_premium": false
+                }
+            ],
+            "remove": [
+                "afr_photo",
+                "afr_yellow_fever"
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill Travel Form",
+                "description": "Complete the 'Mauritius All-in-One Travel Digital Form' online."
+            },
+            {
+                "step_order": 2,
+                "title": "Travel",
+                "description": "Fly to Mauritius with the QR code and return ticket."
+            },
+            {
+                "step_order": 3,
+                "title": "Immigration",
+                "description": "Show QR code, Passport, and Hotel booking to get Visa on Arrival."
+            }
+        ]
+    },
+    "eligibility": null
+}

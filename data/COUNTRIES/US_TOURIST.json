@@ -1,0 +1,92 @@
+{
+    "country_code": "US",
+    "visa_type": "TOURIST",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "185 USD (approx. 15,540 INR)",
+            "processing_time_standard": "High wait times: 10-14 months for interviews, 4-7 months for waivers.",
+            "max_stay": "Up to 6 months per visit (determined at port of entry)",
+            "passport_validity": "6 months beyond intended period of stay",
+            "photo_spec": "2x2 inches (51x51mm), white background, recent (last 6 months)"
+        },
+        "documents": [
+            {
+                "id": "us_passport",
+                "title": "Original Passport",
+                "description": "Valid for at least 6 months beyond intended stay. Must have at least one blank page.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "us_ds160",
+                "title": "DS-160 Confirmation Page",
+                "description": "Printout of the confirmation page from the CEAC portal after submitting Form DS-160.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "us_appointment",
+                "title": "Appointment Confirmation",
+                "description": "Printout of the appointment letter for both the VAC (biometrics) and Consular Interview.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "us_fee_receipt",
+                "title": "MRV Fee Receipt",
+                "description": "Proof of payment of the $185 visa application fee.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "us_financials",
+                "title": "Proof of Funds",
+                "description": "Bank statements (last 6 months), payslips, or tax returns (ITR) to prove ability to cover trip expenses.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "us_employment",
+                "title": "Employment/Ties Proof",
+                "description": "Letter from employer detailing position, salary, and approved leave. If business owner: Company registration and tax docs.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "us_invitation",
+                "title": "Invitation Letter (Optional)",
+                "description": "If visiting family/friends: Letter of invitation and copy of their status in the US (Passport/Green Card).",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Complete DS-160",
+                "description": "Fill out the Nonimmigrant Visa Application (DS-160) online. Keep the barcode page safe."
+            },
+            {
+                "step_order": 2,
+                "title": "Pay Visa Fee",
+                "description": "Create a profile on the official US Visa Scheduling site and pay the $185 MRV fee."
+            },
+            {
+                "step_order": 3,
+                "title": "Schedule Appointments",
+                "description": "Book two appointments: one for Biometrics (VAC) and one for the Consular Interview."
+            },
+            {
+                "step_order": 4,
+                "title": "Attend Biometrics (VAC)",
+                "description": "Go to the Visa Application Center to provide fingerprints and photo."
+            },
+            {
+                "step_order": 5,
+                "title": "Consular Interview",
+                "description": "Attend the interview at the US Embassy/Consulate. Carry all original documents."
+            }
+        ]
+    },
+    "eligibility": null
+}

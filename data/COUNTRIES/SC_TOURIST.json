@@ -1,0 +1,43 @@
+{
+    "country_code": "SC",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "10 EUR (Processing Fee)",
+            "fee_inr_approx": 900,
+            "processing_time_standard": "24 Hours",
+            "max_stay": "30 Days",
+            "passport_validity": "Valid for duration of stay"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "sc_travel_auth",
+                    "title": "Travel Authorization",
+                    "description": "Mandatory Travel Authorization applied via seychelles.govtas.com.",
+                    "type": "digital",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Apply TA",
+                "description": "Visit seychelles.govtas.com up to 10 days before travel."
+            },
+            {
+                "step_order": 2,
+                "title": "Upload & Pay",
+                "description": "Upload passport/photo/flight/hotel and pay 10 EUR."
+            },
+            {
+                "step_order": 3,
+                "title": "Receive TA",
+                "description": "Receive Travel Authorization PDF via email."
+            }
+        ]
+    },
+    "eligibility": null
+}

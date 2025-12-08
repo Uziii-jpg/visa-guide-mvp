@@ -1,0 +1,77 @@
+{
+    "country_code": "DE",
+    "visa_type": "WORK",
+    "template_ref": "SCHENGEN_WORK",
+    "description": "National Visa (Type D) for Work. Includes the new 'Opportunity Card' (Chancenkarte) for job seekers.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "75 EUR (National Visa)",
+            "fee_inr_approx": 7500,
+            "processing_time_standard": "1-3 Months (Standard). Opportunity Card: 3-5 Months.",
+            "max_stay": "Work Permit duration / 1 Year (Opportunity Card)",
+            "passport_validity": "Valid for duration of stay",
+            "photo_spec": "35mm x 45mm, Biometric, White background",
+            "min_funds_requirement": "**Opportunity Card:** Proof of **13,092 EUR/year** (~1,091 EUR/month) via Blocked Account or Part-time job offer."
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "de_zab_recognition",
+                    "title": "Deficiency Letter / Recognition",
+                    "description": "Proof that your foreign degree is recognized in Germany (ZAB Statement of Comparability or Anabin printout).",
+                    "type": "document",
+                    "is_premium": true
+                },
+                {
+                    "id": "de_opportunity_card_points",
+                    "title": "Opportunity Card Points (If applicable)",
+                    "description": "If not fully recognized: Proof of 6+ points (Language, Experience, Age, Connection to Germany).",
+                    "type": "document",
+                    "is_premium": true
+                },
+                {
+                    "id": "de_employer_declaration",
+                    "title": "Erklärung zum Beschäftigungsverhältnis",
+                    "description": "Declaration of Employment form filled and signed by the employer (For Work Permit applicants).",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Check Qualification Recognition",
+                "description": "Verify your degree on Anabin or apply for a ZAB Statement of Comparability."
+            },
+            {
+                "step_order": 2,
+                "title": "Choose Path: Job Offer vs Opportunity Card",
+                "description": "**Job Offer:** Get contract & Employer Declaration.\n**Opportunity Card:** Calculate points & open Blocked Account (€13,092)."
+            },
+            {
+                "step_order": 3,
+                "title": "Fast-Track (Optional - Job Offer only)",
+                "description": "Employer can apply for the Fast-Track procedure for skilled workers (Beschleunigtes Fachkräfteverfahren) in Germany."
+            },
+            {
+                "step_order": 4,
+                "title": "Book Appointment",
+                "description": "Book a National Visa appointment at VFS Global."
+            },
+            {
+                "step_order": 5,
+                "title": "Submit Application",
+                "description": "Submit documents and biometrics."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 1400000,
+        "required_education": "bachelors",
+        "required_employment_status": [],
+        "max_age": 45
+    }
+}

@@ -1,0 +1,111 @@
+{
+    "template_id": "SCHENGEN_WORK",
+    "description": "Long-Stay National Visa (Type D) for Employment. Requires a valid work contract or permit. Optimized for Indian applicants.",
+    "last_updated": "2024-11-30",
+    "base_requirements": {
+        "meta": {
+            "fee_euro_approx": "75 EUR - 100 EUR (National Visa Fee)",
+            "fee_inr_approx": 9000,
+            "processing_time_standard": "4 - 12 Weeks",
+            "max_stay": "Duration of Work Contract (Converted to Residence Permit)",
+            "passport_validity": "12 months beyond scheduled return",
+            "min_funds_requirement": "Salary as per contract must meet minimum wage standards"
+        },
+        "documents": [
+            {
+                "id": "sch_passport",
+                "title": "Original Passport & Copies",
+                "description": "Valid for at least 12 months. Must have 2 blank pages. Include 2 sets of photocopies.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "sch_photos",
+                "title": "3 Biometric Photographs",
+                "description": "35x45mm, white background, 80% face coverage, matte finish.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "sch_form",
+                "title": "National Visa Application Form (Type D)",
+                "description": "Completed and signed Long-Stay form.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "sch_work_contract",
+                "title": "Work Contract / Offer Letter",
+                "description": "Signed contract stating job title, salary, duration, and employer details.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "sch_work_permit",
+                "title": "Work Permit / Authorization",
+                "description": "Official approval from the country's labor ministry (if applicable).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "sch_cv",
+                "title": "Curriculum Vitae (Europass)",
+                "description": "Detailed CV in Europass format.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "cv_builder_europass"
+            },
+            {
+                "id": "sch_qualifications",
+                "title": "Professional Qualifications",
+                "description": "Degrees, diplomas, and certificates relevant to the job.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "sch_insurance_entry",
+                "title": "Incoming Travel Insurance",
+                "description": "Medical coverage of €30,000 valid for at least the first 3 months.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "insurance_schengen_work"
+            },
+            {
+                "id": "sch_accommodation",
+                "title": "Proof of Accommodation",
+                "description": "Rental agreement or hotel booking for the initial period.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "sch_pcc",
+                "title": "Police Clearance Certificate",
+                "description": "PCC issued by the Passport Seva Kendra (PSK) or Regional Passport Office (RPO). Local police station PCC is usually NOT accepted.",
+                "type": "document",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Secure Job Offer",
+                "description": "Get a signed contract from an employer in the Schengen country."
+            },
+            {
+                "step_order": 2,
+                "title": "Work Permit Approval",
+                "description": "Employer applies for labor authorization (if required)."
+            },
+            {
+                "step_order": 3,
+                "title": "Apply for Visa",
+                "description": "Submit National Visa application at the Embassy/Consulate/VFS."
+            },
+            {
+                "step_order": 4,
+                "title": "Travel & Residence Permit",
+                "description": "Enter the country and apply for a Residence Permit within 3 months."
+            }
+        ]
+    }
+}

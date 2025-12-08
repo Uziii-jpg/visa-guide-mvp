@@ -1,0 +1,74 @@
+{
+    "template_id": "GCC_EVISA",
+    "description": "Electronic Visa for Gulf Cooperation Council (GCC) countries. Optimized for Indian applicants.",
+    "last_updated": "2024-11-30",
+    "base_requirements": {
+        "meta": {
+            "fee_euro_approx": "Varies (approx. 80-150 USD)",
+            "fee_inr_approx": 7000,
+            "processing_time_standard": "2-5 Working Days",
+            "max_stay": "30 Days (Single Entry) / 60 Days (Multiple)",
+            "passport_validity": "6 months from date of arrival",
+            "photo_spec": "White background, 45x35mm or 2x2 inches (Country specific)"
+        },
+        "documents": [
+            {
+                "id": "gcc_passport_front",
+                "title": "Passport Front Page",
+                "description": "Color scan of the bio-data page. No glare/flash.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "gcc_passport_back",
+                "title": "Passport Back Page",
+                "description": "Color scan of the address page (Indian Passports).",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "gcc_photo",
+                "title": "Passport Size Photo",
+                "description": "Recent color photograph with white background.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "gcc_residence_proof",
+                "title": "GCC Residence Visa (Optional)",
+                "description": "If applying for 'GCC Resident' entry: Valid residence visa copy of another GCC country.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "gcc_us_uk_visa",
+                "title": "US/UK/Schengen Visa (Optional)",
+                "description": "Valid US, UK, or Schengen visa often grants Visa on Arrival or simplified E-Visa.",
+                "type": "digital",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Apply Online",
+                "description": "Fill the application on the official government portal or authorized service."
+            },
+            {
+                "step_order": 2,
+                "title": "Upload Documents",
+                "description": "Upload clear scans of passport and photo."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay the visa fee online using a Credit/Debit card."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive E-Visa",
+                "description": "Visa is sent via email as a PDF. Print it before travel."
+            }
+        ]
+    }
+}

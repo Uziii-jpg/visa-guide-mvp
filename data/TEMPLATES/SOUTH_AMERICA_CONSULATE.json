@@ -1,0 +1,95 @@
+{
+    "template_id": "SOUTH_AMERICA_CONSULATE",
+    "description": "Sticker Visa processed via Embassy/Consulate for South American countries. Includes US Visa exemption logic.",
+    "last_updated": "2024-11-30",
+    "base_requirements": {
+        "meta": {
+            "fee_euro_approx": "80-150 USD",
+            "fee_inr_approx": 8500,
+            "processing_time_standard": "10-20 Working Days",
+            "max_stay": "90 Days",
+            "passport_validity": "6 months",
+            "photo_spec": "2 Passport size photos (White background, 4x4cm or 3.5x4.5cm)"
+        },
+        "documents": [
+            {
+                "id": "sa_cons_passport",
+                "title": "Original Passport",
+                "description": "Must be submitted physically. Valid for 6 months.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "sa_cons_form",
+                "title": "Visa Application Form",
+                "description": "Online form filled, printed, and signed.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "sa_cons_photos",
+                "title": "Physical Photos",
+                "description": "Recent photos as per specific country specs.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "sa_cons_financials",
+                "title": "Financial Proof",
+                "description": "Bank statements (3-6 months), ITR (3 years), Salary Slips.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "sa_cons_cover_letter",
+                "title": "Cover Letter",
+                "description": "Detailed itinerary, purpose of visit, and employment details.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "sa_cons_hotel",
+                "title": "Hotel Booking",
+                "description": "Confirmed hotel reservation for the entire stay.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "hotel_booking_global"
+            },
+            {
+                "id": "sa_cons_flight",
+                "title": "Return Flight Ticket",
+                "description": "Confirmed return flight ticket.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "flight_dummy_ticket"
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Check Exemption",
+                "description": "Check if you are exempt based on US/Schengen visa holding."
+            },
+            {
+                "step_order": 2,
+                "title": "Fill Form",
+                "description": "Complete the online application form on the Ministry website."
+            },
+            {
+                "step_order": 3,
+                "title": "Submit/Interview",
+                "description": "Submit documents at the Embassy/Consulate. Interview may be required."
+            },
+            {
+                "step_order": 4,
+                "title": "Pay Fees",
+                "description": "Pay visa fees via Bank Transfer/Draft."
+            },
+            {
+                "step_order": 5,
+                "title": "Collect",
+                "description": "Collect passport with visa sticker."
+            }
+        ]
+    }
+}

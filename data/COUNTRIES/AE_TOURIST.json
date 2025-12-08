@@ -1,0 +1,121 @@
+{
+    "country_code": "AE",
+    "visa_type": "TOURIST_SHORT_STAY",
+    "template_ref": "UAE_TOURIST",
+    "description": "Short-Stay UAE Tourist Visa (30 or 60 Days) for Tourism/Leisure from India. Streamlined via Emirates Visa Services (DVPC) for a single consistent application pipeline.",
+    "last_updated": "2024-11-30",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "N/A (Visa fee charged in AED/INR via Emirates DVPC)",
+            "fee_inr_approx": "6000–12000 depending on visa duration and DVPC pricing",
+            "processing_time_standard": "3–5 Working Days (Express options available)",
+            "max_stay": "30 Days or 60 Days depending on chosen visa type",
+            "passport_validity": "Minimum 6 months from intended date of arrival",
+            "photo_spec": "45x55mm, white background, high resolution, no shadows",
+            "min_funds_requirement": "Recommended: ₹50,000+ in bank account, confirmed return ticket, and valid accommodation booking. Sponsor documents required if staying with family."
+        },
+        "documents": [
+            {
+                "id": "ae_passport",
+                "title": "Original Passport + Scanned Copy",
+                "description": "Passport valid for 6 months from travel date. Clear colour scan of first/last page. Attach old passports if they contain travel history.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ae_photo",
+                "title": "UAE Visa Photo",
+                "description": "Recent 45x55mm photograph with white background, high resolution, no shadows, neutral expression.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "ae_flight",
+                "title": "Return Flight Ticket (Mandatory)",
+                "description": "Confirmed return or onward flight booking is required for visa approval under Emirates DVPC.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "flight_dummy_ticket"
+            },
+            {
+                "id": "ae_accommodation",
+                "title": "Hotel Booking or Sponsor Documents",
+                "description": "Fully refundable hotel booking OR sponsor’s Emirates ID + UAE residence visa copy + address details (if staying with family).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ae_financials",
+                "title": "Bank Statement (Recommended for Indians)",
+                "description": "Last 2–3 months' bank statement showing healthy balance. Helps ensure smoother approval for first-time travellers.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ae_sponsor",
+                "title": "Sponsor Documents (If Applicable)",
+                "description": "If family in UAE is sponsoring: Emirates ID, UAE Residence Visa copy, Passport copy. Used when applying through sponsor flow.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "ae_form",
+                "title": "UAE Visa Application Form",
+                "description": "DVPC auto-fills the digital form based on passport details. No manual form filling required.",
+                "type": "digital",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Start Visa Application (Emirates Visa Page)",
+                "description": "Begin your UAE Tourist Visa process through the official Emirates Visa Services (DVPC). This pipeline handles document upload, verification, and delivery of the eVisa.",
+                "action_link": "https://www.emirates.com/english/help/visa-passport/uae-visas/"
+            },
+            {
+                "step_order": 2,
+                "title": "Log In to Emirates Account",
+                "description": "Create or log in to your Emirates account. All visa submissions, document uploads, and tracking will happen using this single account.",
+                "action_link": "https://www.emirates.com/account/"
+            },
+            {
+                "step_order": 3,
+                "title": "Open 'Manage Booking' and Access Visa Services",
+                "description": "If you have an Emirates ticket, enter your booking reference and access the DVPC visa service. Upload passport scan, photo, and travel details here.",
+                "action_link": "https://www.emirates.com/english/manage/"
+            },
+            {
+                "step_order": 4,
+                "title": "Upload Required Documents",
+                "description": "Upload clear digital scans: Passport, Photo, Return Ticket, Hotel Booking/Sponsor Docs. Ensure all documents are high resolution and match DVPC specifications.",
+                "action_link": "https://www.emirates.com/english/help/visa-passport/uae-visas/"
+            },
+            {
+                "step_order": 5,
+                "title": "Pay Visa Fees via DVPC",
+                "description": "Pay the applicable visa fee (30-day or 60-day). Payment options include Debit/Credit Cards. Fees vary based on duration and urgency.",
+                "action_link": "https://www.emirates.com/english/help/visa-passport/uae-visas/"
+            },
+            {
+                "step_order": 6,
+                "title": "Track Visa Application",
+                "description": "Monitor your visa status through Emirates ‘Manage Booking’. DVPC updates the status at each processing stage. Standard processing: 3–5 working days.",
+                "action_link": "https://www.emirates.com/english/manage/"
+            },
+            {
+                "step_order": 7,
+                "title": "Download Your UAE e-Visa",
+                "description": "Once approved, your UAE Tourist Visa (PDF eVisa) will be emailed to you and also available inside your Emirates account. Print a copy and keep a digital backup.",
+                "action_link": ""
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 50000,
+        "required_education": "none",
+        "required_employment_status": "any",
+        "max_age": "no_limit"
+    }
+}

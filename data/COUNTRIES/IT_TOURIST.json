@@ -1,0 +1,55 @@
+{
+    "country_code": "IT",
+    "visa_type": "TOURIST",
+    "template_ref": "SCHENGEN_TOURIST",
+    "description": "Schengen Visitor Visa (Type C). Note: Proof of Hospitality is critical if staying with friends.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "90 EUR + VFS Service Charge",
+            "fee_inr_approx": 9000,
+            "processing_time_standard": "15 Calendar Days (Can be longer in peak season)",
+            "max_stay": "90 days in any 180-day period",
+            "passport_validity": "3 months beyond intended departure",
+            "photo_spec": "35mm x 45mm, Biometric, White background",
+            "min_funds_requirement": "Fixed Table: ~45 EUR/day (1-5 days), ~270 EUR (6-10 days). Proof: Bank statements."
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "it_hospitality",
+                    "title": "Proof of Hospitality (Dichiarazione di Ospitalità)",
+                    "description": "If staying with friends/family, this specific form must be filled by the host and emailed to you along with their ID copy.",
+                    "type": "document",
+                    "is_premium": true
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill Application Form",
+                "description": "Download and fill the Schengen Visa application form for Italy.",
+                "action_link": "https://vistoperitalia.esteri.it/home/en"
+            },
+            {
+                "step_order": 2,
+                "title": "Book Appointment",
+                "description": "Book a slot with VFS Global (Italy).",
+                "action_link": "https://visa.vfsglobal.com/ind/en/ita/book-an-appointment"
+            },
+            {
+                "step_order": 3,
+                "title": "Submit Application",
+                "description": "Submit documents and biometrics at the VFS center."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 200000,
+        "required_education": "high_school",
+        "required_employment_status": [],
+        "max_age": 99
+    }
+}

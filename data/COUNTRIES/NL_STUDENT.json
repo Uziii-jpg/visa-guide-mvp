@@ -1,0 +1,110 @@
+{
+    "country_code": "NL",
+    "visa_type": "STUDENT",
+    "template_ref": "SCHENGEN_STUDENT",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "210 EUR (MVV Fee)",
+            "processing_time_standard": "60-90 Days (TEV Procedure)"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "nl_mvv_form",
+                    "title": "MVV Issue Form",
+                    "description": "Form to collect the Provisional Residence Permit (MVV) at the embassy.",
+                    "type": "document",
+                    "is_premium": false
+                },
+                {
+                    "id": "nl_anteedents",
+                    "title": "Antecedents Certificate",
+                    "description": "Declaration that you have no criminal record.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "University Applies for MVV",
+                "description": "The university submits the application for your entry visa (MVV) and residence permit (VVR) to the IND."
+            },
+            {
+                "step_order": 2,
+                "title": "IND Approval",
+                "description": "The Immigration and Naturalisation Service (IND) approves the application."
+            },
+            {
+                "step_order": 3,
+                "title": "Book Appointment",
+                "description": "Book an appointment at the Dutch Embassy/Consulate to collect the MVV."
+            },
+            {
+                "step_order": 4,
+                "title": "Collect MVV",
+                "description": "Submit passport and biometrics. The MVV sticker is placed in your passport."
+            }
+        ]
+    },
+    "university_guide": {
+        "top_universities": [
+            "Delft University of Technology (TU Delft)",
+            "University of Amsterdam (UvA)",
+            "Wageningen University & Research",
+            "Leiden University",
+            "Erasmus University Rotterdam",
+            "Utrecht University",
+            "University of Groningen",
+            "Maastricht University",
+            "Eindhoven University of Technology (TU/e)",
+            "Vrije Universiteit Amsterdam"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "September Intake",
+                "deadline": "April 1st (Non-EU)"
+            },
+            {
+                "season": "February Intake",
+                "deadline": "October 1st (Limited programs)"
+            }
+        ],
+        "required_exams": [
+            "IELTS / TOEFL (Mandatory for English programs)",
+            "GMAT (Often required for Business Masters)",
+            "GRE (Required for some Engineering/Science Masters)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Register on Studielink",
+                "description": "Create account and select your course."
+            },
+            {
+                "step_order": 2,
+                "title": "Submit University Application",
+                "description": "Upload documents to the university portal."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Tuition & Visa Fee",
+                "description": "Transfer the tuition fee and visa fee to the university."
+            },
+            {
+                "step_order": 4,
+                "title": "University Starts TEV",
+                "description": "The university applies for your visa on your behalf."
+            }
+        ]
+    },
+    "eligibility": null
+}

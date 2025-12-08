@@ -1,0 +1,179 @@
+{
+    "country_code": "CA",
+    "visa_type": "STUDENT",
+    "template_ref": "STUDENT_PERMIT",
+    "description": "Study Permit. Note: SDS Program Discontinued (Nov 2024). All applications are now Standard.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "150 CAD (Visa) + 85 CAD (Biometrics)",
+            "fee_inr_approx": 14500,
+            "processing_time_standard": "8-14 Weeks (Standard Stream)",
+            "max_stay": "Duration of study + 90 days",
+            "passport_validity": "Must be valid for the duration of the study program",
+            "photo_spec": "35x45mm, White background, Frame size 35x45mm",
+            "min_funds_requirement": "**New Requirement:**\n\n* **Living Expenses:** **CAD 20,635** (Single Applicant)\n* **Tuition:** 1st Year Paid in full.\n* **Travel:** ~CAD 2,000.\n* **Total Liquid Proof:** Approx **₹25 Lakhs+** recommended."
+        },
+        "documents": [
+            {
+                "id": "ca_passport",
+                "title": "Valid Passport",
+                "description": "Scanned copies of all pages. Validity should cover the entire course duration to avoid permit renewal issues.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "ca_loa",
+                "title": "Letter of Acceptance (LOA)",
+                "description": "Official letter from a Designated Learning Institution (DLI). Must state the program start/end dates and tuition fees.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "ca_pal",
+                "title": "Provincial Attestation Letter (PAL)",
+                "description": "**Mandatory:** Required for most undergraduate students. Master's/PhD students will also require it starting 2025-26.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ca_gic",
+                "title": "GIC Certificate (Recommended)",
+                "description": "Purchase a GIC of CAD 20,635 from a Canadian bank to demonstrate financial stability.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ca_medical_upfront",
+                "title": "Upfront Medical Sheet (e-Medical)",
+                "description": "Information Sheet from a Panel Physician. Doing this *before* applying (Upfront) saves 3-4 weeks of processing time.",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://secure.cic.gc.ca/pp-md/pp-list.aspx"
+            },
+            {
+                "id": "ca_financials_regular",
+                "title": "Additional Financials",
+                "description": "1. **Tuition Receipt:** Proof of 1st year payment.\n2. **Bank Statements:** Last 4 months (Liquid funds).\n3. **Sponsorship Affidavit:** If parents are funding.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ca_sop",
+                "title": "Statement of Purpose (SOP)",
+                "description": "Critical for approval. Must explain: Why Canada? Why this course? Why not study in India? (Max 2 pages).",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Admission & PAL",
+                "description": "Apply to a DLI. Once accepted, the university must apply for your **PAL** (Provincial Attestation Letter).",
+                "action_link": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/provincial-attestation-letter.html"
+            },
+            {
+                "step_order": 2,
+                "title": "Financial Setup (GIC + Tuition)",
+                "description": "Pay 1 Year Tuition and buy a GIC of CAD 20,635."
+            },
+            {
+                "step_order": 3,
+                "title": "Upfront Medical Exam",
+                "description": "Book an appointment with an **IRCC Panel Physician** in India.",
+                "action_link": "https://secure.cic.gc.ca/pp-md/pp-list.aspx"
+            },
+            {
+                "step_order": 4,
+                "title": "IRCC Portal Application",
+                "description": "Create an account on the IRCC Secure Portal.\n* **Upload:** PAL + LOA + GIC + Medical + Passport.\n* **Pay:** CAD 150 (Visa) + CAD 85 (Biometrics).",
+                "action_link": "https://portal-portail.apps.cic.gc.ca/signin?lang=en"
+            },
+            {
+                "step_order": 5,
+                "title": "Biometrics & Wait",
+                "description": "Receive the Biometric Instruction Letter (BIL). Book VFS appointment. Wait for Passport Request (PPR)."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 2500000,
+        "required_education": "high_school",
+        "required_employment_status": [],
+        "max_age": 0
+    },
+    "university_guide": {
+        "top_universities": [
+            "University of Toronto (UofT)",
+            " University of British Columbia (UBC)",
+            "McGill University",
+            "University of Waterloo",
+            "University of Alberta",
+            "McMaster University",
+            "Queen’s University",
+            "Western University",
+            "Simon Fraser University (SFU)",
+            "University of Calgary / Dalhousie / Ottawa"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "Fall Intake (September) – Main Intake",
+                "deadline": "Check University Website"
+            },
+            {
+                "season": "Winter Intake (January) – Second Best",
+                "deadline": "Check University Website"
+            },
+            {
+                "season": " Summer Intake (May) – Limited",
+                "deadline": "Check University Website"
+            }
+        ],
+        "required_exams": [
+            "IELTS 6.5–7.0",
+            "GRE(Top CS programs)",
+            "GMAT(MBA)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Receive Letter of Acceptance (LOA)",
+                "description": "Follow the official university guidelines."
+            },
+            {
+                "step_order": 2,
+                "title": "Pay Tuition Deposit",
+                "description": "Follow the official university guidelines."
+            },
+            {
+                "step_order": 3,
+                "title": "Prepare Proof of Funds",
+                "description": "Follow the official university guidelines."
+            },
+            {
+                "step_order": 4,
+                "title": "Buy Medical Insurance / Do Medical Exam",
+                "description": "Follow the official university guidelines."
+            },
+            {
+                "step_order": 5,
+                "title": "Gather Visa Documents",
+                "description": "Follow the official university guidelines."
+            },
+            {
+                "step_order": 6,
+                "title": "Submit Study Permit Application via IRCC Portal",
+                "description": "Follow the official university guidelines."
+            }
+        ]
+    }
+}

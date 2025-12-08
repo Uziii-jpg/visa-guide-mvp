@@ -1,0 +1,37 @@
+{
+    "country_code": "ET",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "82 USD (30 Days) / 202 USD (90 Days)",
+            "fee_inr_approx": 6800,
+            "processing_time_standard": "3 Days",
+            "max_stay": "30 or 90 Days",
+            "passport_validity": "6 months"
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "E-Visa Portal",
+                "description": "Visit evisa.gov.et."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply",
+                "description": "Select Visa Type and upload passport/photo."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay fees online."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive E-Visa",
+                "description": "Receive E-Visa PDF via email."
+            }
+        ]
+    },
+    "eligibility": null
+}

@@ -1,0 +1,54 @@
+{
+    "country_code": "SA",
+    "visa_type": "TOURIST",
+    "template_ref": "GCC_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Approx. 300-400 SAR (Includes Insurance)",
+            "fee_inr_approx": 8000,
+            "processing_time_standard": "Instant to 24 Hours",
+            "max_stay": "90 Days (Multiple Entry valid for 1 year)",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "sa_us_uk_visa",
+                    "title": "Valid US/UK/Schengen Visa",
+                    "description": "Indian citizens with a valid US, UK, or Schengen visa (used at least once) are eligible for Instant E-Visa / Visa on Arrival.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ],
+            "modify": [
+                {
+                    "id": "gcc_photo",
+                    "description": "Recent color photo, white background. Women do not need to wear a headscarf in the photo unless they usually do."
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Check Eligibility",
+                "description": "If you have US/UK/Schengen visa, apply for 'Visa on Arrival' or 'Instant E-Visa'. Otherwise, apply for 'Stopover Visa' or regular sticker visa."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply Online (KSA Visa)",
+                "description": "Visit the official KSA Visa platform (ksavisa.sa)."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay the visa fee and mandatory insurance fee."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive Visa",
+                "description": "Download the E-Visa."
+            }
+        ]
+    },
+    "eligibility": null
+}

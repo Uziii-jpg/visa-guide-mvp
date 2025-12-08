@@ -1,0 +1,110 @@
+{
+    "country_code": "AU",
+    "visa_type": "TOURIST",
+    "template_ref": "TOURIST_600",
+    "description": "Visitor Visa (Subclass 600) Tourist Stream. Note: Fees increasing to AUD 200 (Offshore) / AUD 500 (Onshore) from July 2025.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "200 AUD (Offshore) / 500 AUD (Onshore) + Biometrics (~25 AUD)",
+            "fee_inr_approx": 11500,
+            "processing_time_standard": "15 - 28 Days (Global Processing Time)",
+            "max_stay": "Typically 3 months per visit (can be 3, 6, or 12 months at officer discretion)",
+            "passport_validity": "Valid for the duration of stay (Airlines prefer 6 months validity)",
+            "photo_spec": "35mm x 45mm, White background, Head & Shoulders, Taken in last 6 months",
+            "min_funds_requirement": "Minimum AUD 5,000 per person for a 2-week visit. Add ~AUD 1,000 per additional week. Must be liquid funds (Savings / FD / Education Loan)."
+        },
+        "documents": [
+            {
+                "id": "au_passport",
+                "title": "Original Passport (Scans)",
+                "description": "Color scans of ALL pages (Bio + all used pages) of current and old passports.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "au_financials_ind",
+                "title": "Financial Evidence (Liquid Funds)",
+                "description": "1. Last 6 months bank statements (Stamped)\n2. ITR-V for past 3 years\n3. Salary slips for last 3 months\n*Property valuation and CA reports are not strong evidence.*",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "au_employment_proof",
+                "title": "Employment Proof / NOC",
+                "description": "NOC with leave approval from employer. If self-employed: GST certificate + business bank statements.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "au_aadhaar",
+                "title": "National ID (Aadhaar)",
+                "description": "Color scan of Aadhaar card (front & back). Frequently requested for Indian applicants.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "au_biometrics_note",
+                "title": "Biometrics (Fingerprints)",
+                "description": "Mandatory: From Jan 2025, all applicants must provide fingerprints and photos at VFS Global.",
+                "type": "info",
+                "is_premium": false
+            },
+            {
+                "id": "au_family_form",
+                "title": "Form 54 – Family Composition",
+                "description": "Sometimes requested for Indian applicants. Lists all immediate family members.",
+                "type": "document",
+                "is_premium": true,
+                "action_link": "https://immi.homeaffairs.gov.au/form-listing/forms/54.pdf"
+            },
+            {
+                "id": "au_itinerary",
+                "title": "Travel Itinerary",
+                "description": "Tentative flight dates + hotel bookings. Do NOT purchase actual flight tickets before visa approval.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "flight_dummy_ticket"
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Create ImmiAccount",
+                "description": "Create an individual ImmiAccount to lodge your Subclass 600 Tourist application online.",
+                "action_link": "https://online.immi.gov.au/lusc/register"
+            },
+            {
+                "step_order": 2,
+                "title": "Start Visitor Visa (Subclass 600) Application",
+                "description": "Select 'Visitor visa (subclass 600)' → Choose 'Tourist Stream (outside Australia)' → Begin application. Answer all history, funding, and travel questions accurately.",
+                "action_link": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600/tourist-stream-overseas"
+            },
+            {
+                "step_order": 3,
+                "title": "Upload Supporting Documents",
+                "description": "Upload high-quality color scans (PDF/JPG under 5MB). Label files correctly e.g. 'BankStatement_Jun-Nov.pdf'.",
+                "action_link": "https://immi.homeaffairs.gov.au/help-support/applying-online-or-on-paper/online/attach-documents"
+            },
+            {
+                "step_order": 4,
+                "title": "Pay Visa Fee",
+                "description": "Pay AUD 200 via Credit/Debit Card or PayPal. A small surcharge applies depending on method.",
+                "action_link": "https://immi.homeaffairs.gov.au/help-support/applying-online-or-on-paper/online/how-to-pay"
+            },
+            {
+                "step_order": 5,
+                "title": "Book Biometrics Appointment",
+                "description": "After payment, download the 'Biometrics Instruction Letter'. Use it to book your biometrics appointment at VFS Global (India).",
+                "action_link": "https://visa.vfsglobal.com/ind/en/aus/book-an-appointment"
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 299998,
+        "required_education": "none",
+        "required_employment_status": "any",
+        "max_age": "no_limit"
+    }
+}

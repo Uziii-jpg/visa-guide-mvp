@@ -1,0 +1,37 @@
+{
+    "country_code": "MW",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "50 USD (Single Entry)",
+            "fee_inr_approx": 4200,
+            "processing_time_standard": "3-5 Working Days",
+            "max_stay": "90 Days",
+            "passport_validity": "6 months"
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "E-Visa Portal",
+                "description": "Visit evisa.gov.mw."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply",
+                "description": "Create account and submit application."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay 50 USD online."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive Visa",
+                "description": "Receive Approval Letter. Visa issued on arrival."
+            }
+        ]
+    },
+    "eligibility": null
+}

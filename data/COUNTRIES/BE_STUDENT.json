@@ -1,0 +1,160 @@
+{
+    "country_code": "BE",
+    "visa_type": "STUDENT_TYPE_D",
+    "template_ref": "SCHENGEN_STUDENT",
+    "description": "Long-Stay National Visa (Type D) for Higher Education in Belgium. Optimized for the 'Blocked Account' solvency track and includes official admin/contribution fee workflow.",
+    "last_updated": "2024-11-30",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "€180 (Visa Fee) + €236 (Administrative/Contribution Fee) + VFS Service Charges",
+            "fee_inr_approx": 42000,
+            "processing_time_standard": "4-12 Weeks (Peak Season: July–August may take longer)",
+            "max_stay": "Duration of Studies (Residence Permit issued in Belgium after arrival)",
+            "passport_validity": "At least 12 months beyond planned date of arrival",
+            "photo_spec": "35x45 mm, white background, meet Belgium photo specs; provide 2 copies",
+            "min_funds_requirement": "**Solvency (2025 guidance):**\n\n* Govt minimum ~€835/month net (indexed annually)\n* University Blocked Account recommendation: €1,000–€1,050/month (≈ €12,000–€12,600/year)\n* Use of University Blocked Account yields highest acceptance probability."
+        },
+        "documents": [
+            {
+                "id": "be_passport",
+                "title": "Original Passport",
+                "description": "Passport valid for at least 12 months from arrival, with minimum 2 blank pages. Include color copies of identity and used visa pages.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "be_visaonweb",
+                "title": "VisaOnWeb Application (VOW)",
+                "description": "Complete the online visa application via Belgium's VisaOnWeb portal. Print and sign final PDF (3 copies) and note VOW reference number.",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://visaonweb.diplomatie.be/"
+            },
+            {
+                "id": "be_admin_fee",
+                "title": "Proof of Administrative (Contribution) Fee Payment",
+                "description": "Proof of bank payment of the administrative contribution (≈€236). Use the exact payment reference format (Name Firstname Nationality DateOfBirth) as requested by FPS Home Affairs.",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://dofi.ibz.be/en/themes/faq/contribution-fee"
+            },
+            {
+                "id": "be_solvency_blocked",
+                "title": "Blocked Account / Solvency Certificate (University)",
+                "description": "Official certificate from university confirming you deposited the required living expenses (blocked account or equivalent). Recommended over private sponsorship.",
+                "type": "document",
+                "is_premium": true,
+                "action_link": "https://www.studyinbelgium.be/en"
+            },
+            {
+                "id": "be_medical",
+                "title": "Medical Certificate from Approved Panel Doctor",
+                "description": "Medical certificate completed by an Embassy-approved doctor (per VFS/VOC list). Use the Belgian Embassy/VFS list for approved practitioners and forms.",
+                "type": "physical",
+                "is_premium": false,
+                "action_link": "https://visa.vfsglobal.com/ind/en/bel/medical-practitioners"
+            },
+            {
+                "id": "be_pcc_apostille",
+                "title": "Apostilled Police Clearance Certificate (PCC)",
+                "description": "PCC issued by Passport Office (PSK) or local police as required; obtain MEA Apostille (e-Sanad/MEA) for international use.",
+                "type": "physical",
+                "is_premium": false,
+                "action_link": "https://esanad.nic.in/"
+            },
+            {
+                "id": "be_admission",
+                "title": "Admission / Acceptance Letter",
+                "description": "Original official acceptance letter from an accredited Belgian higher-education institution confirming enrolment and start date.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "be_degree_apostille",
+                "title": "Apostilled Degree / Diploma (if requested)",
+                "description": "Apostilled copies of previous diplomas/degrees where required by university or visa office. Use MEA apostille/e-Sanad for Indian documents.",
+                "type": "physical",
+                "is_premium": false,
+                "action_link": "https://esanad.nic.in/"
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Secure University Admission & Blocked Account",
+                "description": "Accept your offer and arrange the blocked-account / university solvency transfer (usually €10,000–€13,000 or per university instructions). Obtain an official Solvency Certificate from the institution or bank.",
+                "action_link": "https://www.studyinbelgium.be/en"
+            },
+            {
+                "step_order": 2,
+                "title": "Pay the Administrative (Contribution) Fee to FPS Home Affairs",
+                "description": "Pay the administrative contribution (approx. €236) by international bank transfer to FPS Home Affairs / Immigration Office. Use the exact reference format (Name Firstname Nationality DateOfBirth). Keep the transfer receipt for upload.",
+                "action_link": "https://dofi.ibz.be/en/themes/faq/contribution-fee"
+            },
+            {
+                "step_order": 3,
+                "title": "Complete VisaOnWeb (VOW) Application",
+                "description": "Register and complete your Long-Stay (Type D) application on VisaOnWeb. Print the final application PDF (3 copies) and save the VOW reference number (required for appointment).",
+                "action_link": "https://visaonweb.diplomatie.be/"
+            },
+            {
+                "step_order": 4,
+                "title": "Medical Exam & Document Legalization",
+                "description": "Book and complete the medical exam with an Embassy-approved practitioner; apostille/attest PCC and other required certificates via e-Sanad/MEA before submission.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/bel/medical-practitioners"
+            },
+            {
+                "step_order": 5,
+                "title": "Book VFS Appointment & Submit Documents",
+                "description": "After completing VOW and payments, book a 'Long Stay Student (Type D)' appointment at the VFS Belgium VAC in India. Submit your originals + 2 photocopy sets, pay VFS service charges and provide biometrics.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/bel/book-an-appointment"
+            },
+            {
+                "step_order": 6,
+                "title": "Track Application & Follow-up to FPS Immigration Office",
+                "description": "Use the Immigration Office tracking tool to follow the status of files forwarded to FPS Home Affairs. If needed, contact infodesk@ibz.fgov.be with payment proof/reference to resolve contribution issues.",
+                "action_link": "https://dofi.ibz.be/en/mon-dossier/follow-visa-application"
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": null,
+        "min_liquid_savings": "130000",
+        "required_education": "Admission to a recognised Belgian higher-education programme (official acceptance letter required)",
+        "required_employment_status": "student",
+        "max_age": "no_limit"
+    },
+    "university_guide": {
+        "top_universities": [
+            "KU Leuven",
+            "Ghent University",
+            "Université Catholique de Louvain (UCLouvain)",
+            "Vrije Universiteit Brussel (VUB)",
+            "University of Antwerp",
+            "Université Libre de Bruxelles (ULB)",
+            "Hasselt University"
+        ],
+        "application_platforms": [
+            "University Application Portals"
+        ],
+        "intake_seasons": [
+            "September Intake (Main Intake)",
+            "February Intake (Limited Intake)"
+        ],
+        "required_exams": [
+            "IELTS 6.0–6.5",
+            "TOEFL iBT 80–90",
+            "GMAT(MBA)"
+        ],
+        "pre_visa_steps": [
+            "Receive Admission Letter",
+            "Pay Tuition Advance (if required)",
+            "Prepare Financial Proof",
+            "Arrange Accommodation",
+            " Buy Medical Insurance",
+            " Prepare Visa Documents",
+            " Book VFS Appointmen",
+            "Biometrics + Visa Interview"
+        ]
+    }
+}

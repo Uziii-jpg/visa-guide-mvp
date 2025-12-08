@@ -1,0 +1,48 @@
+{
+    "country_code": "CO",
+    "visa_type": "TOURIST",
+    "template_ref": "SOUTH_AMERICA_CONSULATE",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Free (with US/Schengen Visa) / 82 USD (E-Visa)",
+            "fee_inr_approx": 7000,
+            "processing_time_standard": "5-10 Working Days",
+            "max_stay": "90 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "co_exemption",
+                    "title": "Visa Exemption",
+                    "description": "Exempt if holding valid US or Schengen visa (min 180 days validity) or Residence.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Check Exemption",
+                "description": "If you have US/Schengen visa, you are VISA EXEMPT."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply Online",
+                "description": "If not exempt, apply for Visitor Visa (V) online."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay application fee and visa fee online."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive E-Visa",
+                "description": "Receive E-Visa via email."
+            }
+        ]
+    },
+    "eligibility": null
+}

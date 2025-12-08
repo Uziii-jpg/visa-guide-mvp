@@ -1,0 +1,61 @@
+{
+    "country_code": "SG",
+    "visa_type": "TOURIST",
+    "template_ref": "E_VISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "30 SGD (approx. 1900 INR) + Agent Fee",
+            "fee_inr_approx": 2500,
+            "processing_time_standard": "3-5 Working Days",
+            "max_stay": "30 Days (Multiple Entry valid for 2 years often granted)",
+            "photo_spec": "Matte finish, white background, 35x45mm (Strictly checked)"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "sg_form_14a",
+                    "title": "Form 14A",
+                    "description": "Duly filled and signed Form 14A (Singapore Visa Application Form).",
+                    "type": "document",
+                    "is_premium": false
+                },
+                {
+                    "id": "sg_cover_letter",
+                    "title": "Cover Letter",
+                    "description": "Letter explaining travel dates, purpose, and employment details.",
+                    "type": "document",
+                    "is_premium": true
+                }
+            ],
+            "modify": [
+                {
+                    "id": "evisa_photo",
+                    "description": "Recent color photo (taken within last 3 months). White background. No borders. 400x514 pixels."
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Find Authorized Agent",
+                "description": "Singapore High Commission does not accept individual applications. Apply via an authorized visa agent (e.g., VFS, Thomas Cook, or local agents)."
+            },
+            {
+                "step_order": 2,
+                "title": "Submit Documents",
+                "description": "Submit physical form 14A and photos to the agent."
+            },
+            {
+                "step_order": 3,
+                "title": "Agent Applies Online",
+                "description": "Agent submits application via SAVE (Submission of Application for Visa Electronically)."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive E-Visa",
+                "description": "Receive the E-Visa PDF from your agent."
+            }
+        ]
+    },
+    "eligibility": null
+}

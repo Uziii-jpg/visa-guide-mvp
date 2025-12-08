@@ -1,0 +1,37 @@
+{
+    "country_code": "ZW",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "30 USD (Single) / 45 USD (Double)",
+            "fee_inr_approx": 2500,
+            "processing_time_standard": "2-5 Working Days",
+            "max_stay": "30 Days",
+            "passport_validity": "6 months"
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "E-Visa Portal",
+                "description": "Visit evisa.gov.zw."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply",
+                "description": "Fill form and upload documents."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay online."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive Visa",
+                "description": "Receive E-Visa letter."
+            }
+        ]
+    },
+    "eligibility": null
+}

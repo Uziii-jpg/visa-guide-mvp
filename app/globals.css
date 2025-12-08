@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/container-queries";
 
 :root {
   --background: #ffffff;
@@ -10,6 +11,65 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom Fonts */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Instrument Sans", sans-serif;
+
+  /* Custom Colors */
+  /* Custom Colors - Premium Palette */
+  --color-primary: #4338ca; /* Indigo 700 */
+  --color-primary-light: #e0e7ff; /* Indigo 100 */
+  --color-primary-dark: #312e81; /* Indigo 900 */
+  --color-primary-text: #FFFFFF;
+  
+  --color-secondary: #059669; /* Emerald 600 */
+  --color-accent: #d97706; /* Amber 600 */
+  
+  --color-background-light: #f8fafc; /* Slate 50 */
+  --color-background-dark: #0f172a; /* Slate 900 */
+  
+  --color-text-light: #1e293b; /* Slate 800 */
+  --color-text-dark: #f1f5f9; /* Slate 100 */
+  /* Improved Contrast Colors */
+  --color-subtext-light: #475569; /* Slate 600 - Darker for better readability */
+  --color-subtext-dark: #cbd5e1; /* Slate 300 - Brighter for dark mode */
+  
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #1e293b; /* Slate 800 */
+  
+  /* Shadows */
+  --shadow-input: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-button: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-card: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-glow: 0 0 20px -5px rgba(67, 56, 202, 0.5);
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/90 backdrop-blur-xl border border-white/20 shadow-lg;
+  }
+  .dark .glass {
+    @apply bg-slate-800/80 border-slate-700/50 shadow-xl;
+  }
+  
+  .card-premium {
+    @apply bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-card rounded-3xl transition-all duration-300;
+  }
+  .card-premium:hover {
+    @apply transform -translate-y-1 shadow-glow border-primary/30 dark:border-primary/50;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600;
+  }
+  .dark .text-gradient {
+    @apply from-indigo-400 to-violet-400;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

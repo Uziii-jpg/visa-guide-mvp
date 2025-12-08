@@ -1,0 +1,48 @@
+{
+    "country_code": "KE",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "30 USD (approx. 2500 INR)",
+            "fee_inr_approx": 2500,
+            "processing_time_standard": "3 Days (72 Hours)",
+            "max_stay": "90 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "ke_eta",
+                    "title": "eTA Requirement",
+                    "description": "Visa has been replaced by Electronic Travel Authorisation (eTA).",
+                    "type": "digital",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Visit eTA Portal",
+                "description": "Go to etakenya.go.ke."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply",
+                "description": "Fill details and upload passport/photo."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay the 30 USD processing fee."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive eTA",
+                "description": "Receive eTA via email. Print and carry."
+            }
+        ]
+    },
+    "eligibility": null
+}

@@ -1,0 +1,53 @@
+{
+    "country_code": "HK",
+    "visa_type": "TOURIST",
+    "template_ref": "E_VISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Free (Pre-Arrival Registration)",
+            "fee_inr_approx": 0,
+            "processing_time_standard": "Instant",
+            "max_stay": "14 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "remove": [
+                "evisa_photo",
+                "evisa_flight",
+                "evisa_hotel"
+            ],
+            "add": [
+                {
+                    "id": "hk_par",
+                    "title": "PAR Notification Slip",
+                    "description": "Printout of the Pre-Arrival Registration (PAR) notification slip.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Apply PAR",
+                "description": "Visit the GovHK website for Pre-Arrival Registration."
+            },
+            {
+                "step_order": 2,
+                "title": "Enter Details",
+                "description": "Enter passport details exactly as they appear."
+            },
+            {
+                "step_order": 3,
+                "title": "Instant Result",
+                "description": "Get instant approval. Print the Notification Slip on A4 paper."
+            },
+            {
+                "step_order": 4,
+                "title": "Travel",
+                "description": "Fly to Hong Kong. Show PAR slip and Passport."
+            }
+        ]
+    },
+    "eligibility": null
+}

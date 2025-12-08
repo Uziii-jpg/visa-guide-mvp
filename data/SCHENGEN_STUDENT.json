@@ -1,0 +1,134 @@
+{
+  "template_id": "SCHENGEN_STUDENT",
+  "description": "Long-Stay National Visa (Type D) for higher education (>90 days). Optimized for Indian applicants with strict document standards.",
+  "last_updated": "2024-11-29",
+  "base_requirements": {
+    "meta": {
+      "fee_euro_approx": "75 EUR - 100 EUR (National Visa Fee)",
+      "fee_inr_approx": 9000,
+      "processing_time_standard": "4 - 12 Weeks (Peak season: May-Sept)",
+      "max_stay": "Duration of Course (Converted to Residence Permit upon arrival)",
+      "passport_validity": "12 months beyond scheduled return",
+      "min_funds_requirement": "Approx. 11,208 EUR - 12,000 EUR per year (Blocked Account preferred)"
+    },
+    "documents": [
+      {
+        "id": "sch_passport",
+        "title": "Original Passport & Copies",
+        "description": "Valid for at least 12 months. Must have 2 blank pages. Include 2 sets of photocopies of the first/last page and any previous visas (US, UK, Schengen).",
+        "type": "physical",
+        "is_premium": false
+      },
+      {
+        "id": "sch_photos",
+        "title": "3 Biometric Photographs",
+        "description": "35x45mm, white background, 80% face coverage, matte finish. Ears must be visible. Do not staple.",
+        "type": "physical",
+        "is_premium": false
+      },
+      {
+        "id": "sch_form",
+        "title": "National Visa Application Form (Type D)",
+        "description": "Completed and signed Long-Stay form. (Note: This is different from the Tourist 'Type C' form).",
+        "type": "document",
+        "is_premium": false
+      },
+      {
+        "id": "sch_admission_letter",
+        "title": "Unconditional Letter of Acceptance",
+        "description": "Official admission letter from the university stating course name, duration, and language of instruction.",
+        "type": "document",
+        "is_premium": false
+      },
+      {
+        "id": "sch_tuition_proof",
+        "title": "Proof of Tuition Fee Payment",
+        "description": "Receipt showing payment of the first semester/year fees or enrollment deposit (if applicable).",
+        "type": "document",
+        "is_premium": true
+      },
+      {
+        "id": "sch_educational_docs",
+        "title": "Apostilled Academic Documents",
+        "description": "Original degree certificates and mark sheets (10th, 12th, Bachelor's). Indian documents often require an 'Apostille' from the MEA (Ministry of External Affairs).",
+        "type": "document",
+        "is_premium": true,
+        "note": "Provisional certificates are accepted only if the convocation hasn't happened yet."
+      },
+      {
+        "id": "sch_cv",
+        "title": "Curriculum Vitae (Europass Format)",
+        "description": "Detailed CV in the European standard format (Europass), covering all education and work history without gaps.",
+        "type": "document",
+        "is_premium": true,
+        "affiliate_key": "cv_builder_europass"
+      },
+      {
+        "id": "sch_language_cert",
+        "title": "Language Proficiency Certificate",
+        "description": "IELTS/TOEFL for English courses (usually 6.0-6.5 band) OR Goethe/DELF certificate for local language courses.",
+        "type": "document",
+        "is_premium": false
+      },
+      {
+        "id": "sch_financial_blocked",
+        "title": "Proof of Financial Means (Blocked Account)",
+        "description": "Standard for many EU countries (Germany/Poland): A specific 'Blocked Account' showing ~12,000 EUR. Alternatively, a scholarship award letter.",
+        "type": "document",
+        "is_premium": true,
+        "affiliate_key": "blocked_account_fintiba_expatrio"
+      },
+      {
+        "id": "sch_financial_sponsor",
+        "title": "Sponsorship Proof (Alternative)",
+        "description": "If parents are sponsoring: Notarized Sponsorship Letter + 6 months bank statements + ITR (3 years) + ID proof of sponsor.",
+        "type": "document",
+        "is_premium": true
+      },
+      {
+        "id": "sch_insurance_entry",
+        "title": "Incoming Travel Insurance",
+        "description": "Medical coverage of €30,000 valid for at least the first 3-6 months until local student insurance starts.",
+        "type": "document",
+        "is_premium": true,
+        "affiliate_key": "insurance_schengen_student"
+      },
+      {
+        "id": "sch_cover_letter",
+        "title": "Motivation Letter / Cover Letter",
+        "description": "A strong essay explaining why you chose this country, how the course aids your career in India, and your intent to return.",
+        "type": "document",
+        "is_premium": true
+      },
+      {
+        "id": "sch_accommodation",
+        "title": "Proof of Accommodation",
+        "description": "Dormitory confirmation, rental contract, or temporary hotel booking for arrival.",
+        "type": "document",
+        "is_premium": true
+      }
+    ],
+    "steps_flow": [
+      {
+        "step_order": 1,
+        "title": "University Admission",
+        "description": "Secure the Unconditional Offer Letter and pay the required tuition deposit."
+      },
+      {
+        "step_order": 2,
+        "title": "Document Legalization (Apostille)",
+        "description": "Get your original Indian degree certificates and mark sheets Apostilled by the MEA (e-Sanad or outsourcing agency)."
+      },
+      {
+        "step_order": 3,
+        "title": "Secure Financials",
+        "description": "Open a Blocked Account (if required by country) or gather liquid fund proofs (Savings/FDs)."
+      },
+      {
+        "step_order": 4,
+        "title": "Book Visa Appointment",
+        "description": "Schedule a 'National Visa (Type D)' appointment at VFS Global or the relevant Embassy."
+      }
+    ]
+  }
+}

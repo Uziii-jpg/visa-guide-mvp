@@ -1,0 +1,159 @@
+{
+    "country_code": "US",
+    "visa_type": "STUDENT",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "185 USD (Visa) + 350 USD (SEVIS) (~45,000 INR Total)",
+            "processing_time_standard": "~60 days (varies by consulate and season)",
+            "max_stay": "Duration of Status (D/S)",
+            "passport_validity": "6 months beyond intended stay",
+            "min_funds_requirement": "Tuition + Living Expenses (approx. $20,000 - $50,000 USD)"
+        },
+        "documents": [
+            {
+                "id": "us_passport",
+                "title": "Valid Passport",
+                "description": "Must be valid for at least 6 months beyond your period of stay.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "us_i20",
+                "title": "Form I-20",
+                "description": "Original Form I-20 issued by your SEVP-certified US university, signed by you and the DSO.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "us_sevis_receipt",
+                "title": "SEVIS I-901 Fee Receipt",
+                "description": "Proof of payment of the $350 SEVIS fee.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "us_ds160",
+                "title": "DS-160 Confirmation Page",
+                "description": "Printout of the confirmation page. Note: You must disclose all social media handles used in the last 5 years.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "us_financials_student",
+                "title": "Proof of Financial Support",
+                "description": "Bank statements, loan sanction letter, or sponsor affidavit (Form I-134) covering 1st year expenses.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "us_academic_docs",
+                "title": "Academic Transcripts",
+                "description": "Original mark sheets, degree certificates, and standardized test scores (GRE/GMAT/TOEFL/IELTS).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "us_appointment",
+                "title": "Appointment Confirmation",
+                "description": "Letter confirming your VAC and Consular appointments.",
+                "type": "document",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Get Accepted & Receive I-20",
+                "description": "Apply to US universities. Once accepted, the school will issue Form I-20."
+            },
+            {
+                "step_order": 2,
+                "title": "Pay SEVIS Fee",
+                "description": "Pay the $350 I-901 SEVIS fee online at fmjfee.com."
+            },
+            {
+                "step_order": 3,
+                "title": "Complete DS-160",
+                "description": "Fill out the online visa application form. Ensure all social media details are accurate."
+            },
+            {
+                "step_order": 4,
+                "title": "Pay Visa Fee & Schedule",
+                "description": "Pay the $185 MRV fee and book your VAC and Interview slots."
+            },
+            {
+                "step_order": 5,
+                "title": "Attend Interview",
+                "description": "Go to the consulate. Be prepared to answer questions about your study plans and intent to return."
+            }
+        ]
+    },
+    "university_guide": {
+        "top_universities": [
+            "Massachusetts Institute of Technology (MIT)",
+            "Stanford University",
+            "Harvard University",
+            "California Institute of Technology (Caltech)",
+            "University of California, Berkeley (UCB)",
+            "Columbia University",
+            "University of California, Los Angeles (UCLA)",
+            "Yale University",
+            "Princeton University",
+            "Cornell University"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "Fall Intake (August/September)",
+                "deadline": "December - January (Previous Year)"
+            },
+            {
+                "season": "Spring Intake (January)",
+                "deadline": "July - October (Previous Year)"
+            },
+            {
+                "season": "Summer Intake (May/June)",
+                "deadline": "January - March (Same Year)"
+            }
+        ],
+        "required_exams": [
+            "SAT / ACT (Undergraduate)",
+            "GRE / GMAT (Graduate)",
+            "TOEFL / IELTS / PTE (English Proficiency)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Research & Shortlist",
+                "description": "Identify universities based on course, budget, and location."
+            },
+            {
+                "step_order": 2,
+                "title": "Take Standardized Tests",
+                "description": "Prepare for and take necessary exams (GRE, TOEFL, etc.) well in advance."
+            },
+            {
+                "step_order": 3,
+                "title": "Submit Applications",
+                "description": "Apply via Common App or university portals. Submit SOPs, LORs, and transcripts."
+            },
+            {
+                "step_order": 4,
+                "title": "Accept Offer & Pay Deposit",
+                "description": "Once admitted, accept the offer and pay the enrollment deposit to secure your seat."
+            },
+            {
+                "step_order": 5,
+                "title": "Request I-20",
+                "description": "Submit financial proof to the university to receive your Form I-20."
+            }
+        ]
+    },
+    "eligibility": null
+}

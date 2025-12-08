@@ -1,0 +1,155 @@
+{
+    "country_code": "AT",
+    "visa_type": "STUDENT_RESIDENCE_PERMIT",
+    "template_ref": "SCHENGEN_STUDENT",
+    "description": "Residence Permit (Aufenthaltsbewilligung - Studierender) for long-term studies (>6 months). Optimized for the 'Direct Embassy' track (Cheapest/Official).",
+    "last_updated": "2024-11-30",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "€160 (Permit Fee) + €150 (D-Visa Fee)",
+            "fee_inr_approx": 28500,
+            "processing_time_standard": "8-12 Weeks (Permit Approval) + 10 Days (Visa D)",
+            "max_stay": "12 Months (Renewable in Austria)",
+            "passport_validity": "3 months beyond validity of the applied permit",
+            "photo_spec": "35x45mm, ICAO Standard, Not older than 6 months",
+            "min_funds_requirement": "**Strict Age-Based Logic (2025 Rates):**\n\n* **Under 24:** €703.58/month (~€8,443/year)\n* **Over 24:** €1,273.99/month (~€15,288/year)\n* **The Rent Trap:** This base amount only covers rent up to **€359.72**. If your rent is higher (e.g., €550), you MUST show the difference (€190.28) as extra monthly funds."
+        },
+        "documents": [
+            {
+                "id": "at_passport",
+                "title": "Original Passport",
+                "description": "Valid for at least 3 months beyond the intended stay. Must have 2 blank pages. Include copies of all used pages.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "at_form",
+                "title": "Application Form (Aufenthaltsbewilligung)",
+                "description": "Download the 'Antrag auf Erteilung einer Aufenthaltsbewilligung' (Formular). Fill in German/English. Do NOT use the Tourist Visa C form.",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://www.bmi.gv.at/312/60a/files/Formulare/Aufenthaltsbewilligung_20240501.pdf"
+            },
+            {
+                "id": "at_admission",
+                "title": "Admission Letter (Bescheid)",
+                "description": "Official 'Bescheid' or 'Aufnahmebestätigung' from the Austrian University/FH. Electronic signature is accepted.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "at_birth_cert_apostille",
+                "title": "Apostilled Birth Certificate",
+                "description": "Original Birth Certificate with MEA Apostille sticker. Mandatory for first-time applicants. English translation required if in regional language.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "at_pcc_apostille",
+                "title": "Apostilled PCC",
+                "description": "Police Clearance Certificate issued by Passport Office (PSK), not older than 3 months, with MEA Apostille.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "at_housing",
+                "title": "Proof of Accommodation (Mietvertrag)",
+                "description": "Tenancy agreement or Dormitory contract (OeAD) for at least 3 months. *Warning: Hotel bookings are NOT accepted.*",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "housing_austria_student"
+            },
+            {
+                "id": "at_financials",
+                "title": "Proof of Solvency",
+                "description": "Bank statement (last 6 months) showing the full year's amount. Account must be accessible from Austria (e.g., International Debit Card).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "at_insurance",
+                "title": "Travel Health Insurance",
+                "description": "Coverage of €30,000 for the initial period (3-4 months) until enrollment in Austrian Statutory Insurance (ÖGK).",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "insurance_schengen_student"
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Secure Housing (Critical First Step)",
+                "description": "You cannot apply without a fixed address. Go to the OeAD Housing website.\n* **Action:** Book a room and pay the deposit.\n* **Download:** The signed 'Benützungsvertrag' (Usage Agreement). This is your proof of residence.",
+                "action_link": "https://studenthousing.oead.at/en/"
+            },
+            {
+                "step_order": 2,
+                "title": "Document Legalization (Apostille)",
+                "description": "Your Indian Birth Certificate and PCC are invalid in Austria without an Apostille.\n* **Action:** Register on e-Sanad or visit a BLS Attestation center.\n* **Submit:** Original documents + Passport copies.\n* **Receive:** Documents with the square MEA sticker on the back (approx 3-5 days).",
+                "action_link": "https://apostille.in/"
+            },
+            {
+                "step_order": 3,
+                "title": "Book Embassy Appointment",
+                "description": "Apply directly at the Embassy to avoid confusion. \n* **Action:** Email 'new-delhi-embassy@bmeia.gv.at' (Delhi) or 'mumbai.cg@bmeia.gv.at' (Mumbai).\n* **Subject:** 'Residence Permit Student - [Your Name]'.\n* **Attach:** Scanned Passport and Admission Letter. Wait for their confirmation email.",
+                "action_link": "https://www.bmeia.gv.at/en/austrian-embassy-new-delhi/"
+            },
+            {
+                "step_order": 4,
+                "title": "In-Person Submission",
+                "description": "Visit the Embassy/Consulate on your slot.\n* **Carry:** All Originals + 2 Sets of Photocopies + €160 fee in CASH (INR equivalent).\n* **Process:** Submit files, give fingerprints, and answer interview questions (e.g., 'Why Austria?').",
+                "action_link": ""
+            },
+            {
+                "step_order": 5,
+                "title": "Collect Visa D (Entry Visa)",
+                "description": "Wait 8-12 weeks for the Magistrate (MA35) approval.\n* **Notification:** You will receive an email stating your permit is ready.\n* **Action:** Return to the Embassy (or VFS if specifically instructed by email) to submit your passport for the 'Visa D' stamp.\n* **Travel:** Enter Austria, then collect your physical Residence Permit card from the local Magistrate.",
+                "action_link": ""
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 900000,
+        "required_education": "Admission to an accredited Austrian university or recognised study programme (official admission letter required)",
+        "required_employment_status": "student",
+        "max_age": "no_limit"
+    },
+    "university_guide": {
+        "top_universities": [
+            "University of Vienna",
+            "TU Wien",
+            "University of Innsbruck",
+            "Johannes Kepler University Linz",
+            "University of Natural Resources and Life Sciences, Vienna",
+            "Vienna University of Economics and Business"
+        ],
+        "application_platforms": [
+            "University-specific Online Portals"
+        ],
+        "intake_seasons": [
+            {
+                "season": "Winter Intake (Main Intake)",
+                "deadline": "October"
+            },
+            {
+                "season": "Summer Intake (Secondary Intake)",
+                "deadline": "March"
+            }
+        ],
+        "required_exams": [
+            "IELTS (6.0–7.0)",
+            "TOEFL iBT (72–90+)"
+        ],
+        "pre_visa_steps": [
+            "Get Your University Admission Letter (Zulassungsbescheid)",
+            "Prepare Your Financial Proof",
+            "Arrange Accommodation (Mandatory)",
+            "Get Travel Insurance (Important)",
+            "Collect All Required Documents",
+            "Arrange Translations (If Needed)",
+            "Book VFS Appointment (VERY Important!)",
+            "Prepare Your Motivation Letter (Optional but helps)"
+        ]
+    }
+}

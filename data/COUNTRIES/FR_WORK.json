@@ -1,0 +1,62 @@
+{
+    "country_code": "FR",
+    "visa_type": "WORK",
+    "template_ref": "SCHENGEN_WORK",
+    "description": "Talent Passport & Long Stay Work Visa. Note: New salary thresholds effective Aug 2025.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "99 EUR (Long Stay) + 200 EUR Tax (on issuance)",
+            "fee_inr_approx": 9200,
+            "processing_time_standard": "15-20 Days",
+            "max_stay": "4 Years (Talent Passport)",
+            "passport_validity": "Valid for duration of stay",
+            "photo_spec": "35mm x 45mm, Biometric, White background",
+            "min_funds_requirement": "**Talent Passport Thresholds (2025):**\n* **Qualified Employee:** 39,582 EUR/year\n* **EU Blue Card:** 59,373 EUR/year"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "fr_cerfa_form",
+                    "title": "CERFA Form",
+                    "description": "CERFA 15619*01 (if applicable for 'Passeport Talent').",
+                    "type": "document",
+                    "is_premium": false
+                },
+                {
+                    "id": "fr_contract",
+                    "title": "Employment Contract",
+                    "description": "CERFA form signed by employer + Contract stating salary meets the threshold (e.g., >39,582 EUR).",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Employer Application",
+                "description": "Your employer in France applies for work authorization via the 'Administration Numérique pour les Étrangers en France' (ANEF).",
+                "action_link": "https://administration-etrangers-en-france.interieur.gouv.fr/particuliers/#/"
+            },
+            {
+                "step_order": 2,
+                "title": "France-Visas Application",
+                "description": "Complete the application on France-Visas portal once authorization is received.",
+                "action_link": "https://france-visas.gouv.fr/"
+            },
+            {
+                "step_order": 3,
+                "title": "VFS Appointment",
+                "description": "Submit documents and biometrics at VFS Global."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 500000,
+        "required_education": "bachelors",
+        "required_employment_status": [],
+        "max_age": 55
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "country_code": "TZ",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "50 USD (approx. 4200 INR)",
+            "fee_inr_approx": 4200,
+            "processing_time_standard": "10 Working Days",
+            "max_stay": "90 Days (Single Entry)",
+            "passport_validity": "6 months"
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Official Portal",
+                "description": "Visit visa.immigration.go.tz."
+            },
+            {
+                "step_order": 2,
+                "title": "Fill & Upload",
+                "description": "Complete form and upload documents."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay 50 USD online."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive Grant",
+                "description": "Download Visa Grant Notice."
+            }
+        ]
+    },
+    "eligibility": null
+}

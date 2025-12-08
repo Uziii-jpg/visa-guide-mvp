@@ -1,0 +1,124 @@
+{
+    "country_code": "AU",
+    "visa_type": "WORK_SKILLED_SPONSORED",
+    "template_ref": "WORK_GENERAL",
+    "description": "Guide for points-based skilled migration (Subclass 189/190) and employer-sponsored routes (Subclass 482 / Skills in Demand).",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "189/190: AUD 4,765 (~€2,900) | 482: AUD 1,495 (Short) / AUD 3,115 (Medium)",
+            "fee_inr_approx": 270000,
+            "processing_time_standard": "189/190: 5–12 Months | 482: 1–3 Months",
+            "max_stay": "Permanent (189/190) | 2–4 Years (482 TSS/Skills in Demand)",
+            "passport_validity": "Valid for travel and ideally >6 months on date of lodgement",
+            "min_funds_requirement": "**Sponsored (482/Employer):** Salary must meet the TSMIT (AUD 76,515). **Skilled (189/190):** No fixed balance but recommend AUD 30k–40k for initial settlement proof."
+        },
+        "documents": [
+            {
+                "id": "au_skills_assessment",
+                "title": "Positive Skills Assessment",
+                "description": "Required for points streams (189/190). Obtain from the correct assessing authority (e.g., ACS for ICT, VETASSESS for many trades/professions, EA for engineers).",
+                "type": "document",
+                "is_premium": true,
+                "action_link": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-assessment/assessing-authorities"
+            },
+            {
+                "id": "au_english_work",
+                "title": "English Test Results (IELTS/PTE/TOEFL)",
+                "description": "Needed to claim points (189/190) and as evidence for visa lodgement. Higher scores = more points.",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/english-language"
+            },
+            {
+                "id": "au_eoi_skillselect",
+                "title": "Expression of Interest (EOI) — SkillSelect",
+                "description": "Mandatory step for 189/190: create an EOI in SkillSelect and claim your points (age, English, qualifications, experience).",
+                "type": "digital",
+                "is_premium": false,
+                "action_link": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect"
+            },
+            {
+                "id": "au_sponsor_nomination",
+                "title": "Employer Nomination / TRN (482)",
+                "description": "Employer must lodge sponsorship and nomination; employee receives a TRN (Transaction Reference Number) needed to lodge the visa application.",
+                "type": "digital",
+                "is_premium": true,
+                "action_link": "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/sponsoring-workers"
+            },
+            {
+                "id": "au_pcc_psk",
+                "title": "Police Clearance Certificate (PCC)",
+                "description": "PCC from Passport Office (PSK) / local police as required; must match skills/experience claims and be recent per Home Affairs guidance.",
+                "type": "physical",
+                "is_premium": true
+            },
+            {
+                "id": "au_experience_strict",
+                "title": "Employment Reference Letters & Payslips",
+                "description": "Detailed reference letters on company letterhead specifying role, duties, FTE, start/end dates + payslips and tax documents to support claims.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "au_medicals",
+                "title": "Health & Medical Checks (HAP ID)",
+                "description": "Book panel physician via eMedical after lodgement request; chest X-ray and health checks may be required.",
+                "type": "document",
+                "is_premium": true,
+                "action_link": "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/medical/what-to-expect"
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Choose Track: Points (189/190) vs Employer-Sponsored (482)",
+                "description": "Decide whether you will apply via SkillSelect points (189/190) or through an employer nomination (482/Skills in Demand). If employer route, ensure they are willing to sponsor and meet TSMIT.",
+                "action_link": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-finder/work"
+            },
+            {
+                "step_order": 2,
+                "title": "Skills Assessment (If applying points or required by occupation)",
+                "description": "Apply to the relevant assessing authority (ACS/VETASSESS/EA etc.). Processing times vary (4–12 weeks). You need a Positive assessment letter to claim points or substantiate the visa application.",
+                "action_link": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-assessment"
+            },
+            {
+                "step_order": 3,
+                "title": "Lodge EOI in SkillSelect (189/190) OR Employer lodges Nomination (482)",
+                "description": "189/190: Create EOI in SkillSelect and claim your points; wait for Invitation to Apply (ITA). 482: Employer lodges sponsorship and nomination; ensure offered salary ≥ TSMIT.",
+                "action_link": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect"
+            },
+            {
+                "step_order": 4,
+                "title": "Prepare & Apostille Documents (If required)",
+                "description": "Legalise Indian documents where required (PCC, degrees) via MEA apostille/e-Sanad, translate to English if necessary, and gather originals/copies.",
+                "action_link": "https://www.mea.gov.in/apostille/"
+            },
+            {
+                "step_order": 5,
+                "title": "Lodge Visa Application in ImmiAccount",
+                "description": "Once invited (189/190) or nominated (482), lodge your visa in ImmiAccount, attach all supporting docs, pay fees, and follow any requests for further information.",
+                "action_link": "https://online.immi.gov.au/lusc/login"
+            },
+            {
+                "step_order": 6,
+                "title": "Medicals, Biometrics & Await Decision",
+                "description": "Complete medicals (HAP ID) and biometrics when requested. Processing timelines vary; respond promptly to additional requests to avoid delays.",
+                "action_link": "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/medical/what-to-expect"
+            },
+            {
+                "step_order": 7,
+                "title": "Visa Outcome & Arrival",
+                "description": "On grant, receive visa grant notice (and visa label if applicable). Employer-sponsored visa holders check work start and visa conditions; permanent visas (189/190) grant residency rights.",
+                "action_link": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189"
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": null,
+        "min_liquid_savings": null,
+        "required_education": "Relevant qualification (as per assessing authority) for nominated occupation",
+        "required_employment_status": "For 482: binding job offer + employer nomination; For 189/190: meet points threshold and invited",
+        "max_age": "Preferably under 45 for points claim (age points reduce after 45)"
+    }
+}

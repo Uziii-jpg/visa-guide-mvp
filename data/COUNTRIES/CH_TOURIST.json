@@ -1,0 +1,46 @@
+{
+    "country_code": "CH",
+    "visa_type": "TOURIST",
+    "template_ref": "SCHENGEN_TOURIST",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "80 EUR (approx. 80 CHF) + VFS Service Charge",
+            "processing_time_standard": "15 Calendar Days"
+        },
+        "documents": {
+            "modify": [
+                {
+                    "id": "std_financials",
+                    "description": "Bank statements for the last 3 months. Minimum 100 CHF per day of stay."
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill Application Form",
+                "description": "Use the official checklist from the visa-processing partner (VFS Global\nhttps://www.vfsglobal.com/one-pager/switzerland/india/english/pdf/Checklist_Tourist-EN-2025.pdf?utm_source=chatgpt.com"
+            },
+            {
+                "step_order": 2,
+                "title": "Fill out the application carefully & pay fee",
+                "description": "Book a slot with VFS Global (Switzerland)."
+            },
+            {
+                "step_order": 3,
+                "title": "Book appointment at VFS Global centre → submit application + biometrics",
+                "description": "On appointment day bring originals + copies of all required documents, photos. \nProvide biometrics (fingerprints + photo) — biometric submission is usually required."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_liquid_savings": 500000,
+        "min_annual_income": 600000,
+        "required_employment_status": [
+            "salaried",
+            "business",
+            "student",
+            "retired"
+        ]
+    }
+}

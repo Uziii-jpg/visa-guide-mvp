@@ -1,0 +1,56 @@
+{
+    "country_code": "DE",
+    "visa_type": "TOURIST",
+    "template_ref": "SCHENGEN_TOURIST",
+    "description": "Schengen Visitor Visa (Type C). Note: High demand in India; book VFS appointments 3-4 months in advance.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "90 EUR + VFS Service Charge",
+            "fee_inr_approx": 9000,
+            "processing_time_standard": "15 Calendar Days (Official). Realistically 3-4 Weeks due to backlog.",
+            "max_stay": "90 days in any 180-day period",
+            "passport_validity": "3 months beyond intended departure from Schengen area",
+            "photo_spec": "35mm x 45mm, Biometric, White background, Face covers 70-80%",
+            "min_funds_requirement": "Min. 45 EUR/day. Proof: Bank statements (3-6 months) + ITR."
+        },
+        "documents": {
+            "modify": [
+                {
+                    "id": "std_form",
+                    "description": "Must be filled online via the 'VIDEX' portal. Print the generated PDF and sign it."
+                },
+                {
+                    "id": "std_financials",
+                    "description": "Bank statements for the last 3 months. If sponsored, a formal 'Verpflichtungserklärung' (Obligation Letter) from the host in Germany is highly recommended."
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Complete VIDEX Form",
+                "description": "Fill the application form online at the VIDEX portal.",
+                "action_link": "https://videx.diplo.de/"
+            },
+            {
+                "step_order": 2,
+                "title": "Book Appointment",
+                "description": "Schedule a slot with VFS Global (Germany). Slots are released randomly; check frequently.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/deu/book-an-appointment"
+            },
+            {
+                "step_order": 3,
+                "title": "Submit Application",
+                "description": "Submit documents and biometrics at the VFS center."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 200000,
+        "required_education": "high_school",
+        "required_employment_status": [],
+        "max_age": 99
+    }
+}

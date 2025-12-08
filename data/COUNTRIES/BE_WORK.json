@@ -1,0 +1,105 @@
+{
+    "country_code": "BE",
+    "visa_type": "WORK_SINGLE_PERMIT",
+    "template_ref": "SCHENGEN_WORK",
+    "description": "Work + Residence Permit (Single Permit) for non-EU nationals wishing to work in Belgium long-term. Employer-initiated procedure, followed by Type D visa and municipality registration.",
+    "last_updated": "2025-12-01",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "€180 (Visa D) + regional work permit / admin fee (varies per region)",
+            "processing_time_standard": "3-4 months (Single Permit decision) + 2–4 weeks for Visa D processing",
+            "passport_validity": "Passport valid for at least 12 months recommended",
+            "max_stay": "Duration of employment contract (usually 1–3 years), renewable",
+            "permit_type": "Single Permit (work + residence combined)"
+        },
+        "documents": [
+            {
+                "id": "be_passport",
+                "title": "Valid Passport",
+                "description": "Passport with at least 12 months validity and blank pages. Color copy of bio-page and used pages if required.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "be_employment_contract",
+                "title": "Signed Employment Contract / Job Offer",
+                "description": "Job offer or contract from Belgian employer; must specify role, salary, duration.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "be_single_permit_application",
+                "title": "Single Permit Application (Employer submitted)",
+                "description": "Application submitted by employer via the authorized regional or online counter ('Working in Belgium'). You receive permit decision (Annex 46 / 47).",
+                "type": "document",
+                "is_premium": true,
+                "action_link": "https://www.international.socialsecurity.be/working_in_belgium/en/single-permit.html"
+            },
+            {
+                "id": "be_annex_46",
+                "title": "Decision Letter (Annex 46 / 47)",
+                "description": "Official decision granting the Single Permit. Necessary to apply for Visa D and travel to Belgium.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "be_medical_certificate",
+                "title": "Medical Certificate",
+                "description": "Standard medical certificate as required by Belgian law for work permit applications.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "be_pcc",
+                "title": "Police Clearance Certificate (PCC)",
+                "description": "A clean criminal record certificate / PCC, apostilled or legalized if required.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "be_insurance_proof",
+                "title": "Health Insurance or Social Security Registration Proof",
+                "description": "Proof that employer will register you under Belgian social security, or have relevant health cover.",
+                "type": "document",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Employer Submits Single Permit Application",
+                "description": "Belgian employer (or authorized Belgian agent) submits the Single Permit request via the official ‘Working in Belgium’ portal or regional labour authority. Includes contract, employee info, and fees.",
+                "action_link": "https://www.international.socialsecurity.be/working_in_belgium/en/single-permit.html"
+            },
+            {
+                "step_order": 2,
+                "title": "Regional + Federal Approval Process",
+                "description": "Region reviews work authorisation; federal Immigration Office reviews residence permit. Decision expected within ~3–4 months for admissible files.  :contentReference[oaicite:13]{index=13}"
+            },
+            {
+                "step_order": 3,
+                "title": "Receive Permit Decision (Annex 46 / 47)",
+                "description": "On approval, you get the Single Permit decision document (Annex 46 or 47), proof you’re authorised to stay & work in Belgium.",
+                "action_link": ""
+            },
+            {
+                "step_order": 4,
+                "title": "Apply for Visa D (Long-Stay) at Embassy / Consulate",
+                "description": "Submit Annex 46 + passport + visa fees at Belgian consulate/VFS in your home country to get Type D visa for travel.",
+                "action_link": "https://india.diplomatie.belgium.be/en/travel-belgium/visa-belgium-if-you-live-india"
+            },
+            {
+                "step_order": 5,
+                "title": "Travel to Belgium & Register at Local Municipality",
+                "description": "Arrive with Visa D + permit decision. Within 8 working days, register at your commune (town hall). Obtain temporary residence card (Annex 49), then final residence/work card.  :contentReference[oaicite:14]{index=14}"
+            }
+        ]
+    },
+    "eligibility": {
+        "required_employment": "Valid job offer from Belgian employer",
+        "required_residence": "None (handled via single permit)",
+        "min_age": 18,
+        "max_age": "no_limit",
+        "other_requirements": "Clean criminal record; valid passport; contract and employer sponsorship"
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "country_code": "MG",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "35 EUR (30 Days) / 40 EUR (60 Days)",
+            "fee_inr_approx": 3200,
+            "processing_time_standard": "3 Days (E-Visa) or On Arrival",
+            "max_stay": "30 or 60 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "mg_landing_auth",
+                    "title": "Landing Authorization",
+                    "description": "If applying online, you get a Landing Authorization to present at the airport.",
+                    "type": "digital",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "E-Visa Portal",
+                "description": "Visit evisamada.gov.mg."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply",
+                "description": "Fill details and submit."
+            },
+            {
+                "step_order": 3,
+                "title": "Travel",
+                "description": "Fly to Madagascar. (Payment is often done at the airport counter even for E-Visa)."
+            },
+            {
+                "step_order": 4,
+                "title": "Payment & Entry",
+                "description": "Pay fees at the airport and get visa stamp."
+            }
+        ]
+    },
+    "eligibility": null
+}

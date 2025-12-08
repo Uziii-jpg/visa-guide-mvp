@@ -1,0 +1,123 @@
+{
+    "country_code": "AR",
+    "visa_type": "TOURIST_SHORT_STAY",
+    "template_ref": "ARGENTINA_TOURIST",
+    "description": "Short-Stay Tourist Visa (up to 90 days) for Indian travellers visiting Argentina for tourism. Mandatory consular application; no visa-on-arrival for Indian nationals.",
+    "last_updated": "2024-11-30",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "N/A (Visa fee charged in USD)",
+            "fee_inr_approx": "₹12,000–₹14,000 approx (USD 150 consular fee + handling variations)",
+            "processing_time_standard": "3–6 weeks depending on consulate workload",
+            "max_stay": "90 Days",
+            "passport_validity": "Minimum 6 months beyond date of arrival + 2 blank pages",
+            "photo_spec": "4x4 cm, white background, recent (Embassy standard)",
+            "min_funds_requirement": "3–6 months bank statements showing healthy balance + return flight + hotel booking"
+        },
+        "documents": [
+            {
+                "id": "ar_passport",
+                "title": "Original Passport",
+                "description": "Passport valid for 6+ months from date of travel, with at least two blank pages. Include photocopies of front/back and previous visas.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ar_photos",
+                "title": "Two Recent Photos",
+                "description": "4x4 cm, white background, no shadows, taken within last 6 months.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "ar_form",
+                "title": "Tourist Visa Application Form",
+                "description": "Fill the Argentina Tourist Visa form (handwritten in blue ink or digitally filled). Print on 3 separate pages. Attach photograph on page 3. Sign in presence of consular officer.",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://cgmum.cancilleria.gob.ar/en/how-obtain-visa-visit-argentina"
+            },
+            {
+                "id": "ar_flight",
+                "title": "Round-Trip Flight Reservation",
+                "description": "Return or onward flight booking showing entry and exit to/from Argentina. Dummy booking accepted.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "flight_dummy_ticket"
+            },
+            {
+                "id": "ar_accommodation",
+                "title": "Hotel Booking or Invitation Letter",
+                "description": "Fully refundable hotel reservation OR invitation letter from host with address and ID copies.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ar_financials",
+                "title": "Bank Statements (Proof of Funds)",
+                "description": "3–6 months bank statements, salary slips, ITR-V; must show sufficient balance to cover the trip.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ar_employment",
+                "title": "Employment Proof / NOC",
+                "description": "If employed: NOC + leave approval + salary slips. If self-employed: GST/MSME. If student: Bonafide letter.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ar_cover_letter",
+                "title": "Cover Letter",
+                "description": "Personal cover letter explaining purpose, travel dates, itinerary, accommodation, and who funds the trip.",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Download & Fill Visa Application Form",
+                "description": "Download the tourist visa form from the Argentina Consulate website. Fill it neatly (BLUE ink or typed), print on 3 separate pages, attach photo on page 3.",
+                "action_link": "https://cgmum.cancilleria.gob.ar/en/how-obtain-visa-visit-argentina"
+            },
+            {
+                "step_order": 2,
+                "title": "Gather Required Documents",
+                "description": "Prepare all required documents: passport, photos, flight reservation, accommodation proof, financial statements, employment proof, and cover letter.",
+                "action_link": "https://cancilleria.gob.ar/en/services/visa/tourist-visa"
+            },
+            {
+                "step_order": 3,
+                "title": "Book Appointment at Argentine Consulate",
+                "description": "Schedule an appointment at the correct Consulate (Delhi or Mumbai depending on your state). Bring original documents + photocopies.",
+                "action_link": "https://cgmum.cancilleria.gob.ar/en/content/consular-assistance"
+            },
+            {
+                "step_order": 4,
+                "title": "Submit Documents In Person",
+                "description": "Visit the consulate on your appointment date. Submit all documents, pay visa fee (USD 150), and sign the application in front of the consular officer.",
+                "action_link": ""
+            },
+            {
+                "step_order": 5,
+                "title": "Attend Interview",
+                "description": "You may be interviewed about your itinerary, purpose, employment, and financials. Answer truthfully and confidently.",
+                "action_link": ""
+            },
+            {
+                "step_order": 6,
+                "title": "Wait for Visa Processing",
+                "description": "Processing time is typically 3–6 weeks. Once approved, your passport will be returned with the visa sticker.",
+                "action_link": ""
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 100000,
+        "required_education": "none",
+        "required_employment_status": "any",
+        "max_age": "no_limit"
+    }
+}

@@ -1,0 +1,134 @@
+{
+    "country_code": "IE",
+    "visa_type": "STUDENT",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "60 EUR (Single Entry) / 100 EUR (Multi Entry)",
+            "processing_time_standard": "4-8 Weeks",
+            "max_stay": "Duration of Course",
+            "passport_validity": "12 months beyond intended stay",
+            "min_funds_requirement": "7,000 EUR (~6.3 Lakh INR / ~7,600 USD) + Tuition for first year"
+        },
+        "documents": [
+            {
+                "id": "ie_passport",
+                "title": "Valid Passport",
+                "description": "Must be valid for 12 months.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "ie_application_summary",
+                "title": "Application Summary Sheet",
+                "description": "Signed summary sheet from the AVATS online application.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ie_acceptance_letter",
+                "title": "Letter of Acceptance",
+                "description": "From an Irish university confirming your course.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ie_fees_receipt",
+                "title": "Fee Payment Receipt",
+                "description": "Proof that you have paid the tuition fees (usually at least 6,000 EUR).",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ie_insurance",
+                "title": "Private Medical Insurance",
+                "description": "Proof of private medical insurance coverage.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ie_financials",
+                "title": "Evidence of Finances",
+                "description": "Bank statements showing access to 7,000 EUR + tuition fees.",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Apply to University",
+                "description": "Apply to an Irish university and receive the acceptance letter."
+            },
+            {
+                "step_order": 2,
+                "title": "Pay Tuition Fees",
+                "description": "Pay the required tuition fee (usually min. 6,000 EUR) to the college."
+            },
+            {
+                "step_order": 3,
+                "title": "Apply Online (AVATS)",
+                "description": "Complete the visa application online."
+            },
+            {
+                "step_order": 4,
+                "title": "Submit Documents",
+                "description": "Submit passport and all original documents at VFS Global."
+            }
+        ]
+    },
+    "university_guide": {
+        "top_universities": [
+            "Trinity College Dublin (TCD)",
+            "University College Dublin (UCD)",
+            "University of Galway",
+            "University College Cork (UCC)",
+            "Dublin City University (DCU)",
+            "University of Limerick (UL)",
+            "Maynooth University",
+            "Technological University Dublin (TU Dublin)"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "September Intake",
+                "deadline": "June - July"
+            },
+            {
+                "season": "January Intake",
+                "deadline": "October - November (Limited)"
+            }
+        ],
+        "required_exams": [
+            "IELTS / TOEFL / PTE (Mandatory for English proficiency)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Choose Course",
+                "description": "Select a course from the ILEP (Interim List of Eligible Programmes)."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply Direct",
+                "description": "Apply via the college website."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay the tuition fee to secure your place and for visa purposes."
+            },
+            {
+                "step_order": 4,
+                "title": "Get Insurance",
+                "description": "Purchase private medical insurance."
+            }
+        ]
+    },
+    "eligibility": null
+}

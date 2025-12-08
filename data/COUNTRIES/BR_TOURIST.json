@@ -1,0 +1,92 @@
+{
+    "country_code": "BR",
+    "visa_type": "TOURIST",
+    "template_ref": "SOUTH_AMERICA_CONSULATE",
+    "description": "Visitor Visa (VIVIS) for Tourism / Family Visit to Brazil. Using official e-Consular + embassy submission workflow for Indian applicants.",
+    "last_updated": "2025-12-01",
+    "overrides": {
+        "meta": {
+            "fee_usd_approx": "80 USD (~₹7,500-8,500) — as per current consular fee for Indian applicants",
+            "fee_inr_approx": 8000,
+            "processing_time_standard": "10-15 working days (after in-person submission)  :contentReference[oaicite:2]{index=2}",
+            "max_stay": "Up to 90 days (single or multiple entries depending on grant)  :contentReference[oaicite:3]{index=3}",
+            "passport_validity": "At least 6 months beyond date of arrival  :contentReference[oaicite:4]{index=4}",
+            "photo_spec": "Standard passport-size (as per Brazil Embassy’s guidelines), recent, white background  :contentReference[oaicite:5]{index=5}",
+            "min_funds_requirement": "Proof of sufficient funds — bank statements / income proof (no publicly published fixed amount). Embassy guidelines emphasise proof of economic means / return ticket + accommodation.  :contentReference[oaicite:6]{index=6}"
+        },
+        "documents": [
+            {
+                "id": "br_passport",
+                "title": "Valid Passport",
+                "description": "Original passport valid for at least 6 months from date of entry, with 2 blank pages. Include copies of first page + any used pages with visas/stamps if required.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "br_rer_receipt",
+                "title": "RER Receipt (Visa Application Form)",
+                "description": "Filled-in online visa application (SCEDV), printed and signed. This is mandatory to present at embassy/consulate.  :contentReference[oaicite:7]{index=7}",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://formulario-mre.serpro.gov.br/sci/pages/web/ui/#/cidadao-nacionalidade"
+            },
+            {
+                "id": "br_financials",
+                "title": "Proof of Financial Means",
+                "description": "Recent bank statements (3-6 months), payslips or ITR for salaried/self-employed. Should demonstrate enough funds for stay + return ticket + expenses.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "br_travel_itinerary",
+                "title": "Travel Itinerary & Accommodation Proof",
+                "description": "Confirmed flight reservation (return or onward) + hotel booking or proof of stay / address in Brazil.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "br_cover_letter",
+                "title": "Cover / Motivation Letter",
+                "description": "Brief letter explaining purpose of visit, travel plan, intended duration, and commitment to exit Brazil before visa expiry.",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill Online Visa Application (SCEDV)",
+                "description": "Complete the online visa form on Brazil’s official portal. Print the form and sign it before submission.  :contentReference[oaicite:8]{index=8}",
+                "action_link": "https://formulario-mre.serpro.gov.br/sci/pages/web/ui/#/cidadao-nacionalidade"
+            },
+            {
+                "step_order": 2,
+                "title": "Book Appointment via e-Consular",
+                "description": "Create account on the official e-Consular booking system for the Brazil Embassy/Consulate in India (New Delhi / Mumbai). Submit scanned documents and required data digitally.  :contentReference[oaicite:9]{index=9}",
+                "action_link": "https://ec-novadelhi.itamaraty.gov.br/"
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Visa Fee & Collect Payment Receipt",
+                "description": "After validation, pay the visa fee (as instructed) — typically via bank transfer / deposit to consulate-account (not cash). Keep payment receipt.  :contentReference[oaicite:10]{index=10}"
+            },
+            {
+                "step_order": 4,
+                "title": "Visit Embassy/Consulate & Submit Original Documents",
+                "description": "Carry passport, printed & signed RER, payment receipt, financial proof, travel plan & accommodation details, photos. Submit all originals + documents as per check-list.  :contentReference[oaicite:11]{index=11}"
+            },
+            {
+                "step_order": 5,
+                "title": "Processing & Collect Passport/Visa",
+                "description": "Wait 10-15 working days for processing. Once approved, collect passport with visa stamp (valid for up to 90 days stay).  :contentReference[oaicite:12]{index=12}"
+            }
+        ]
+    },
+    "eligibility": {
+        "valid_passport": true,
+        "sufficient_funds": true,
+        "return_ticket_or_funds": true,
+        "no_work_permit": true,
+        "max_stay_limit": "90 days per entry"
+    }
+}

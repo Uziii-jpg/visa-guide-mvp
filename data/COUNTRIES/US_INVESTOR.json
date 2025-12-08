@@ -1,0 +1,85 @@
+{
+    "country_code": "US",
+    "visa_type": "INVESTOR",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "11,160 USD (I-526) + 3,450 USD (approx. other fees)",
+            "processing_time_standard": "12 - 36 Months (I-526 Petition)",
+            "max_stay": "Permanent Residence (Green Card) - Conditional for first 2 years",
+            "passport_validity": "6 months beyond intended entry",
+            "min_funds_requirement": "800,000 USD (TEA/Rural) or 1,050,000 USD (Standard)"
+        },
+        "documents": [
+            {
+                "id": "us_passport",
+                "title": "Original Passport",
+                "description": "Valid for at least 6 months beyond intended entry.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "us_source_of_funds",
+                "title": "Source of Funds Evidence",
+                "description": "Comprehensive documentation proving the legal origin of the investment capital (Tax returns, sale deeds, gift letters, business records).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "us_business_plan",
+                "title": "Comprehensive Business Plan",
+                "description": "Matter of Ho compliant business plan showing how the investment will create 10 full-time jobs.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "us_investment_proof",
+                "title": "Proof of Investment",
+                "description": "Wire transfer receipts, escrow agreements, and bank confirmation letters showing capital is 'at risk'.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "us_regional_center",
+                "title": "Regional Center Agreement (If applicable)",
+                "description": "Subscription agreement and offering documents if investing through a Regional Center.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "us_civil_docs",
+                "title": "Civil Documents",
+                "description": "Birth certificates, marriage certificates, and police clearance certificates for all applicants.",
+                "type": "document",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Choose Project & Invest",
+                "description": "Select a qualifying project (Direct or Regional Center) and transfer the capital ($800k or $1.05M)."
+            },
+            {
+                "step_order": 2,
+                "title": "File Form I-526",
+                "description": "Attorney files the Immigrant Petition by Alien Investor with USCIS. Wait for approval (12-36 months)."
+            },
+            {
+                "step_order": 3,
+                "title": "NVC Processing",
+                "description": "Once I-526 is approved, file DS-260 with the National Visa Center and pay fees."
+            },
+            {
+                "step_order": 4,
+                "title": "Consular Interview",
+                "description": "Attend the immigrant visa interview at the US Consulate (usually Mumbai for India)."
+            },
+            {
+                "step_order": 5,
+                "title": "Enter US & Receive Green Card",
+                "description": "Enter the US to activate your Conditional Permanent Resident status (valid for 2 years)."
+            }
+        ]
+    },
+    "eligibility": null
+}

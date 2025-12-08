@@ -1,0 +1,91 @@
+{
+    "country_code": "BW",
+    "visa_type": "TOURIST_EVISA",
+    "template_ref": "AFRICA_EVISA",
+    "description": "Tourist E-Visa (Single/Multiple). Optimized for the official 'evisa.gov.bw' portal (Direct Government Track).",
+    "last_updated": "2024-11-30",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "300 BWP (~25 USD) for Single Entry | 500 BWP (~42 USD) for Multiple Entry",
+            "fee_inr_approx": 2100,
+            "processing_time_standard": "7-14 Working Days",
+            "max_stay": "30 Days (extendable to 90 days total in a year)",
+            "passport_validity": "6 months from date of arrival",
+            "photo_spec": "30x40mm or 35x45mm, White background, Scanned JPEG < 2MB",
+            "min_funds_requirement": "**Recommended Benchmark:** Approx. **100 USD per day** of stay to cover safari/lodging costs. Proof via 3 months' bank statements."
+        },
+        "documents": [
+            {
+                "id": "bw_passport",
+                "title": "Passport Bio Page",
+                "description": "Clear color scan of valid passport (6 months validity).",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "bw_photo",
+                "title": "Digital Photo",
+                "description": "Recent photo (30x40mm preferred), white background.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "bw_itinerary",
+                "title": "Trip Schedule / Itinerary",
+                "description": "Day-wise travel plan including Safari bookings or Flight details. *Critical for approval.*",
+                "type": "digital",
+                "is_premium": true,
+                "affiliate_key": "safari_booking_botswana"
+            },
+            {
+                "id": "bw_accommodation",
+                "title": "Proof of Accommodation",
+                "description": "Hotel/Lodge booking confirmation or Letter from Host (with their Omang ID/Residence Permit copy).",
+                "type": "digital",
+                "is_premium": true,
+                "affiliate_key": "hotel_booking_global"
+            },
+            {
+                "id": "bw_financials",
+                "title": "Proof of Funds",
+                "description": "Bank statements for the last 3 months showing sufficient balance for the trip.",
+                "type": "digital",
+                "is_premium": true
+            },
+            {
+                "id": "bw_yellow_fever",
+                "title": "Yellow Fever Vaccination",
+                "description": "**Mandatory** if traveling from/through a Yellow Fever endemic country (e.g., Kenya, Ethiopia). *Note: India requires this for re-entry if you visit Africa.*",
+                "type": "physical",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Register on Portal",
+                "description": "Create an account on the official Government of Botswana E-Visa portal.",
+                "action_link": "https://evisa.gov.bw/"
+            },
+            {
+                "step_order": 2,
+                "title": "Submit Application",
+                "description": "Select 'Tourist Visa', upload documents (Passport, Photo, Itinerary, Hotel). \n* **Tip:** Ensure files are under 2MB.",
+                "action_link": "https://evisa.gov.bw/express"
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay **300 BWP** (Single) or **500 BWP** (Multiple) online using a Credit/Debit card.",
+                "action_link": "https://evisa.gov.bw/payments"
+            },
+            {
+                "step_order": 4,
+                "title": "Download E-Visa",
+                "description": "Wait 7-14 days. Receive the 'Visa Approval Letter' via email. Print 2 copies to show at the border.",
+                "action_link": "https://evisa.gov.bw/track"
+            }
+        ]
+    },
+    "eligibility": null
+}

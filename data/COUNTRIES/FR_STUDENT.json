@@ -1,0 +1,136 @@
+{
+    "country_code": "FR",
+    "visa_type": "STUDENT",
+    "template_ref": "SCHENGEN_STUDENT",
+    "description": "Long Stay Visa (VLS-TS). Note: Campus France fee increased to 18,500 INR.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "99 EUR (Long Stay) / 50 EUR (EEF Rate) + VFS Fees",
+            "fee_inr_approx": 9200,
+            "processing_time_standard": "2-3 Weeks (after Campus France interview)",
+            "max_stay": "Duration of study + 1 Year (APS/Job Search)",
+            "passport_validity": "Valid for duration of stay",
+            "photo_spec": "35mm x 45mm, Biometric, White background",
+            "min_funds_requirement": "**615 EUR/month** (~7,380 EUR/year). Proof: Bank statements or Scholarship letter."
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "fr_campus_france",
+                    "title": "Campus France NOC",
+                    "description": "Confirmation email/certificate from Campus France after completing the 'Etudes en France' procedure.",
+                    "type": "document",
+                    "is_premium": false
+                },
+                {
+                    "id": "fr_accommodation",
+                    "title": "Proof of Accommodation",
+                    "description": "Lease agreement, CROUS booking, or 'Attestation d’hébergement' for the first 3 months.",
+                    "type": "document",
+                    "is_premium": true
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Campus France Registration",
+                "description": "Register on 'Etudes en France' platform. Upload documents and pay the processing fee.",
+                "action_link": "https://pastel.diplomatie.gouv.fr/etudesenfrance/"
+            },
+            {
+                "step_order": 2,
+                "title": "Pay Campus France Fee",
+                "description": "Pay **18,500 INR** online to Campus France India.",
+                "action_link": "https://www.inde.campusfrance.org/campus-france-procedure-fee-payment"
+            },
+            {
+                "step_order": 3,
+                "title": "Academic Interview",
+                "description": "Attend the interview with Campus France advisor."
+            },
+            {
+                "step_order": 4,
+                "title": "France-Visas Application",
+                "description": "After Campus France approval, fill the visa application on France-Visas website.",
+                "action_link": "https://france-visas.gouv.fr/"
+            },
+            {
+                "step_order": 5,
+                "title": "VFS Appointment",
+                "description": "Book and attend the VFS appointment for biometrics and document submission."
+            }
+        ]
+    },
+    "university_guide": {
+        "top_universities": [
+            "Université PSL (Paris Sciences & Lettres)",
+            "Institut Polytechnique de Paris",
+            "Sorbonne University",
+            "Paris-Saclay University",
+            "École Normale Supérieure de Lyon",
+            "Sciences Po",
+            "HEC Paris (Business)",
+            "INSEAD (Business)",
+            "Grenoble Alpes University",
+            "University of Strasbourg"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "Fall Intake (September)",
+                "deadline": "December - March (via Campus France)"
+            },
+            {
+                "season": "Spring Intake (January/February)",
+                "deadline": "September - October (Limited programs)"
+            }
+        ],
+        "required_exams": [
+            "DELF / DALF (for French-taught programs)",
+            "IELTS / TOEFL (for English-taught programs - usually optional but recommended)",
+            "GMAT / GRE (for top Business Schools)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Create Etudes en France Account",
+                "description": "Register on the official portal."
+            },
+            {
+                "step_order": 2,
+                "title": "Submit Application",
+                "description": "Choose programs and upload academic documents."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Campus France Fee",
+                "description": "Pay the administrative fee (18,500 INR)."
+            },
+            {
+                "step_order": 4,
+                "title": "Campus France Interview",
+                "description": "Attend the academic interview."
+            },
+            {
+                "step_order": 5,
+                "title": "Receive Acceptance",
+                "description": "Get the admission letter and NOC to proceed with visa."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 1000000,
+        "required_education": "high_school",
+        "required_employment_status": [],
+        "max_age": 40
+    }
+}

@@ -1,0 +1,121 @@
+{
+    "country_code": "BE",
+    "visa_type": "TOURIST",
+    "template_ref": "SCHENGEN_TOURIST",
+    "description": "Schengen Visa (Type C) for tourism in Belgium. Allows stay up to 90 days in a 180-day period.",
+    "last_updated": "2025-12-02",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "90 EUR (Adults), 45 EUR (Children 6-12)",
+            "fee_inr_approx": 9270,
+            "processing_time_standard": "15 calendar days (apply 3-4 weeks in advance)",
+            "max_stay": "90 days within any 180-day period",
+            "passport_validity": "At least 3 months beyond departure from Schengen area",
+            "photo_spec": "35x45mm, white background, 80% face coverage",
+            "min_funds_requirement": "Approx. 95 EUR/day (hotel) or 45 EUR/day (cheaper accommodation)"
+        },
+        "documents": [
+            {
+                "id": "be_passport",
+                "title": "Original Passport",
+                "description": "Valid for at least 3 months after intended departure. Must have 2 blank pages. Issued within last 10 years.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "be_application_form",
+                "title": "Visa Application Form",
+                "description": "Completed and signed application form from Visa On Web (VOW).",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://visaonweb.diplomatie.be/"
+            },
+            {
+                "id": "be_photos",
+                "title": "Two Recent Photographs",
+                "description": "35x45mm, white background, taken within last 6 months.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "be_insurance",
+                "title": "Travel Medical Insurance",
+                "description": "Minimum coverage of 30,000 EUR for medical costs and repatriation. Valid for entire Schengen area.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "insurance_schengen"
+            },
+            {
+                "id": "be_itinerary",
+                "title": "Travel Itinerary",
+                "description": "Round trip flight reservation and detailed travel plan.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "be_accommodation",
+                "title": "Proof of Accommodation",
+                "description": "Hotel bookings for entire stay or invitation letter (Bijlage 3bis / Annexe 3bis) if staying with friends/family.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "be_financials",
+                "title": "Proof of Financial Means",
+                "description": "Bank statements (last 3 months), ITR (last 3 years), payslips (last 3 months).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "be_employment",
+                "title": "Proof of Employment/Student Status",
+                "description": "Leave letter from employer/school, student ID, or business registration if self-employed.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "be_cover_letter",
+                "title": "Cover Letter",
+                "description": "Explaining purpose of visit, dates, and itinerary.",
+                "type": "document",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Complete Online Application",
+                "description": "Fill out the visa application form on the 'Visa On Web' portal.",
+                "action_link": "https://visaonweb.diplomatie.be/"
+            },
+            {
+                "step_order": 2,
+                "title": "Book VFS Appointment",
+                "description": "Schedule an appointment at a VFS Global center in India.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/bel/book-an-appointment"
+            },
+            {
+                "step_order": 3,
+                "title": "Prepare Documents",
+                "description": "Gather all required documents, including insurance and flight reservations."
+            },
+            {
+                "step_order": 4,
+                "title": "Submit Application",
+                "description": "Visit VFS center to submit documents and provide biometrics (fingerprints & photo)."
+            },
+            {
+                "step_order": 5,
+                "title": "Track & Collect",
+                "description": "Track status online. Processing takes ~15 days. Collect passport from VFS or via courier."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 3000,
+        "required_education": "none",
+        "required_employment_status": [],
+        "max_age": 0
+    }
+}

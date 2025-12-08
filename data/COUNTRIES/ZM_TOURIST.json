@@ -1,0 +1,37 @@
+{
+    "country_code": "ZM",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "25 USD (Day Tripper) / 50 USD (Single Entry)",
+            "fee_inr_approx": 4200,
+            "processing_time_standard": "3-5 Working Days",
+            "max_stay": "90 Days",
+            "passport_validity": "6 months"
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "E-Visa Portal",
+                "description": "Visit eservices.zambiaimmigration.gov.zm."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply",
+                "description": "Complete application and upload docs."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay online or at Port of Entry (if approved)."
+            },
+            {
+                "step_order": 4,
+                "title": "Approval Letter",
+                "description": "Receive Approval Letter. Visa stamped on arrival."
+            }
+        ]
+    },
+    "eligibility": null
+}

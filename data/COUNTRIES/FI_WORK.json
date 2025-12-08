@@ -1,0 +1,50 @@
+{
+    "country_code": "FI",
+    "visa_type": "WORK",
+    "template_ref": "SCHENGEN_WORK",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "490 EUR (Online Application)",
+            "processing_time_standard": "2-4 Months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "fi_tem054",
+                    "title": "Terms of Employment (TEM054)",
+                    "description": "Form filled by the employer detailing the terms of work.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Secure Job Offer",
+                "description": "Get a signed contract and the TEM054 form from your employer."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply on Enter Finland",
+                "description": "Submit the application for 'Residence Permit for an Employed Person' online."
+            },
+            {
+                "step_order": 3,
+                "title": "Employer Verification",
+                "description": "Your employer logs in to Enter Finland to add their details to your application."
+            },
+            {
+                "step_order": 4,
+                "title": "Book Appointment",
+                "description": "Visit VFS Global for identity verification and biometrics."
+            },
+            {
+                "step_order": 5,
+                "title": "TE Office Decision",
+                "description": "The Employment Office (TE Office) makes a partial decision, then Migri makes the final decision."
+            }
+        ]
+    },
+    "eligibility": null
+}

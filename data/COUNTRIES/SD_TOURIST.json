@@ -1,0 +1,48 @@
+{
+    "country_code": "SD",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_CONSULATE",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Approx. 100 USD",
+            "fee_inr_approx": 8500,
+            "processing_time_standard": "3-7 Working Days",
+            "max_stay": "30 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "sd_entry_permit",
+                    "title": "Entry Permit",
+                    "description": "Entry permit obtained by sponsor in Sudan from the Ministry of Interior.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Sponsor Applies",
+                "description": "Sponsor in Sudan gets Entry Permit approved."
+            },
+            {
+                "step_order": 2,
+                "title": "Submit",
+                "description": "Submit passport and permit copy to Embassy in Delhi."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay visa fee."
+            },
+            {
+                "step_order": 4,
+                "title": "Collect",
+                "description": "Collect passport."
+            }
+        ]
+    },
+    "eligibility": null
+}

@@ -1,0 +1,76 @@
+{
+    "template_id": "AFRICA_EVISA",
+    "description": "Electronic Visa / ETA for African countries. Optimized for Indian applicants.",
+    "last_updated": "2024-11-30",
+    "base_requirements": {
+        "meta": {
+            "fee_euro_approx": "30-100 USD",
+            "fee_inr_approx": 4500,
+            "processing_time_standard": "3-7 Working Days",
+            "max_stay": "30-90 Days",
+            "passport_validity": "6 months from date of arrival",
+            "photo_spec": "Digital, White background, JPEG format"
+        },
+        "documents": [
+            {
+                "id": "afr_passport",
+                "title": "Passport Bio Page",
+                "description": "Clear color scan of the passport information page.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "afr_photo",
+                "title": "Digital Photo",
+                "description": "Recent photograph, white background.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "afr_yellow_fever",
+                "title": "Yellow Fever Vaccination",
+                "description": "Mandatory if traveling from/transit through a Yellow Fever endemic zone. Highly recommended to carry original card.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "afr_flight",
+                "title": "Return Flight Ticket",
+                "description": "Confirmed return or onward journey ticket.",
+                "type": "digital",
+                "is_premium": true,
+                "affiliate_key": "flight_dummy_ticket"
+            },
+            {
+                "id": "afr_hotel",
+                "title": "Hotel Booking",
+                "description": "Proof of accommodation for the entire stay.",
+                "type": "digital",
+                "is_premium": true,
+                "affiliate_key": "hotel_booking_global"
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Apply Online",
+                "description": "Visit the official government E-Visa/ETA portal."
+            },
+            {
+                "step_order": 2,
+                "title": "Upload Docs",
+                "description": "Upload passport, photo, and flight details."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay the visa fee online (usually in USD)."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive Visa",
+                "description": "Download the E-Visa/ETA PDF. Print it and carry it with your Yellow Fever card."
+            }
+        ]
+    }
+}

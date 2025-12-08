@@ -1,0 +1,32 @@
+{
+    "country_code": "ID",
+    "visa_type": "TOURIST",
+    "template_ref": "E_VISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "500,000 IDR (approx. 2700 INR)",
+            "fee_inr_approx": 2700,
+            "processing_time_standard": "Instant (E-VOA) or On Arrival",
+            "max_stay": "30 Days (Extendable once)",
+            "passport_validity": "6 months"
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Apply E-VOA (Optional)",
+                "description": "Apply for Electronic Visa on Arrival (molina.imigrasi.go.id) to skip queues."
+            },
+            {
+                "step_order": 2,
+                "title": "Or Pay on Arrival",
+                "description": "Pay 500,000 IDR at the Visa on Arrival counter at the airport."
+            },
+            {
+                "step_order": 3,
+                "title": "Immigration",
+                "description": "Show payment receipt/E-Visa and passport."
+            }
+        ]
+    },
+    "eligibility": null
+}

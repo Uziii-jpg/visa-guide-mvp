@@ -1,0 +1,46 @@
+{
+    "country_code": "MY",
+    "visa_type": "TOURIST",
+    "template_ref": "E_VISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Free (Visa Waiver until Dec 31, 2024) - MDAC Registration Required",
+            "fee_inr_approx": 0,
+            "processing_time_standard": "Instant (MDAC Registration)",
+            "max_stay": "30 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "my_mdac",
+                    "title": "MDAC Confirmation",
+                    "description": "Malaysia Digital Arrival Card (MDAC) must be filled 3 days before arrival.",
+                    "type": "digital",
+                    "is_premium": false
+                }
+            ],
+            "remove": [
+                "evisa_photo"
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill MDAC",
+                "description": "Complete the Malaysia Digital Arrival Card online 3 days prior to travel."
+            },
+            {
+                "step_order": 2,
+                "title": "Download PIN",
+                "description": "Save the MDAC PIN/Confirmation."
+            },
+            {
+                "step_order": 3,
+                "title": "Travel",
+                "description": "Fly to Malaysia. Show MDAC, Passport, and Return Ticket at immigration."
+            }
+        ]
+    },
+    "eligibility": null
+}

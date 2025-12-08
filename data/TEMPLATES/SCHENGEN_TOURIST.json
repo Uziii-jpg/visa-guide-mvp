@@ -1,0 +1,115 @@
+{
+    "template_id": "SCHENGEN_TOURIST",
+    "description": "Standard Short-Stay Visa (Type C) for Tourism across the 29 Schengen member states. Optimized for Indian applicants.",
+    "last_updated": "2024-11-30",
+    "base_requirements": {
+        "meta": {
+            "fee_euro_adult": 90,
+            "fee_euro_child_6_11": 45,
+            "fee_euro_child_0_6": 0,
+            "fee_inr_approx": 8200,
+            "processing_time_standard": "15 Calendar Days",
+            "max_stay": "90 days in any 180-day period",
+            "passport_validity": "3 months beyond intended departure from Schengen Area",
+            "photo_spec": "ICAO Standard (35x45mm, white background, 80% face coverage)"
+        },
+        "documents": [
+            {
+                "id": "std_passport",
+                "title": "Original Passport",
+                "description": "Must be valid for at least 3 months after exit. Issued within last 10 years. Two blank pages. Include copies of first and last page.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "std_form",
+                "title": "Schengen Application Form",
+                "description": "Completed and signed Visa Application Form (Harmonized format).",
+                "type": "document",
+                "is_premium": false,
+                "note": "Some countries use digital portals (VIDEX, France-Visas)."
+            },
+            {
+                "id": "std_photos",
+                "title": "Two Passport Photos",
+                "description": "Recent (within 6 months), 35x45mm, matte finish, white background.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "std_insurance",
+                "title": "Travel Medical Insurance",
+                "description": "Mandatory policy covering €30,000 min. for medical/repatriation. Must be valid in all Schengen states.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "insurance_schengen_global"
+            },
+            {
+                "id": "std_flight",
+                "title": "Round Trip Flight Itinerary",
+                "description": "Confirmed reservation showing entry and exit from the Schengen zone. Do not buy tickets before approval.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "flight_dummy_ticket"
+            },
+            {
+                "id": "std_accommodation",
+                "title": "Proof of Accommodation",
+                "description": "Hotel vouchers or invitation letter from host covering the entire duration of stay.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "hotel_booking_global"
+            },
+            {
+                "id": "std_financials",
+                "title": "Proof of Sufficient Funds",
+                "description": "Bank statements for the last 3 months (stamped/signed), ITR-V (Last 3 years), and Salary Slips (3 months).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "std_employment",
+                "title": "Employment Proof / NOC",
+                "description": "Leave sanction letter (NOC) from employer, or business registration (GST/MSME) if self-employed.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "std_aadhaar",
+                "title": "National ID (Aadhaar)",
+                "description": "Copy of Aadhaar Card (Front and Back). Often requested at VFS.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "std_cover_letter",
+                "title": "Cover Letter",
+                "description": "Personal letter detailing the itinerary, purpose of visit, and intent to return.",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Determine Jurisdiction",
+                "description": "Identify the embassy of your main destination (longest stay or first entry)."
+            },
+            {
+                "step_order": 2,
+                "title": "Fill Application",
+                "description": "Complete the country-specific application form (Online or PDF)."
+            },
+            {
+                "step_order": 3,
+                "title": "Book Appointment",
+                "description": "Schedule a biometrics slot with the official service provider (VFS, TLS, or BLS)."
+            },
+            {
+                "step_order": 4,
+                "title": "Submit & Biometrics",
+                "description": "Attend the center in person to submit documents and provide fingerprints."
+            }
+        ]
+    }
+}

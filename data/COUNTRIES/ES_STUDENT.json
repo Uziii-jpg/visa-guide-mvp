@@ -1,0 +1,185 @@
+{
+    "country_code": "ES",
+    "visa_type": "STUDENT",
+    "template_ref": "SCHENGEN_STUDENT",
+    "description": "Long-Term Student Visa (Type D) for studies exceeding 90 days in Spain.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "60 EUR (National Visa) + Service Fees",
+            "fee_inr_approx": 8920,
+            "processing_time_standard": "1-2 Months (Apply at least 2-3 months in advance)",
+            "max_stay": "Duration of study program (TIE required for >6 months)",
+            "passport_validity": "At least 1 year beyond intended stay",
+            "photo_spec": "35x45mm, white background, face forward, no glasses",
+            "min_funds_requirement": "**100% IPREM** (600 EUR/month) = 7,200 EUR/year. Add 450 EUR/month for first dependent."
+        },
+        "documents": [
+            {
+                "id": "es_application_form",
+                "title": "National Visa Application Form",
+                "description": "Two completed and signed application forms. Blue ink signature.",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://www.exteriores.gob.es/DocumentosAuxiliares/ServiciosConsulares/VisadoNacional.pdf"
+            },
+            {
+                "id": "es_passport",
+                "title": "Original Passport",
+                "description": "Valid for at least 1 year. Minimum 2 blank pages. Issued within last 10 years.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "es_photos",
+                "title": "Two Recent Photographs",
+                "description": "35x45mm, white background, glued to the application forms.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "es_admission_letter",
+                "title": "Admission Letter",
+                "description": "Original acceptance letter from a Spanish university/institution. Must state program dates and fees.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "es_financials",
+                "title": "Proof of Financial Means",
+                "description": "Bank statements (last 6 months), ITR (last 3 years). Min 7,200 EUR/year (100% IPREM).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "es_insurance",
+                "title": "Health Insurance",
+                "description": "Public or private health insurance from an entity authorized to operate in Spain. Full coverage, no copay.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "insurance_spain"
+            },
+            {
+                "id": "es_medical_cert",
+                "title": "Medical Certificate",
+                "description": "Issued by a doctor (M.B.B.S or higher), stating freedom from diseases under IHR 2005. Apostilled & Translated.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "es_pcc",
+                "title": "Police Clearance Certificate (PCC)",
+                "description": "Issued by Passport Office (PSK). Apostilled & Translated into Spanish. Valid for 6 months.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "es_homologacion",
+                "title": "Homologación Proof",
+                "description": "Proof of application for recognition of previous studies (if required by university).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "es_accommodation",
+                "title": "Proof of Accommodation",
+                "description": "Rental agreement, dorm booking, or letter of invitation for the duration of studies.",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "University Admission",
+                "description": "Apply and receive the official Admission Letter from a Spanish institution."
+            },
+            {
+                "step_order": 2,
+                "title": "Prepare Documents",
+                "description": "Get Medical Cert and PCC. Apostille them and get Sworn Translations."
+            },
+            {
+                "step_order": 3,
+                "title": "Book BLS Appointment",
+                "description": "Schedule a National Visa appointment at BLS International (Delhi/Mumbai).",
+                "action_link": "https://india.blsspainvisa.com/"
+            },
+            {
+                "step_order": 4,
+                "title": "Submit Application",
+                "description": "Submit application in person with all original documents and copies."
+            },
+            {
+                "step_order": 5,
+                "title": "Collect Visa & Apply for TIE",
+                "description": "Collect visa. After arriving in Spain, apply for TIE (Foreigner Identity Card) within 1 month."
+            }
+        ]
+    },
+    "university_guide": {
+        "top_universities": [
+            "University of Barcelona (UB)",
+            "Autonomous University of Barcelona (UAB)",
+            "Complutense University of Madrid",
+            "University of Valencia",
+            "Autonomous University of Madrid",
+            "University of Granada",
+            "Pompeu Fabra University",
+            "University of Seville",
+            "University of Salamanca",
+            "Polytechnic University of Catalonia"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "Fall Intake (September)",
+                "deadline": "May - July"
+            },
+            {
+                "season": "Spring Intake (January/February)",
+                "deadline": "November - December"
+            }
+        ],
+        "required_exams": [
+            "Selectividad / EBAU (Entrance exam for undergrads)",
+            "Spanish Language Test (DELE/SIELE) - B2 level usually required",
+            "IELTS / TOEFL (for English programs)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Check UNED Requirements",
+                "description": "Determine if you need UNED accreditation for your high school diploma."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply to University",
+                "description": "Submit application and pay fees."
+            },
+            {
+                "step_order": 3,
+                "title": "Homologación",
+                "description": "Start the process of degree recognition (can take time)."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive Acceptance",
+                "description": "Get the official admission letter."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 750000,
+        "required_education": "high_school",
+        "required_employment_status": [],
+        "max_age": 40
+    }
+}

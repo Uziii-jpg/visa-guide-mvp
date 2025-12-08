@@ -1,0 +1,48 @@
+{
+    "country_code": "PE",
+    "visa_type": "TOURIST",
+    "template_ref": "SOUTH_AMERICA_CONSULATE",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Free (with US/Schengen/UK/Aus/Can Visa) / 2250 INR (Consulate)",
+            "fee_inr_approx": 2250,
+            "processing_time_standard": "Instant (Exemption) / 5-10 Days (Consulate)",
+            "max_stay": "180 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "pe_exemption",
+                    "title": "Visa Exemption",
+                    "description": "Exempt if holding valid visa (min 6 months) or residence from US, Canada, UK, Australia, or Schengen.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Check Exemption",
+                "description": "If you have a valid US/UK/Schengen/Aus/Can visa, you are VISA EXEMPT."
+            },
+            {
+                "step_order": 2,
+                "title": "Consulate Visa (If needed)",
+                "description": "Download DGC 005 form and fill it."
+            },
+            {
+                "step_order": 3,
+                "title": "Submit",
+                "description": "Submit in person at the Embassy of Peru in New Delhi."
+            },
+            {
+                "step_order": 4,
+                "title": "Pay Fee",
+                "description": "Pay 2250 INR in cash."
+            }
+        ]
+    },
+    "eligibility": null
+}

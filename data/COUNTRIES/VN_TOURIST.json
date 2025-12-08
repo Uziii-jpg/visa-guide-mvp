@@ -1,0 +1,40 @@
+{
+    "country_code": "VN",
+    "visa_type": "TOURIST",
+    "template_ref": "E_VISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "25 USD (approx. 2100 INR)",
+            "fee_inr_approx": 2100,
+            "processing_time_standard": "3-5 Working Days (Often delayed, apply early)",
+            "max_stay": "30 Days (Single Entry) or 90 Days (Multiple)",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "modify": [
+                {
+                    "id": "evisa_photo",
+                    "description": "Recent photo, no glasses, white background. 4x6cm."
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Official Portal",
+                "description": "Visit the official Vietnam E-Visa website (immigration.gov.vn)."
+            },
+            {
+                "step_order": 2,
+                "title": "Upload & Pay",
+                "description": "Upload passport/photo and pay 25 USD."
+            },
+            {
+                "step_order": 3,
+                "title": "Check Status",
+                "description": "Check status using registration code. Download E-Visa PDF upon approval."
+            }
+        ]
+    },
+    "eligibility": null
+}

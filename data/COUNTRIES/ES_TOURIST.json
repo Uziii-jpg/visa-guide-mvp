@@ -1,0 +1,55 @@
+{
+    "country_code": "ES",
+    "visa_type": "TOURIST",
+    "template_ref": "SCHENGEN_TOURIST",
+    "description": "Schengen Visitor Visa (Type C). Note: Official 'Carta de Invitación' required if staying with friends.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "90 EUR + BLS Service Charge",
+            "fee_inr_approx": 10850,
+            "processing_time_standard": "15 Calendar Days (Can be longer in peak season)",
+            "max_stay": "90 days in any 180-day period",
+            "passport_validity": "3 months beyond intended departure",
+            "photo_spec": "35mm x 45mm, Biometric, White background",
+            "min_funds_requirement": "Min. 113 EUR/day per person. Minimum total: 1,020 EUR (90% of SMI)."
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "es_invitation",
+                    "title": "Carta de Invitación (Official Invitation)",
+                    "description": "If staying with a private host, a simple letter is NOT enough. The host must obtain an official 'Carta de Invitación' from the Spanish National Police.",
+                    "type": "document",
+                    "is_premium": true
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill Application Form",
+                "description": "Download and fill the Schengen Visa application form for Spain.",
+                "action_link": "https://india.blsspainvisa.com/book_appointment.php"
+            },
+            {
+                "step_order": 2,
+                "title": "Book Appointment",
+                "description": "Book a slot with BLS International (Official partner for Spain).",
+                "action_link": "https://india.blsspainvisa.com/"
+            },
+            {
+                "step_order": 3,
+                "title": "Submit Application",
+                "description": "Submit documents and biometrics at the BLS center."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 200000,
+        "required_education": "high_school",
+        "required_employment_status": [],
+        "max_age": 99
+    }
+}

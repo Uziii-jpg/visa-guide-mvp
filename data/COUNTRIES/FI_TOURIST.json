@@ -1,0 +1,37 @@
+{
+    "country_code": "FI",
+    "visa_type": "TOURIST",
+    "template_ref": "SCHENGEN_TOURIST",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "90 EUR + VFS Service Charge",
+            "processing_time_standard": "15 Calendar Days"
+        },
+        "documents": {
+            "modify": [
+                {
+                    "id": "std_financials",
+                    "description": "Bank statements for the last 3 months. Minimum 30 EUR per day of stay."
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill Application Form",
+                "description": "Complete the application on the 'Finland Abroad' or VFS website."
+            },
+            {
+                "step_order": 2,
+                "title": "Book Appointment",
+                "description": "Book a slot with VFS Global (Finland)."
+            },
+            {
+                "step_order": 3,
+                "title": "Submit Application",
+                "description": "Submit documents and biometrics."
+            }
+        ]
+    },
+    "eligibility": null
+}

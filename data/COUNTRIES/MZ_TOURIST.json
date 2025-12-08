@@ -1,0 +1,37 @@
+{
+    "country_code": "MZ",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Approx. 100 USD (E-Visa) / 50 USD (VOA - Subject to change)",
+            "fee_inr_approx": 8500,
+            "processing_time_standard": "5 Working Days",
+            "max_stay": "30 Days",
+            "passport_validity": "6 months"
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "E-Visa Portal",
+                "description": "Visit evisa.gov.mz."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply",
+                "description": "Register and submit application."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay online."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive Visa",
+                "description": "Receive E-Visa PDF."
+            }
+        ]
+    },
+    "eligibility": null
+}

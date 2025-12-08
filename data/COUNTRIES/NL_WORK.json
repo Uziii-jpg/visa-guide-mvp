@@ -1,0 +1,45 @@
+{
+    "country_code": "NL",
+    "visa_type": "WORK",
+    "template_ref": "SCHENGEN_WORK",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "350 EUR (GVVA Fee)",
+            "processing_time_standard": "90 Days"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "nl_employer_sponsorship",
+                    "title": "Recognized Sponsor Proof",
+                    "description": "Proof that your employer is a 'Recognized Sponsor' by the IND (for Highly Skilled Migrant route).",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Employer Applies",
+                "description": "Your employer submits the application for the GVVA (Single Permit) or Highly Skilled Migrant visa to the IND."
+            },
+            {
+                "step_order": 2,
+                "title": "IND Approval",
+                "description": "Wait for the IND to approve the application (approx. 2-3 weeks for Highly Skilled, longer for others)."
+            },
+            {
+                "step_order": 3,
+                "title": "Collect MVV",
+                "description": "Book an appointment at the Dutch Embassy to collect your MVV sticker."
+            },
+            {
+                "step_order": 4,
+                "title": "Travel & Collect Residence Permit",
+                "description": "Travel to the Netherlands and collect your residence card from an IND desk."
+            }
+        ]
+    },
+    "eligibility": null
+}

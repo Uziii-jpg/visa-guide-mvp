@@ -1,0 +1,193 @@
+{
+    "country_code": "AU",
+    "visa_type": "STUDENT",
+    "template_ref": "STUDENT_500",
+    "description": "Subclass 500 Student Visa. Optimized for the 'Genuine Student' (GS) requirement.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "1,808 AUD (~1,100 EUR)",
+            "fee_inr_approx": 100000,
+            "processing_time_standard": "1-3 Months (Higher Education Sector)",
+            "max_stay": "Course Duration + 2 Months (typically)",
+            "passport_validity": "Must be valid for the duration of stay",
+            "photo_spec": "35mm x 45mm, White background, Head & Shoulders (80%)",
+            "min_funds_requirement": "**Financial Thresholds:**\n\n* **Student (Living):** AUD 29,710/year\n* **Partner:** AUD 10,394/year\n* **Child:** AUD 4,449/year\n* **Travel:** ~AUD 2,000\n* **Tuition:** 1st Year Fees paid or held in account.\n* **Total Proof:** Approx ~AUD 50,000 - 60,000 (approx. ₹28-34 Lakhs) usually required to be 'Safe'."
+        },
+        "documents": [
+            {
+                "id": "au_passport",
+                "title": "Valid Passport",
+                "description": "Color scan of bio pages. Must be valid for the entire course duration.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "au_coe",
+                "title": "Confirmation of Enrolment (CoE)",
+                "description": "Mandatory: You cannot apply without the CoE code issued after paying the deposit.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "au_gs_answers",
+                "title": "Genuine Student (GS) Responses",
+                "description": "Mandatory 150-word responses inside ImmiAccount about ties to home, value of course, reasons for choosing university, and previous study history.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "au_financials_strict",
+                "title": "Financial Evidence (Strict)",
+                "description": "**Accepted:** Education Loan Sanction Letter, Savings (3+ months old), FDs.\n**Rejected:** Property valuation, CA reports, gold loans, mutual funds (not liquidated).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "au_oshc",
+                "title": "OSHC Policy",
+                "description": "Overseas Student Health Cover covering entire visa duration (Course + 2 months).",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "insurance_australia_student"
+            },
+            {
+                "id": "au_aadhaar",
+                "title": "National ID (Aadhaar)",
+                "description": "Optional secondary ID, often requested for Indian applicants.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "au_english",
+                "title": "English Test Results",
+                "description": "IELTS / PTE / TOEFL iBT. Must be less than 2 years old.",
+                "type": "document",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Get CoE (Mandatory First Step)",
+                "description": "Apply → Receive Offer → Pay Deposit + OSHC → Receive CoE. CoE code is mandatory for Visa 500.",
+                "action_link": "https://www.studyaustralia.gov.au/en/applying-to-study/how-to-apply"
+            },
+            {
+                "step_order": 2,
+                "title": "Create ImmiAccount",
+                "description": "This is the official account used for all Australian visa applications.",
+                "action_link": "https://online.immi.gov.au/lusc/register"
+            },
+            {
+                "step_order": 3,
+                "title": "Start Visa 500 Application + GS Questions",
+                "description": "Select 'Student Visa (Subclass 500)'. Complete GS questionnaire honestly (150+ words each).",
+                "action_link": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500"
+            },
+            {
+                "step_order": 4,
+                "title": "Upload Documents & Pay Fee",
+                "description": "Upload PDF/JPEG files (< 5MB each).\nPay AUD 1,808 using Credit/Debit card or PayPal.",
+                "action_link": "https://immi.homeaffairs.gov.au/help-support/applying-online-or-on-paper/online/how-to-pay"
+            },
+            {
+                "step_order": 5,
+                "title": "Biometrics & Medical Examination (HAP ID)",
+                "description": "After submitting, download your **HAP ID**.\n- Book medicals via eMedical panel clinic.\n- Book biometrics at VFS Australia.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/aus/book-an-appointment"
+            }
+        ]
+    },
+    "eligibility": {
+        "required_education": "Enrolment in CRICOS-registered course (CoE required)",
+        "required_employment_status": "student",
+        "min_annual_income": 0,
+        "min_liquid_savings": 1800000,
+        "max_age": "no_limit"
+    },
+    "university_guide": {
+        "top_universities": [
+            " University of Melbourne",
+            "Australian National University (ANU)",
+            "University of Sydney (USYD)",
+            "University of New South Wales (UNSW Sydney)",
+            "Monash University",
+            " University of Queensland (UQ)",
+            "University of Adelaide",
+            "RMIT University (Melbourne)",
+            "University of Technology Sydney (UTS)",
+            "Deakin University / La Trobe"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "February Intake (Main Intake)",
+                "deadline": "Oct - Nov"
+            },
+            {
+                "season": "July Intake (Mid-Year)",
+                "deadline": "Apr - May"
+            },
+            {
+                "season": "November Intake (Small / Limited)",
+                "deadline": "Aug - Sep"
+            }
+        ],
+        "required_exams": [
+            "IELTS (6.0-6.5 usually)",
+            "PTE Academic (50–58+)",
+            "Bachelor’s:  12th with 60–70% Master’s:  Bachelor’s with 50–60% minimum  Higher unis want 65%+",
+            "GMAT(MBA)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Get the Offer Letter",
+                "description": "Apply to the university and receive your conditional or full offer letter.",
+                "action_link": "https://www.studyaustralia.gov.au/en/applying-to-study/how-to-apply"
+            },
+            {
+                "step_order": 2,
+                "title": "Accept the Offer + Pay Initial Tuition Deposit",
+                "description": "Sign the acceptance form and pay the deposit to secure your seat."
+            },
+            {
+                "step_order": 3,
+                "title": "Receive Your CoE (Confirmation of Enrolment)",
+                "description": "The university will issue the CoE, which is mandatory for the visa application."
+            },
+            {
+                "step_order": 4,
+                "title": "Arrange Financial Proof",
+                "description": "Ensure you meet the Genuine Temporary Entrant (GTE) financial requirements."
+            },
+            {
+                "step_order": 5,
+                "title": "OSHC (Health Insurance)",
+                "description": "Purchase Overseas Student Health Cover for the duration of your course."
+            },
+            {
+                "step_order": 6,
+                "title": "Prepare Visa Documents",
+                "description": "Gather all required documents including passport, academic transcripts, and financial proofs."
+            },
+            {
+                "step_order": 7,
+                "title": "Create ImmiAccount + Apply for Visa",
+                "description": "Log in to ImmiAccount and submit your Student Visa (Subclass 500) application."
+            },
+            {
+                "step_order": 8,
+                "title": "Biometrics + Medical Examination",
+                "description": "Complete your biometrics and medical health check as instructed."
+            }
+        ]
+    }
+}

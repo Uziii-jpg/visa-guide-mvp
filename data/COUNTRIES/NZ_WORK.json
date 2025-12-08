@@ -1,0 +1,67 @@
+{
+    "country_code": "NZ",
+    "visa_type": "WORK",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "750 NZD (approx. 38,000 INR)",
+            "fee_inr_approx": 38000,
+            "processing_time_standard": "6-9 Weeks",
+            "max_stay": "Up to 3 years (for most AEWV roles)",
+            "passport_validity": "3 months beyond intended departure",
+            "min_funds_requirement": "Job offer must meet median wage (approx. 29.66 - 33.56 NZD/hour)"
+        },
+        "documents": [
+            {
+                "id": "nz_job_offer",
+                "title": "Job Offer (AEWV)",
+                "description": "Full-time offer from an Accredited Employer. Must include 'Job Check' token number.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "nz_qualifications",
+                "title": "Qualifications & Experience",
+                "description": "Degree certificates and work experience letters proving you meet the job requirements. IQA assessment may be needed.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "nz_english",
+                "title": "English Proficiency",
+                "description": "IELTS/PTE score (if required for the role, usually IELTS 4.0+ for lower skill roles).",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "nz_pcc_medical",
+                "title": "PCC & Medicals",
+                "description": "Police Clearance Certificate from India and eMedical results.",
+                "type": "document",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Employer Accreditation",
+                "description": "Employer gets accredited and completes a 'Job Check' for the role."
+            },
+            {
+                "step_order": 2,
+                "title": "Receive Job Token",
+                "description": "Employer sends you a unique link/token to apply."
+            },
+            {
+                "step_order": 3,
+                "title": "Apply Online",
+                "description": "Complete the Accredited Employer Work Visa (AEWV) application."
+            },
+            {
+                "step_order": 4,
+                "title": "Upload & Pay",
+                "description": "Upload docs (PCC, Medicals, Qualifications) and pay fees."
+            }
+        ]
+    },
+    "eligibility": null
+}

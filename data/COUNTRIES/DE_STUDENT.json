@@ -1,0 +1,136 @@
+{
+    "country_code": "DE",
+    "visa_type": "STUDENT",
+    "template_ref": "SCHENGEN_STUDENT",
+    "description": "National Visa (Type D) for Studies. Note: Blocked Account amount increased to €11,904/year.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "75 EUR (National Visa)",
+            "fee_inr_approx": 7500,
+            "processing_time_standard": "6-12 Weeks (Can be longer in peak season)",
+            "max_stay": "Duration of study + Post-study search",
+            "passport_validity": "Valid for the duration of stay",
+            "photo_spec": "35mm x 45mm, Biometric, White background",
+            "min_funds_requirement": "**11,904 EUR** per year (Blocked Account). Monthly withdrawal limit: **992 EUR**."
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "de_blocked_account",
+                    "title": "Blocked Account (Sperrkonto)",
+                    "description": "Confirmation of opening a Blocked Account with **11,904 EUR** (e.g., Fintiba, Expatrio, Coracle).",
+                    "type": "document",
+                    "is_premium": true,
+                    "affiliate_key": "blocked_account_germany"
+                },
+                {
+                    "id": "de_health_insurance",
+                    "title": "Health Insurance",
+                    "description": "Public (statutory) or private health insurance valid in Germany from day one.",
+                    "type": "document",
+                    "is_premium": true,
+                    "affiliate_key": "insurance_germany_student"
+                }
+            ],
+            "modify": [
+                {
+                    "id": "sch_financial_blocked",
+                    "description": "MANDATORY: Proof of **11,904 EUR** in a Blocked Account. Bank statements alone are usually NOT accepted."
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "University Admission",
+                "description": "Apply and receive the Admission Letter from a German university."
+            },
+            {
+                "step_order": 2,
+                "title": "Open Blocked Account",
+                "description": "Open a Sperrkonto and transfer the required amount (approx. 11,904 EUR)."
+            },
+            {
+                "step_order": 3,
+                "title": "Get Health Insurance",
+                "description": "Purchase suitable student health insurance."
+            },
+            {
+                "step_order": 4,
+                "title": "Book VFS Appointment",
+                "description": "Schedule a National Visa appointment at VFS Global."
+            },
+            {
+                "step_order": 5,
+                "title": "Submit Application",
+                "description": "Submit documents and biometrics. Wait for approval."
+            }
+        ]
+    },
+    "university_guide": {
+        "top_universities": [
+            "Technical University of Munich (TUM)",
+            "Ludwig Maximilian University of Munich (LMU)",
+            "Heidelberg University",
+            "Humboldt University of Berlin",
+            "RWTH Aachen University",
+            "Free University of Berlin",
+            "Technical University of Berlin (TUB)",
+            "University of Freiburg",
+            "University of Tübingen",
+            "KIT, Karlsruhe Institute of Technology"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "Winter Semester (October)",
+                "deadline": "July 15th (Most common)"
+            },
+            {
+                "season": "Summer Semester (April)",
+                "deadline": "January 15th"
+            }
+        ],
+        "required_exams": [
+            "IELTS / TOEFL (for English programs)",
+            "TestDaF / DSH (for German programs)",
+            "GRE / GMAT (Optional but recommended for top universities)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Check Requirements",
+                "description": "Verify if your Indian degree is recognized (Anabin database)."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply via Uni-Assist",
+                "description": "Submit applications and pay fees (approx. 75 EUR for first, 30 EUR for subsequent)."
+            },
+            {
+                "step_order": 3,
+                "title": "Receive Admission",
+                "description": "Get the 'Zulassungsbescheid' (Admission Letter)."
+            },
+            {
+                "step_order": 4,
+                "title": "Financial Setup",
+                "description": "Open Blocked Account and transfer funds immediately."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 1300000,
+        "required_education": "high_school",
+        "required_employment_status": [],
+        "max_age": 50
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "country_code": "US",
+    "visa_type": "WORK",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "205 USD (Visa Fee) + Employer Fees (approx. $5000+)",
+            "processing_time_standard": "Lottery Based (April). Processing: 2-6 Months (Premium: 15 Days)",
+            "max_stay": "3 years initially (extendable up to 6 years for H-1B)",
+            "passport_validity": "6 months beyond intended stay",
+            "min_funds_requirement": "No fixed amount, but salary must meet Prevailing Wage"
+        },
+        "documents": [
+            {
+                "id": "us_i797",
+                "title": "Form I-797 (Approval Notice)",
+                "description": "Original Notice of Action (I-797B) showing approval of the petition.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "us_i129",
+                "title": "Form I-129 Copy",
+                "description": "Copy of the Petition for a Nonimmigrant Worker filed by your employer.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "us_lca",
+                "title": "LCA (Labor Condition Application)",
+                "description": "Certified LCA from the Department of Labor (ETA Form 9035).",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "us_education_eval",
+                "title": "Education Evaluation",
+                "description": "Critical: Evaluation proving your degree is directly relevant to the job role (New Rule Jan 2025).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "us_resume",
+                "title": "Resume / CV",
+                "description": "Detailed CV showing relevant experience.",
+                "type": "document",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Employer Files LCA",
+                "description": "Employer submits Labor Condition Application to DOL."
+            },
+            {
+                "step_order": 2,
+                "title": "Employer Files Petition",
+                "description": "Employer files Form I-129 with USCIS (and pays fees)."
+            },
+            {
+                "step_order": 3,
+                "title": "USCIS Approval",
+                "description": "Receive Form I-797 Notice of Action upon approval."
+            },
+            {
+                "step_order": 4,
+                "title": "Complete DS-160",
+                "description": "Fill the online visa application form."
+            },
+            {
+                "step_order": 5,
+                "title": "Interview",
+                "description": "Attend interview at US Consulate with I-797 and other docs."
+            }
+        ]
+    },
+    "eligibility": null
+}

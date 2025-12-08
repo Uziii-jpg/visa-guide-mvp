@@ -1,0 +1,74 @@
+{
+    "country_code": "IE",
+    "visa_type": "TOURIST",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "60 EUR (Single Entry) / 100 EUR (Multi Entry) + VFS Charges",
+            "processing_time_standard": "8 Weeks (can vary significantly)",
+            "max_stay": "Up to 90 days",
+            "passport_validity": "6 months beyond intended stay",
+            "photo_spec": "Standard Ireland/EU size",
+            "min_funds_requirement": "No fixed amount, but must show sufficient funds for duration"
+        },
+        "documents": [
+            {
+                "id": "ie_summary_sheet",
+                "title": "Application Summary Sheet",
+                "description": "Signed summary sheet from the AVATS online system.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ie_application_letter",
+                "title": "Application Letter",
+                "description": "Signed letter explaining why you want to visit, dates, and commitment to obey rules.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ie_financials",
+                "title": "Financial Documents",
+                "description": "6 months detailed bank statements. Lump sum lodgements must be explained.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ie_accommodation",
+                "title": "Accommodation Plan",
+                "description": "Hotel bookings or invitation letter from host.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ie_insurance",
+                "title": "Travel Insurance",
+                "description": "Medical insurance covering at least 25,000 EUR (recommended, though sometimes not strictly asked at submission, mandatory for entry).",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Apply Online (AVATS)",
+                "description": "Complete the online application on the AVATS system."
+            },
+            {
+                "step_order": 2,
+                "title": "Pay Fees",
+                "description": "Pay the visa fee via VFS or as instructed."
+            },
+            {
+                "step_order": 3,
+                "title": "Book Appointment",
+                "description": "Schedule an appointment at VFS Global (Ireland)."
+            },
+            {
+                "step_order": 4,
+                "title": "Submit Application",
+                "description": "Submit passport and all supporting documents. Ireland requires physical submission of all docs."
+            }
+        ]
+    },
+    "eligibility": null
+}

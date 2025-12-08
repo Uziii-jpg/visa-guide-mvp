@@ -1,0 +1,37 @@
+{
+    "country_code": "GR",
+    "visa_type": "TOURIST",
+    "template_ref": "SCHENGEN_TOURIST",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "90 EUR + GVC World Service Charge",
+            "processing_time_standard": "15 Calendar Days"
+        },
+        "documents": {
+            "modify": [
+                {
+                    "id": "std_financials",
+                    "description": "Bank statements for the last 3 months. Credit card statements are also accepted as supporting proof."
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill Application Form",
+                "description": "Complete the Schengen Visa application form for Greece."
+            },
+            {
+                "step_order": 2,
+                "title": "Book Appointment",
+                "description": "Book a slot with GVC World (Official partner for Greece in India)."
+            },
+            {
+                "step_order": 3,
+                "title": "Submit Application",
+                "description": "Submit documents and biometrics at the GVC World center."
+            }
+        ]
+    },
+    "eligibility": null
+}

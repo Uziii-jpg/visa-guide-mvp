@@ -1,0 +1,51 @@
+{
+    "country_code": "RE",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_CONSULATE",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "60 EUR (approx. 5400 INR) - Free for organized tours (15 days)",
+            "fee_inr_approx": 5400,
+            "processing_time_standard": "15 Working Days",
+            "max_stay": "90 Days",
+            "passport_validity": "3 months beyond stay"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "re_voucher",
+                    "title": "Voucher (For Exemption)",
+                    "description": "If staying <15 days via approved agency, a voucher is needed for visa exemption.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ],
+            "remove": [
+                "afr_yellow_fever"
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Check Exemption",
+                "description": "Indians via approved agency for <15 days are Visa Exempt."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply (If needed)",
+                "description": "Apply for 'Visa for Overseas Departments' at VFS France."
+            },
+            {
+                "step_order": 3,
+                "title": "Submit",
+                "description": "Submit documents similar to Schengen visa."
+            },
+            {
+                "step_order": 4,
+                "title": "Collect",
+                "description": "Collect passport."
+            }
+        ]
+    },
+    "eligibility": null
+}

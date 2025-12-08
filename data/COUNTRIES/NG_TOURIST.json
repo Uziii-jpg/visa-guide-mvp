@@ -1,0 +1,55 @@
+{
+    "country_code": "NG",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_CONSULATE",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Approx. 253 USD (Visa Fee) + 90 USD (Biometrics)",
+            "fee_inr_approx": 28000,
+            "processing_time_standard": "7-10 Working Days",
+            "max_stay": "30 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "ng_invitation",
+                    "title": "Letter of Invitation",
+                    "description": "Invitation letter from a host in Nigeria + their Passport copy + CAC Certificate (if company).",
+                    "type": "document",
+                    "is_premium": false
+                },
+                {
+                    "id": "ng_online_payment",
+                    "title": "Online Payment Receipt",
+                    "description": "Receipt of payment made on the Nigeria Immigration Service portal.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Fill Online",
+                "description": "Fill form on portal.immigration.gov.ng."
+            },
+            {
+                "step_order": 2,
+                "title": "Pay Online",
+                "description": "Pay visa fee online and print receipt."
+            },
+            {
+                "step_order": 3,
+                "title": "Book Appointment",
+                "description": "Schedule appointment at OIS Services (Delhi/Mumbai)."
+            },
+            {
+                "step_order": 4,
+                "title": "Submit",
+                "description": "Submit physical documents and give biometrics."
+            }
+        ]
+    },
+    "eligibility": null
+}

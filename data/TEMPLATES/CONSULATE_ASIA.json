@@ -1,0 +1,81 @@
+{
+    "template_id": "CONSULATE_ASIA",
+    "description": "Sticker Visa processed via Consulate/Embassy/VFS (e.g., Japan, South Korea).",
+    "last_updated": "2024-11-30",
+    "base_requirements": {
+        "meta": {
+            "fee_euro_approx": "Varies (Often low visa fee + VFS charge)",
+            "fee_inr_approx": 1500,
+            "processing_time_standard": "4-7 Working Days",
+            "max_stay": "15-90 Days",
+            "passport_validity": "6 months",
+            "photo_spec": "45x45mm or 35x45mm (White background)"
+        },
+        "documents": [
+            {
+                "id": "cons_passport",
+                "title": "Original Passport",
+                "description": "Must be submitted physically. Valid for 6 months.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "cons_form",
+                "title": "Visa Application Form",
+                "description": "Physical form, filled and signed.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "cons_photo",
+                "title": "Physical Photos",
+                "description": "2 recent photos glued to the form.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "cons_financials",
+                "title": "Financial Proof",
+                "description": "Bank statements (3-6 months) and ITR (3 years).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "cons_employment",
+                "title": "Employment Proof",
+                "description": "NOC from employer / Salary Slips.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "cons_cover_letter",
+                "title": "Cover Letter",
+                "description": "Detailed itinerary and purpose of visit.",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Prepare Documents",
+                "description": "Gather all physical documents and photos."
+            },
+            {
+                "step_order": 2,
+                "title": "Submit Application",
+                "description": "Submit at VFS Global or Consulate (Walk-in or Appointment)."
+            },
+            {
+                "step_order": 3,
+                "title": "Processing",
+                "description": "Passport is held at the consulate for processing."
+            },
+            {
+                "step_order": 4,
+                "title": "Collection",
+                "description": "Collect passport with visa sticker."
+            }
+        ]
+    }
+}

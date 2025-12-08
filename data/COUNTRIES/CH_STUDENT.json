@@ -1,0 +1,103 @@
+{
+    "country_code": "CH",
+    "visa_type": "STUDENT",
+    "template_ref": "SCHENGEN_STUDENT",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "80 EUR (National Visa)",
+            "processing_time_standard": "8-12 Weeks (Cantonal Approval Required)"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "ch_commitment",
+                    "title": "Written Commitment",
+                    "description": "A signed letter stating you will leave Switzerland after completing your studies.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "University Admission",
+                "description": "Apply and receive the acceptance letter from a Swiss university."
+            },
+            {
+                "step_order": 2,
+                "title": "Book Appointment",
+                "description": "Book a National Visa appointment at VFS Global.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/che/book-an-appointment"
+            },
+            {
+                "step_order": 3,
+                "title": "Submit Application",
+                "description": "Submit documents. The Consulate forwards them to the Cantonal Migration Office."
+            },
+            {
+                "step_order": 4,
+                "title": "Cantonal Approval",
+                "description": "Wait for the Canton to authorize the visa (can take 8-10 weeks)."
+            }
+        ]
+    },
+    "university_guide": {
+        "top_universities": [
+            "University of Bern",
+            "University of Basel",
+            "University of Lausanne",
+            "University of St. Gallen (HSG)",
+            "University of Fribourg",
+            "Università della Svizzera italiana"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "Fall Semester (September)",
+                "deadline": "April 30th (Non-EU)"
+            },
+            {
+                "season": "Spring Semester (February)",
+                "deadline": "November 30th (Non-EU)"
+            }
+        ],
+        "required_exams": [
+            "IELTS / TOEFL (for English programs)",
+            "GRE (Required for some Master's at ETH/EPFL)",
+            "German/French/Italian proficiency (if applicable)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Check Requirements",
+                "description": "Verify specific requirements for ETH/EPFL or other unis."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply Online",
+                "description": "Submit application and pay the fee (approx. 100-150 CHF)."
+            },
+            {
+                "step_order": 3,
+                "title": "Receive Admission",
+                "description": "Get the official acceptance letter."
+            },
+            {
+                "step_order": 4,
+                "title": "Proof of Funds",
+                "description": "Ensure you have approx. 21,000 CHF in a bank account for the first year."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_liquid_savings": 2000000,
+        "required_education": "high_school"
+    }
+}

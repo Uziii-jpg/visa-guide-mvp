@@ -1,0 +1,91 @@
+{
+    "country_code": "ES",
+    "visa_type": "WORK",
+    "template_ref": "SCHENGEN_WORK",
+    "description": "Work Visa & Digital Nomad Visa (DNV). Note: DNV income threshold is 200% of SMI.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "60-80 EUR (National Visa)",
+            "fee_inr_approx": 8920,
+            "processing_time_standard": "1-3 Months",
+            "max_stay": "Work Permit duration / 1 Year (DNV)",
+            "passport_validity": "Valid for duration of stay",
+            "photo_spec": "35mm x 45mm, Biometric, White background",
+            "min_funds_requirement": "**Digital Nomad:** ~2,368 EUR/month (200% SMI). Add 75% SMI for spouse, 25% for child."
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "es_work_auth",
+                    "title": "Work Authorization (Autorización de Trabajo)",
+                    "description": "Original resolution of the Work and Residence Authorization issued by the 'Oficina de Extranjería' in Spain.",
+                    "type": "document",
+                    "is_premium": true
+                },
+                {
+                    "id": "es_dnv_proof",
+                    "title": "Digital Nomad Evidence",
+                    "description": "Contracts showing remote work for >3 months. Company must be outside Spain. Income >200% SMI.",
+                    "type": "document",
+                    "is_premium": true
+                },
+                {
+                    "id": "es_social_security",
+                    "title": "Social Security Certificate",
+                    "description": "Proof of Social Security coverage in home country (if applicable) or registration in Spain.",
+                    "type": "document",
+                    "is_premium": false
+                },
+                {
+                    "id": "es_medical_cert",
+                    "title": "Medical Certificate",
+                    "description": "Certificate stating you are free from diseases under International Health Regulations 2005.",
+                    "type": "document",
+                    "is_premium": false
+                },
+                {
+                    "id": "es_police_record",
+                    "title": "Police Clearance Certificate",
+                    "description": "PCC from countries lived in for the last 5 years, legalized and translated into Spanish.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Choose Path: Work Visa vs Digital Nomad",
+                "description": "**Work Visa:** Employer gets authorization.\n**Digital Nomad:** Apply directly if you meet income/remote work criteria."
+            },
+            {
+                "step_order": 2,
+                "title": "Employer Applies for Authorization (Work Visa only)",
+                "description": "Your employer submits the application to the Provincial Aliens Office (Oficina de Extranjería)."
+            },
+            {
+                "step_order": 3,
+                "title": "Receive Authorization",
+                "description": "Once approved, the employer sends you the resolution copy with the file number."
+            },
+            {
+                "step_order": 4,
+                "title": "Book Appointment",
+                "description": "Book a National Visa appointment at BLS International."
+            },
+            {
+                "step_order": 5,
+                "title": "Submit Application",
+                "description": "Submit documents including the Medical Certificate and PCC within 1 month of authorization."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 500000,
+        "required_education": "bachelors",
+        "required_employment_status": [],
+        "max_age": 55
+    }
+}

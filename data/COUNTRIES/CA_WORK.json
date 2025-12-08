@@ -1,0 +1,95 @@
+{
+    "country_code": "CA",
+    "visa_type": "WORK_PERMIT",
+    "template_ref": "WORK_PERMIT",
+    "description": "Temporary Work Permit (Closed/LMIA or Exempt). Note: LMIA validity periods have been reduced.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "155 CAD (Work Permit) + 85 CAD (Biometrics) + 100 CAD (Open Permit - if applicable)",
+            "fee_inr_approx": 16000,
+            "processing_time_standard": "12-20 Weeks (India to Canada). LMIA processing varies.",
+            "max_stay": "1-2 Years (LMIA validity) or up to 3 Years (Exempt)",
+            "passport_validity": "Must be valid for the entire duration of the contract",
+            "photo_spec": "35mm x 45mm, White background, Frame size 35x45mm",
+            "min_funds_requirement": "**Proof of Funds:** Not mandatory if you have a valid Job Offer, but highly recommended to show **~CAD 5,000** for initial settlement."
+        },
+        "documents": [
+            {
+                "id": "ca_passport",
+                "title": "Original Passport",
+                "description": "Scanned copies of all pages. Validity must cover the entire work duration.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "ca_lmia_letter",
+                "title": "LMIA Copy (Labour Market Impact Assessment)",
+                "description": "**Track A (Closed):** Positive LMIA letter provided by your employer. It must list your name or be an 'Unnamed' LMIA matched to you.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ca_offer_number",
+                "title": "Offer of Employment Number (A#)",
+                "description": "**Track B (Exempt):** The 'A-Number' (e.g., A1234567) generated when the employer submits the offer in the Employer Portal.",
+                "type": "digital",
+                "is_premium": true
+            },
+            {
+                "id": "ca_job_contract",
+                "title": "Job Offer Letter",
+                "description": "Signed contract on company letterhead detailing: Salary (must match LMIA), Hours (min 30/week), and Duties.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ca_experience_proof",
+                "title": "Proof of Qualifications",
+                "description": "Evidence you can do the job: Education Degrees + Previous Work Experience Letters (to match the NOC code requirements).",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ca_medical_upfront",
+                "title": "Upfront Medical Exam",
+                "description": "Required for jobs in health/childcare or if residing in India (designated country). Book with a Panel Physician.",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://secure.cic.gc.ca/pp-md/pp-list.aspx"
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Employer Secures Authorization",
+                "description": "You cannot start without the employer's input.\n* **LMIA Stream:** Employer applies to ESDC (pay CAD 1000). Wait for 'Positive LMIA'.\n* **Exempt Stream:** Employer submits offer in the 'Employer Portal' (pay CAD 230).",
+                "action_link": "https://www.canada.ca/en/employment-social-development/services/foreign-workers.html"
+            },
+            {
+                "step_order": 2,
+                "title": "Create IRCC Account",
+                "description": "Log in to GCKey/IRCC Portal.\n* **Select:** 'Work Permit' -> 'Outside Canada'.\n* **Input:** Enter the LMIA Number or the Offer of Employment Number (A#).",
+                "action_link": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html"
+            },
+            {
+                "step_order": 3,
+                "title": "Upload & Pay",
+                "description": "Upload documents (PDF < 4MB).\n* **Fees:** Pay CAD 155 (Work Permit) + CAD 85 (Biometrics). Open Permit holders pay +CAD 100.",
+                "action_link": "https://eservices.cic.gc.ca/epay/order.do?category=17"
+            },
+            {
+                "step_order": 4,
+                "title": "Biometrics & Passport",
+                "description": "Book VFS appointment after receiving the BIL letter.\n* **Wait:** ~12-20 weeks.\n* **Submit:** Passport to VFS upon request (PPR). Receive the **'Port of Entry (POE) Letter of Introduction'**.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/can/book-an-appointment"
+            },
+            {
+                "step_order": 5,
+                "title": "Arrival & Issuance",
+                "description": "**Critical:** The visa in your passport is just for entry. \n* **Action:** At the Canadian airport, show your POE Letter + Job Offer to the Officer.\n* **Receive:** They will print the actual **Work Permit** (paper document). Check the expiry date immediately."
+            }
+        ]
+    },
+    "eligibility": null
+}

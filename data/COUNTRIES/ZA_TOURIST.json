@@ -1,0 +1,55 @@
+{
+    "country_code": "ZA",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Free (Gratis for Indians) - Agent/VFS fees may apply",
+            "fee_inr_approx": 0,
+            "processing_time_standard": "5-10 Working Days (E-Visa can be unpredictable)",
+            "max_stay": "90 Days",
+            "passport_validity": "30 days after intended stay"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "za_bank_statement",
+                    "title": "Bank Statements",
+                    "description": "3 months bank statements certified by the bank. Minimum balance approx. 3000 ZAR.",
+                    "type": "document",
+                    "is_premium": true
+                },
+                {
+                    "id": "za_employment",
+                    "title": "Employment Proof",
+                    "description": "Letter from employer stating leave dates and return to work.",
+                    "type": "document",
+                    "is_premium": true
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Apply Online",
+                "description": "Register on the eHomeAffairs portal (e-visa.home-affairs.gov.za)."
+            },
+            {
+                "step_order": 2,
+                "title": "Upload Docs",
+                "description": "Upload all documents. Ensure files are small (<2MB)."
+            },
+            {
+                "step_order": 3,
+                "title": "Submit",
+                "description": "Submit application. No visa fee for Indians (Gratis)."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive Visa",
+                "description": "Receive E-Visa via email. (Note: If E-Visa fails, apply via VFS Global)."
+            }
+        ]
+    },
+    "eligibility": null
+}

@@ -1,0 +1,78 @@
+{
+    "country_code": "GB",
+    "visa_type": "WORK",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "625-1,423 GBP (Visa) + 1,035 GBP/year (IHS). Total upfront cost is high.",
+            "processing_time_standard": "3 Weeks (Priority: 5 Days)",
+            "max_stay": "Up to 5 years before renewal",
+            "passport_validity": "Valid for travel",
+            "min_funds_requirement": "1,270 GBP (held for 28 days) unless employer certifies maintenance. Salary Threshold: 38,700 GBP/year."
+        },
+        "documents": [
+            {
+                "id": "uk_cos",
+                "title": "Certificate of Sponsorship (CoS)",
+                "description": "Reference number provided by your UK employer.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "uk_english_proof",
+                "title": "English Language Proof",
+                "description": "IELTS UKVI (General) or degree taught in English (Ecctis verified).",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "uk_tb_test",
+                "title": "TB Test Certificate",
+                "description": "Mandatory for residents of India.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "uk_pcc",
+                "title": "Criminal Record Certificate",
+                "description": "Required for certain jobs (education, healthcare, social services).",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "uk_financials_work",
+                "title": "Proof of Funds",
+                "description": "Bank statements showing 1,270 GBP for 28 days OR employer certification on CoS.",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Get Job Offer",
+                "description": "Secure a job with a licensed UK sponsor paying at least 38,700 GBP/year (or going rate)."
+            },
+            {
+                "step_order": 2,
+                "title": "Receive CoS",
+                "description": "Employer issues the Certificate of Sponsorship."
+            },
+            {
+                "step_order": 3,
+                "title": "Apply Online",
+                "description": "Submit Skilled Worker visa application on GOV.UK."
+            },
+            {
+                "step_order": 4,
+                "title": "Pay Fees",
+                "description": "Pay application fee and Immigration Health Surcharge."
+            },
+            {
+                "step_order": 5,
+                "title": "Biometrics",
+                "description": "Attend appointment at VFS Global."
+            }
+        ]
+    },
+    "eligibility": null
+}

@@ -1,0 +1,71 @@
+{
+    "country_code": "IT",
+    "visa_type": "WORK",
+    "template_ref": "SCHENGEN_WORK",
+    "description": "Work Visa (Decreto Flussi) & Digital Nomad Visa. Note: 2025 Quotas are open.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "116 EUR (National Visa)",
+            "fee_inr_approx": 10500,
+            "processing_time_standard": "1-3 Months (Depends on Nulla Osta)",
+            "max_stay": "Work Permit duration / 1 Year (Digital Nomad)",
+            "passport_validity": "Valid for duration of stay",
+            "photo_spec": "35mm x 45mm, Biometric, White background",
+            "min_funds_requirement": "**Digital Nomad:** ~28,000 EUR/year income. **Work Visa:** Salary as per contract (CCNL standards)."
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "it_nulla_osta",
+                    "title": "Nulla Osta (Work Authorization)",
+                    "description": "Original Work Authorization issued by the 'Sportello Unico per l'Immigrazione' (SUI) in Italy. This is the most critical document.",
+                    "type": "document",
+                    "is_premium": true
+                },
+                {
+                    "id": "it_digital_nomad_proof",
+                    "title": "Digital Nomad Evidence",
+                    "description": "Proof of remote work (contracts), annual income >28,000 EUR, and health insurance (30k EUR coverage).",
+                    "type": "document",
+                    "is_premium": true
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Choose Path: Work Visa vs Digital Nomad",
+                "description": "**Work Visa:** Employer applies for Nulla Osta (Decreto Flussi quotas).\n**Digital Nomad:** Apply directly if you meet income/remote work criteria."
+            },
+            {
+                "step_order": 2,
+                "title": "Employer Applies for Nulla Osta (Work Visa only)",
+                "description": "Your employer in Italy submits the request to the Immigration Office (SUI) during 'Click Days' (Feb/Oct 2025).",
+                "action_link": "https://portaleservizi.dlci.interno.it/"
+            },
+            {
+                "step_order": 3,
+                "title": "Receive Nulla Osta",
+                "description": "Once approved, the SUI sends the Nulla Osta to the employer and the Italian Consulate in your country."
+            },
+            {
+                "step_order": 4,
+                "title": "Book Appointment",
+                "description": "Book a National Visa appointment at VFS Global."
+            },
+            {
+                "step_order": 5,
+                "title": "Submit Application",
+                "description": "Submit the visa application with the Nulla Osta (or Digital Nomad docs) within 6 months of issuance."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 500000,
+        "required_education": "bachelors",
+        "required_employment_status": [],
+        "max_age": 50
+    }
+}

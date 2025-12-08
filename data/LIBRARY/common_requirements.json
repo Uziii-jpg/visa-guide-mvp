@@ -1,0 +1,54 @@
+[
+    {
+        "id": "std_passport",
+        "title": "Original Passport",
+        "description": "Must be valid for at least 6 months beyond intended stay. Issued within last 10 years. Two blank pages.",
+        "type": "physical",
+        "is_premium": false
+    },
+    {
+        "id": "std_photos",
+        "title": "Two Passport Photos",
+        "description": "Recent (within 6 months), 35x45mm, matte finish, white background, 80% face coverage.",
+        "type": "physical",
+        "is_premium": false
+    },
+    {
+        "id": "std_flight",
+        "title": "Round Trip Flight Itinerary",
+        "description": "Confirmed reservation showing entry and exit. Do not buy actual tickets before visa approval.",
+        "type": "document",
+        "is_premium": true,
+        "affiliate_key": "flight_dummy_ticket"
+    },
+    {
+        "id": "std_accommodation",
+        "title": "Proof of Accommodation",
+        "description": "Hotel vouchers or invitation letter from host covering the entire duration of stay.",
+        "type": "document",
+        "is_premium": true,
+        "affiliate_key": "hotel_booking_global"
+    },
+    {
+        "id": "std_financials_bank",
+        "title": "Bank Statements",
+        "description": "Personal bank statements for the last 3-6 months (stamped and signed by the bank).",
+        "type": "document",
+        "is_premium": true
+    },
+    {
+        "id": "std_employment_noc",
+        "title": "Employment Proof / NOC",
+        "description": "Leave sanction letter from employer (NOC) and salary slips for the last 3 months.",
+        "type": "document",
+        "is_premium": true
+    },
+    {
+        "id": "std_insurance_travel",
+        "title": "Travel Medical Insurance",
+        "description": "Policy covering medical emergencies and repatriation. Minimum coverage usually $50,000 or €30,000.",
+        "type": "document",
+        "is_premium": true,
+        "affiliate_key": "insurance_global"
+    }
+]

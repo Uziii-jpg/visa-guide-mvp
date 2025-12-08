@@ -1,0 +1,144 @@
+{
+    "country_code": "GB",
+    "visa_type": "STUDENT",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "490 GBP (Visa) + 776 GBP/year (IHS Surcharge). Total ~1.3 Lakh INR upfront for 1 year.",
+            "processing_time_standard": "3 Weeks (Priority: 5 Days)",
+            "max_stay": "Duration of course + 4 months (usually)",
+            "passport_validity": "Valid for travel",
+            "photo_spec": "UK Standard (45x35mm)",
+            "min_funds_requirement": "1,334 GBP/month (London) or 1,023 GBP/month (Outside London) for 9 months"
+        },
+        "documents": [
+            {
+                "id": "uk_cas",
+                "title": "CAS Number",
+                "description": "Confirmation of Acceptance for Studies (CAS) reference number from your university.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "uk_financials_student",
+                "title": "Financial Evidence",
+                "description": "Bank statements (28 days old) OR Education Loan Sanction Letter from a nationalized Indian bank.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "uk_tb_test",
+                "title": "TB Test Certificate",
+                "description": "Tuberculosis test result from an approved clinic (mandatory for India).",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "uk_academic_docs",
+                "title": "Academic Transcripts",
+                "description": "Documents listed on your CAS (e.g., degree certificates, English test results).",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "uk_atass",
+                "title": "ATAS Certificate",
+                "description": "Academic Technology Approval Scheme certificate (if required for your course).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "uk_dependents_note",
+                "title": "Dependent Restriction",
+                "description": "Note: Master's students (taught courses) cannot bring dependents. Only PhD/Research students are eligible.",
+                "type": "info",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Receive CAS",
+                "description": "Get the CAS number from your university after meeting all conditions."
+            },
+            {
+                "step_order": 2,
+                "title": "Prepare Finances",
+                "description": "Ensure funds have been in your account for 28 days."
+            },
+            {
+                "step_order": 3,
+                "title": "Apply Online",
+                "description": "Fill the Student Visa application on GOV.UK."
+            },
+            {
+                "step_order": 4,
+                "title": "Pay Fees",
+                "description": "Pay the Visa fee and the Immigration Health Surcharge (IHS)."
+            },
+            {
+                "step_order": 5,
+                "title": "Biometrics",
+                "description": "Attend appointment at VFS Global."
+            }
+        ]
+    },
+    "university_guide": {
+        "top_universities": [
+            "University of Oxford",
+            "University of Cambridge",
+            "Imperial College London",
+            "University College London (UCL)",
+            "London School of Economics (LSE)",
+            "University of Edinburgh",
+            "King's College London",
+            "University of Manchester",
+            "University of Warwick",
+            "University of Bristol"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "September Intake (Major)",
+                "deadline": "January (UCAS) / June-July (Postgrad)"
+            },
+            {
+                "season": "January Intake",
+                "deadline": "October - November"
+            }
+        ],
+        "required_exams": [
+            "IELTS UKVI (Academic)",
+            "PTE Academic UKVI",
+            "LNAT (Law), UCAT/BMAT (Medicine)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Apply via UCAS/Direct",
+                "description": "Submit applications and personal statement."
+            },
+            {
+                "step_order": 2,
+                "title": "Receive Offer",
+                "description": "Get Conditional or Unconditional Offer."
+            },
+            {
+                "step_order": 3,
+                "title": "Meet Conditions",
+                "description": "Submit final results, pay deposit, and pass TB test."
+            },
+            {
+                "step_order": 4,
+                "title": "Request CAS",
+                "description": "University issues the CAS number."
+            }
+        ]
+    },
+    "eligibility": null
+}

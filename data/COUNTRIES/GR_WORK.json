@@ -1,0 +1,52 @@
+{
+    "country_code": "GR",
+    "visa_type": "WORK",
+    "template_ref": "SCHENGEN_WORK",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "180 EUR (National Visa)",
+            "processing_time_standard": "4-8 Weeks"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "gr_work_contract_approval",
+                    "title": "Approval of Work Contract",
+                    "description": "Approval from the Decentralized Administration in Greece.",
+                    "type": "document",
+                    "is_premium": true
+                },
+                {
+                    "id": "gr_medical",
+                    "title": "Medical Certificate",
+                    "description": "Certificate stating you are free from contagious diseases.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Employer Applies",
+                "description": "Employer submits the request to the Decentralized Administration in Greece."
+            },
+            {
+                "step_order": 2,
+                "title": "Approval",
+                "description": "Once approved, the decision is forwarded to the Greek Consulate."
+            },
+            {
+                "step_order": 3,
+                "title": "Book Appointment",
+                "description": "Book a National Visa appointment at the Consulate."
+            },
+            {
+                "step_order": 4,
+                "title": "Submit Application",
+                "description": "Submit documents including the Medical Certificate and PCC."
+            }
+        ]
+    },
+    "eligibility": null
+}

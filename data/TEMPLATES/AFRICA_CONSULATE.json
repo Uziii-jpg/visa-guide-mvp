@@ -1,0 +1,88 @@
+{
+    "template_id": "AFRICA_CONSULATE",
+    "description": "Sticker Visa processed via High Commission/Embassy for African countries.",
+    "last_updated": "2024-11-30",
+    "base_requirements": {
+        "meta": {
+            "fee_euro_approx": "Varies (approx. 50-150 USD)",
+            "fee_inr_approx": 6000,
+            "processing_time_standard": "5-10 Working Days",
+            "max_stay": "30-90 Days",
+            "passport_validity": "6 months",
+            "photo_spec": "2 Passport size photos (White background)"
+        },
+        "documents": [
+            {
+                "id": "afr_cons_passport",
+                "title": "Original Passport",
+                "description": "Must be submitted physically. Valid for 6 months.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "afr_cons_form",
+                "title": "Visa Application Form",
+                "description": "Physical form, filled and signed.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "afr_cons_photos",
+                "title": "Physical Photos",
+                "description": "2 recent photos glued/stapled to the form.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "afr_yellow_fever",
+                "title": "Yellow Fever Vaccination",
+                "description": "Original Yellow Fever Vaccination Card is mandatory for submission.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "afr_cons_financials",
+                "title": "Financial Proof",
+                "description": "Bank statements (3-6 months) showing sufficient funds.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "afr_cons_cover_letter",
+                "title": "Cover Letter",
+                "description": "Detailed itinerary and purpose of visit.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "afr_cons_invitation",
+                "title": "Invitation Letter (If applicable)",
+                "description": "Letter from host in the country + their ID copy.",
+                "type": "document",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Prepare Documents",
+                "description": "Gather all physical documents, including Yellow Fever card."
+            },
+            {
+                "step_order": 2,
+                "title": "Submit Application",
+                "description": "Submit at the High Commission or authorized agent."
+            },
+            {
+                "step_order": 3,
+                "title": "Processing",
+                "description": "Passport is held for processing."
+            },
+            {
+                "step_order": 4,
+                "title": "Collection",
+                "description": "Collect passport with visa sticker."
+            }
+        ]
+    }
+}

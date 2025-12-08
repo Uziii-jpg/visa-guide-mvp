@@ -1,0 +1,111 @@
+{
+    "country_code": "AT",
+    "visa_type": "WORK_RWR_CARD",
+    "template_ref": "SCHENGEN_WORK",
+    "description": "Red-White-Red Card (Rot-Weiß-Rot Karte) for Qualified Workers in Austria under the official immigration scheme.",
+    "last_updated": "2025-12-01",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "€160 (Residence Permit Fee) + €150 (Visa D Fee)",
+            "fee_inr_approx": 29000,
+            "processing_time_standard": "Approximately 8–12 weeks (including labour-market check by AMS)",
+            "max_stay": "2 Years (Usually 24 months, renewable)",
+            "passport_validity": "At least 3 months beyond the validity of the applied permit",
+            "photo_spec": "35x45 mm, ICAO-standard passport photo, not older than 6 months",
+            "min_funds_requirement": "Salary threshold applies depending on category; see employer-offer and gross wage conditions as per RWR Card requirements"
+        },
+        "documents": [
+            {
+                "id": "at_passport",
+                "title": "Original Passport (Valid + Copies)",
+                "description": "Passport valid for intended stay; at least two blank pages. Provide copies of all used pages and visas.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "at_employer_decl",
+                "title": "Employer's Declaration (Arbeitgebererklärung)",
+                "description": "Signed employer’s declaration required for RWR Card application.",
+                "type": "document",
+                "is_premium": false,
+                "action_link": "https://www.migration.gv.at/fileadmin/downloads/formulare/Arbeitgebererklaerung.pdf"
+            },
+            {
+                "id": "at_points_calc",
+                "title": "Points Calculator Output / Proof",
+                "description": "Print-out or screenshot of the official points-calculator showing you meet the threshold (e.g. ≥ 55 points for many categories).",
+                "type": "document",
+                "is_premium": true,
+                "action_link": "https://www.migration.gv.at/en/service-and-links/points-calculator/"
+            },
+            {
+                "id": "at_qualifications",
+                "title": "Apostilled Degree or Vocational Certificate",
+                "description": "Your degree/diploma certificate, MEA-apostilled (for Indian documents), translated to German/English if required.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "at_experience",
+                "title": "Experience Certificates / Job Letters",
+                "description": "Proof of relevant work experience — reference letters describing your role, durations, responsibilities.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "at_pcc_apostille",
+                "title": "Police Clearance Certificate (PCC) with Apostille",
+                "description": "PCC from Indian authorities (not older than 3 months) and MEA-apostilled to be valid for Austrian application.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "at_insurance",
+                "title": "Health / Travel Insurance (initial)",
+                "description": "Insurance coverage for entry period until Austrian statutory insurance can start.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "insurance_austria_work"
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Secure a Job Offer & Employer Declaration",
+                "description": "Get a binding job offer from an Austrian employer and obtain the signed Employer’s Declaration (Arbeitgebererklärung). Ensure gross salary meets RWR Card thresholds.",
+                "action_link": "https://www.migration.gv.at/fileadmin/downloads/formulare/Arbeitgebererklaerung.pdf"
+            },
+            {
+                "step_order": 2,
+                "title": "Calculate & Verify Points Eligibility",
+                "description": "Use the official Austrian RWR-Card Points Calculator to check you meet minimum required points (e.g. 55/90 for many categories). Save the result as proof.",
+                "action_link": "https://www.migration.gv.at/en/service-and-links/points-calculator/"
+            },
+            {
+                "step_order": 3,
+                "title": "Legalize Indian Documents (Apostille)",
+                "description": "Get required documents (degree, PCC, etc.) apostilled via MEA/e-Sanad or authorised centre before submission to Austrian Embassy/Consulate.",
+                "action_link": "https://apostille.in/"
+            },
+            {
+                "step_order": 4,
+                "title": "Submit Application at Austrian Embassy / Consulate",
+                "description": "Submit all documents (passport, employer letter, points proof, legalized docs, insurance) to the Austrian Embassy/Consulate; embassy will forward to AMS for labour-market check.",
+                "action_link": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/redwhiteredcard/"
+            },
+            {
+                "step_order": 5,
+                "title": "Await AMS Approval & Visa D Issuance",
+                "description": "Once AMS approves (typically within 8-12 weeks), the embassy issues a Visa D allowing entry. After arrival, you collect the Red-White-Red Card (residence & work permit).",
+                "action_link": ""
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": null,
+        "min_liquid_savings": null,
+        "required_education": "Relevant degree/vocational qualification recognized in Austria",
+        "required_employment_status": "Binding job offer from Austrian employer + signed employer declaration",
+        "max_age": "no_limit"
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "template_id": "E_VISA",
+    "description": "Standard Electronic Visa for countries with digital processing (SE Asia, etc.).",
+    "last_updated": "2024-11-30",
+    "base_requirements": {
+        "meta": {
+            "fee_euro_approx": "30-80 USD",
+            "fee_inr_approx": 3500,
+            "processing_time_standard": "3-5 Working Days",
+            "max_stay": "30 Days",
+            "passport_validity": "6 months from date of arrival",
+            "photo_spec": "Digital, White background, JPEG format"
+        },
+        "documents": [
+            {
+                "id": "evisa_passport",
+                "title": "Passport Bio Page",
+                "description": "Clear color scan of the passport information page.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "evisa_photo",
+                "title": "Digital Photo",
+                "description": "Recent photograph, white background, specific pixel dimensions (e.g., 400x600px).",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "evisa_flight",
+                "title": "Return Flight Ticket",
+                "description": "Confirmed return or onward journey ticket.",
+                "type": "digital",
+                "is_premium": true,
+                "affiliate_key": "flight_dummy_ticket"
+            },
+            {
+                "id": "evisa_hotel",
+                "title": "Hotel Booking",
+                "description": "Proof of accommodation for the entire stay.",
+                "type": "digital",
+                "is_premium": true,
+                "affiliate_key": "hotel_booking_global"
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Register",
+                "description": "Create account on the official E-Visa portal."
+            },
+            {
+                "step_order": 2,
+                "title": "Fill Details",
+                "description": "Enter passport and travel details accurately."
+            },
+            {
+                "step_order": 3,
+                "title": "Upload & Pay",
+                "description": "Upload docs and pay fee online."
+            },
+            {
+                "step_order": 4,
+                "title": "Download Visa",
+                "description": "Receive Electronic Travel Authorization (ETA) or E-Visa via email."
+            }
+        ]
+    }
+}

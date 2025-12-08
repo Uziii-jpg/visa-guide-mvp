@@ -1,0 +1,48 @@
+{
+    "country_code": "CL",
+    "visa_type": "TOURIST",
+    "template_ref": "SOUTH_AMERICA_CONSULATE",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Free (with US Visa) / 123 USD (Consulate)",
+            "fee_inr_approx": 10500,
+            "processing_time_standard": "15-30 Days",
+            "max_stay": "90 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "cl_us_exemption",
+                    "title": "US Visa Exemption",
+                    "description": "Exempt if holding a valid US B1/B2 visa or Green Card (min 6 months validity).",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Check Exemption",
+                "description": "If you have a US Visa, you are VISA EXEMPT."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply Online (SAC)",
+                "description": "If no US visa, apply via Chile Online Consular Services (SAC)."
+            },
+            {
+                "step_order": 3,
+                "title": "Upload Docs",
+                "description": "Upload all documents online."
+            },
+            {
+                "step_order": 4,
+                "title": "Pay & Stamp",
+                "description": "Pay fee online if approved. Visit Embassy for stamping."
+            }
+        ]
+    },
+    "eligibility": null
+}

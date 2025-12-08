@@ -1,0 +1,79 @@
+{
+    "country_code": "GB",
+    "visa_type": "TOURIST",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "115 GBP (~12,500 INR). Increasing to 127 GBP from April 2025.",
+            "processing_time_standard": "3 Weeks (15 Working Days). Priority: 5 Days.",
+            "max_stay": "Up to 6 months",
+            "passport_validity": "Valid for the whole of your stay",
+            "photo_spec": "45mm x 35mm, cream/grey background (UK standard)",
+            "min_funds_requirement": "Sufficient to cover all costs (no fixed amount)"
+        },
+        "documents": [
+            {
+                "id": "uk_passport",
+                "title": "Original Passport",
+                "description": "Must be valid for the duration of your stay and have at least one blank page.",
+                "type": "physical",
+                "is_premium": false
+            },
+            {
+                "id": "uk_financials",
+                "title": "Financial Evidence",
+                "description": "Bank statements (6 months), payslips, or tax returns showing you can support yourself.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "uk_employment",
+                "title": "Employment/Education Proof",
+                "description": "Letter from employer (leave approval) or school/university.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "uk_accommodation",
+                "title": "Accommodation Details",
+                "description": "Hotel booking or address of where you will stay.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "uk_invitation",
+                "title": "Invitation Letter (if applicable)",
+                "description": "Letter from host + copy of their passport/visa if staying with them.",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Apply Online",
+                "description": "Complete the 'Standard Visitor' visa application on GOV.UK."
+            },
+            {
+                "step_order": 2,
+                "title": "Pay Fees",
+                "description": "Pay the visa fee online."
+            },
+            {
+                "step_order": 3,
+                "title": "Book Appointment",
+                "description": "Book a biometric appointment at VFS Global."
+            },
+            {
+                "step_order": 4,
+                "title": "Upload Documents",
+                "description": "Self-upload documents on the VFS/commercial partner website (recommended) or take them to the center."
+            },
+            {
+                "step_order": 5,
+                "title": "Attend Appointment",
+                "description": "Provide biometrics (fingerprints and photo) at the center."
+            }
+        ]
+    },
+    "eligibility": null
+}

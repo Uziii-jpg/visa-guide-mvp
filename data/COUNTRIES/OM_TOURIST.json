@@ -1,0 +1,48 @@
+{
+    "country_code": "OM",
+    "visa_type": "TOURIST",
+    "template_ref": "GCC_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "20 OMR (approx. 4300 INR) for 30 Days",
+            "fee_inr_approx": 4300,
+            "processing_time_standard": "1-4 Working Days",
+            "max_stay": "10 Days (26A), 30 Days (26B)",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "om_gcc_residence",
+                    "title": "GCC Residence Card (Optional)",
+                    "description": "GCC residents can apply for a specific visa type (29A) which is cheaper/easier.",
+                    "type": "document",
+                    "is_premium": false
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "ROP Portal",
+                "description": "Visit the Royal Oman Police (ROP) E-Visa website."
+            },
+            {
+                "step_order": 2,
+                "title": "Select Visa Type",
+                "description": "Choose 'Unsponsored Tourist Visa' (26B) or 'GCC Resident Visa' (29A)."
+            },
+            {
+                "step_order": 3,
+                "title": "Upload & Pay",
+                "description": "Upload passport/photo and pay fees."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive Visa",
+                "description": "Visa is sent via email."
+            }
+        ]
+    },
+    "eligibility": null
+}

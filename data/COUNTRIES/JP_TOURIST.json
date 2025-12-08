@@ -1,0 +1,55 @@
+{
+    "country_code": "JP",
+    "visa_type": "TOURIST",
+    "template_ref": "CONSULATE_ASIA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Approx. 500 INR (Visa Fee) + 650 INR (VFS Charge)",
+            "fee_inr_approx": 1150,
+            "processing_time_standard": "4-7 Working Days",
+            "max_stay": "15-90 Days (Single/Double/Multiple)",
+            "photo_spec": "45x45mm, White background, Matte finish"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "jp_schedule",
+                    "title": "Schedule of Stay",
+                    "description": "Day-by-day itinerary in the official Japanese format.",
+                    "type": "document",
+                    "is_premium": true
+                },
+                {
+                    "id": "jp_itr",
+                    "title": "ITR (3 Years)",
+                    "description": "Income Tax Returns for the last 3 years are mandatory.",
+                    "type": "document",
+                    "is_premium": true
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Download Form",
+                "description": "Download and fill the Visa Application Form from the Embassy website."
+            },
+            {
+                "step_order": 2,
+                "title": "Prepare Schedule",
+                "description": "Create a detailed day-wise itinerary."
+            },
+            {
+                "step_order": 3,
+                "title": "Submit at VFS",
+                "description": "Walk-in or book appointment at VFS Japan (New Delhi/Mumbai/etc.)."
+            },
+            {
+                "step_order": 4,
+                "title": "Collect Passport",
+                "description": "Collect passport after 4-5 days."
+            }
+        ]
+    },
+    "eligibility": null
+}

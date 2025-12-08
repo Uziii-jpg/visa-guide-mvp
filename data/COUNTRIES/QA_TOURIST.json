@@ -1,0 +1,56 @@
+{
+    "country_code": "QA",
+    "visa_type": "TOURIST",
+    "template_ref": "GCC_EVISA",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "100 QAR (approx. 2300 INR) + Insurance",
+            "fee_inr_approx": 2300,
+            "processing_time_standard": "1-4 Working Days",
+            "max_stay": "30 Days",
+            "min_funds_requirement": "Must have hotel booking for duration of stay (Discover Qatar hotel often mandatory for certain visas)"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "qa_hotel_booking",
+                    "title": "Discover Qatar Hotel Booking",
+                    "description": "For Visa on Arrival or specific e-visas, booking via Discover Qatar website is mandatory.",
+                    "type": "document",
+                    "is_premium": true,
+                    "affiliate_key": "hotel_booking_qatar"
+                },
+                {
+                    "id": "qa_insurance",
+                    "title": "Health Insurance",
+                    "description": "Mandatory health insurance from a MOPH-registered provider (approx. 50 QAR).",
+                    "type": "document",
+                    "is_premium": true
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Hayya Portal",
+                "description": "Register on the Hayya Portal (Official Qatar Visa Platform)."
+            },
+            {
+                "step_order": 2,
+                "title": "Upload Docs",
+                "description": "Upload passport, photo, and accommodation details."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay the 100 QAR visa fee."
+            },
+            {
+                "step_order": 4,
+                "title": "Receive Hayya Entry Visa",
+                "description": "Receive the entry permit via email."
+            }
+        ]
+    },
+    "eligibility": null
+}

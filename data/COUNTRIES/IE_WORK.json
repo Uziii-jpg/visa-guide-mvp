@@ -1,0 +1,71 @@
+{
+    "country_code": "IE",
+    "visa_type": "WORK",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "1,000 EUR (Permit Fee) + 60/100 EUR (Visa Fee)",
+            "processing_time_standard": "4-12 Weeks (Permit) + 8 Weeks (Visa)",
+            "max_stay": "2 years (Critical Skills) / 5 years (General)",
+            "passport_validity": "12 months beyond intended date of arrival",
+            "min_funds_requirement": "Salary must meet threshold (e.g., 32k/64k EUR for Critical Skills)"
+        },
+        "documents": [
+            {
+                "id": "ie_employment_permit",
+                "title": "Employment Permit",
+                "description": "Original Critical Skills or General Employment Permit issued by DETE.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "ie_contract",
+                "title": "Employment Contract",
+                "description": "Signed contract detailing job description, salary, and duration.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ie_qualifications",
+                "title": "Qualifications",
+                "description": "Certified copies of degrees and diplomas relevant to the job.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "ie_insurance",
+                "title": "Medical Insurance",
+                "description": "Private medical insurance covering the period until you are enrolled in state services.",
+                "type": "document",
+                "is_premium": true
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Secure Job Offer",
+                "description": "Get a job offer from an Irish employer."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply for Permit",
+                "description": "Employer (or you) applies for the Employment Permit from DETE (Dept of Enterprise, Trade and Employment)."
+            },
+            {
+                "step_order": 3,
+                "title": "Receive Permit",
+                "description": "Wait for approval and receive the physical permit."
+            },
+            {
+                "step_order": 4,
+                "title": "Apply for Visa",
+                "description": "Apply for the 'D' Long Stay visa online (AVATS) and submit documents."
+            },
+            {
+                "step_order": 5,
+                "title": "Travel & Register",
+                "description": "Enter Ireland and register with Immigration (ISD) to get your IRP card."
+            }
+        ]
+    },
+    "eligibility": null
+}

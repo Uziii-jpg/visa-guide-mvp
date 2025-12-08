@@ -1,0 +1,52 @@
+{
+    "country_code": "NA",
+    "visa_type": "TOURIST",
+    "template_ref": "AFRICA_CONSULATE",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "Approx. 50 USD (Visa on Arrival available for Indians)",
+            "fee_inr_approx": 4200,
+            "processing_time_standard": "On Arrival",
+            "max_stay": "90 Days",
+            "passport_validity": "6 months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "na_voa_form",
+                    "title": "Visa on Arrival Form",
+                    "description": "Fill the form available at the airport.",
+                    "type": "physical",
+                    "is_premium": false
+                }
+            ],
+            "remove": [
+                "afr_cons_photos",
+                "afr_cons_form"
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Travel",
+                "description": "Fly to Hosea Kutako International Airport (Windhoek)."
+            },
+            {
+                "step_order": 2,
+                "title": "Fill Form",
+                "description": "Complete the Visa on Arrival form."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees",
+                "description": "Pay the visa fee (Cash/Card)."
+            },
+            {
+                "step_order": 4,
+                "title": "Immigration",
+                "description": "Get visa stamped."
+            }
+        ]
+    },
+    "eligibility": null
+}

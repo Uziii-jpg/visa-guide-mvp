@@ -1,0 +1,133 @@
+{
+    "country_code": "IT",
+    "visa_type": "STUDENT",
+    "template_ref": "SCHENGEN_STUDENT",
+    "description": "National Visa (Type D) for Studies. Note: Universitaly pre-enrollment is mandatory.",
+    "last_updated": "2025-12-05",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "50 EUR (National Visa)",
+            "fee_inr_approx": 5000,
+            "processing_time_standard": "4-8 Weeks (After Universitaly validation)",
+            "max_stay": "Duration of study + 1 Year (Permesso di Soggiorno)",
+            "passport_validity": "Valid for duration of stay",
+            "photo_spec": "35mm x 45mm, Biometric, White background",
+            "min_funds_requirement": "**460.28 EUR/month** (~6,000 EUR/year). Recommended to show **8,000-10,000 EUR** for safety."
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "it_universitaly",
+                    "title": "Universitaly Summary",
+                    "description": "Validated pre-enrolment application form from the Universitaly portal.",
+                    "type": "document",
+                    "is_premium": false
+                },
+                {
+                    "id": "it_dov",
+                    "title": "Declaration of Value (DOV) / CIMEA",
+                    "description": "Declaration of Value issued by the Italian Consulate OR CIMEA Statement of Comparability for your previous degrees.",
+                    "type": "document",
+                    "is_premium": true
+                },
+                {
+                    "id": "it_accommodation",
+                    "title": "Proof of Accommodation",
+                    "description": "Hotel booking (10-30 days) or University housing letter.",
+                    "type": "document",
+                    "is_premium": true
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "University Admission",
+                "description": "Apply to the Italian university and get accepted."
+            },
+            {
+                "step_order": 2,
+                "title": "Universitaly Pre-enrollment",
+                "description": "Register on Universitaly.it and submit the pre-enrollment application to the university.",
+                "action_link": "https://www.universitaly.it/"
+            },
+            {
+                "step_order": 3,
+                "title": "University Validation",
+                "description": "The university validates your request and forwards it to the Consulate."
+            },
+            {
+                "step_order": 4,
+                "title": "Book VFS Appointment",
+                "description": "Schedule a National Visa appointment at VFS Global.",
+                "action_link": "https://visa.vfsglobal.com/ind/en/ita/book-an-appointment"
+            },
+            {
+                "step_order": 5,
+                "title": "Submit Application",
+                "description": "Submit documents, including the Universitaly summary and DOV/CIMEA."
+            }
+        ]
+    },
+    "university_guide": {
+        "top_universities": [
+            "Politecnico di Milano",
+            "Sapienza University of Rome",
+            "University of Bologna",
+            "University of Padua",
+            "University of Milan",
+            "Politecnico di Torino",
+            "University of Pisa",
+            "University of Naples Federico II",
+            "University of Trento",
+            "University of Florence"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "Fall Intake (September/October)",
+                "deadline": "April - June (Pre-enrollment)"
+            }
+        ],
+        "required_exams": [
+            "TOLC (for some undergraduate programs)",
+            "IELTS / TOEFL (for English programs)",
+            "Italian Language Test (if applicable)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Apply to University",
+                "description": "Submit application to the university and get the admission letter."
+            },
+            {
+                "step_order": 2,
+                "title": "Universitaly Registration",
+                "description": "Create account on Universitaly and fill the pre-enrollment form."
+            },
+            {
+                "step_order": 3,
+                "title": "DOV / CIMEA",
+                "description": "Apply for the Declaration of Value or CIMEA certificate."
+            },
+            {
+                "step_order": 4,
+                "title": "Wait for Validation",
+                "description": "Wait for the university to approve the Universitaly request."
+            }
+        ]
+    },
+    "eligibility": {
+        "min_annual_income": 0,
+        "min_liquid_savings": 800000,
+        "required_education": "high_school",
+        "required_employment_status": [],
+        "max_age": 40
+    }
+}

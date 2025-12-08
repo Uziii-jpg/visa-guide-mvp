@@ -1,0 +1,88 @@
+{
+    "country_code": "NZ",
+    "visa_type": "TOURIST",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "341 NZD (approx. 18,000 INR) + IVL 35 NZD",
+            "fee_inr_approx": 19500,
+            "processing_time_standard": "4-6 Weeks",
+            "max_stay": "Up to 9 months (usually 3 months per visit)",
+            "passport_validity": "3 months beyond intended departure",
+            "photo_spec": "Digital, 4:3 aspect ratio, 900x1200px to 2250x3000px, light background",
+            "min_funds_requirement": "1,000 NZD/month (or 400 NZD/month if accommodation prepaid)"
+        },
+        "documents": [
+            {
+                "id": "nz_passport",
+                "title": "Passport Bio Pages",
+                "description": "Scanned copies of all pages with visa stamps/entries.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "nz_photo",
+                "title": "Digital Photo",
+                "description": "High-quality digital photo meeting NZ specific dimensions.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "nz_financials",
+                "title": "Proof of Funds",
+                "description": "6 months bank statements, Pay slips (3 months), ITR-V (3 years). Must show ~1000 NZD/month.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "nz_employment",
+                "title": "Employment Proof",
+                "description": "NOC from employer, Letter of Leave, or Business Registration.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "nz_cover_letter",
+                "title": "Cover Letter",
+                "description": "Detailed itinerary, purpose of visit, and ties to home country (India).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "nz_return_ticket",
+                "title": "Return Ticket",
+                "description": "Proof of onward travel or funds to buy a ticket.",
+                "type": "document",
+                "is_premium": true,
+                "affiliate_key": "flight_dummy_ticket"
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "RealMe Account",
+                "description": "Create a RealMe account on the Immigration New Zealand website."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply Online",
+                "description": "Complete the Visitor Visa application form online."
+            },
+            {
+                "step_order": 3,
+                "title": "Upload Docs",
+                "description": "Upload all documents as PDFs and the photo as JPG."
+            },
+            {
+                "step_order": 4,
+                "title": "Pay Fees",
+                "description": "Pay the Visa fee and IVL using a credit card (approx. 341 NZD)."
+            },
+            {
+                "step_order": 5,
+                "title": "Decision",
+                "description": "Receive the E-Visa via email."
+            }
+        ]
+    },
+    "eligibility": null
+}

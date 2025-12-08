@@ -1,0 +1,141 @@
+{
+    "country_code": "NZ",
+    "visa_type": "STUDENT",
+    "standalone_data": {
+        "meta": {
+            "fee_euro_approx": "750 NZD (approx. 38,000 INR)",
+            "fee_inr_approx": 38000,
+            "processing_time_standard": "8-10 Weeks (Apply 3 months in advance)",
+            "max_stay": "Duration of Course (up to 4 years)",
+            "passport_validity": "3 months beyond intended departure",
+            "min_funds_requirement": "20,000 NZD per year (approx. 10 Lakh INR) + Tuition Fees"
+        },
+        "documents": [
+            {
+                "id": "nz_offer_place",
+                "title": "Offer of Place",
+                "description": "Official offer letter from an approved NZ education provider.",
+                "type": "digital",
+                "is_premium": false
+            },
+            {
+                "id": "nz_tuition_receipt",
+                "title": "Tuition Fee Receipt",
+                "description": "Proof of payment of tuition fees (usually required before final approval).",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "nz_financials_student",
+                "title": "Financial Evidence",
+                "description": "Funds Transfer Scheme (FTS) is recommended for Indians. Or 6 months bank statements showing 20,000 NZD/year + Education Loan Sanction Letter.",
+                "type": "document",
+                "is_premium": true
+            },
+            {
+                "id": "nz_pcc",
+                "title": "Police Clearance Certificate",
+                "description": "PCC from Passport Seva Kendra (for applicants aged 17+). Valid for 6 months.",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "nz_medical",
+                "title": "Medical & Chest X-Ray",
+                "description": "eMedical from a panel physician (required for courses > 12 months).",
+                "type": "document",
+                "is_premium": false
+            },
+            {
+                "id": "nz_academic_docs",
+                "title": "Academic Transcripts",
+                "description": "Mark sheets and certificates (10th, 12th, Bachelor's).",
+                "type": "document",
+                "is_premium": false
+            }
+        ],
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "Get Offer",
+                "description": "Apply to a university and receive an Offer of Place."
+            },
+            {
+                "step_order": 2,
+                "title": "Medicals & PCC",
+                "description": "Complete medical exam and obtain PCC."
+            },
+            {
+                "step_order": 3,
+                "title": "Apply Online",
+                "description": "Submit 'Fee Paying Student Visa' application via RealMe."
+            },
+            {
+                "step_order": 4,
+                "title": "AIP & Payment",
+                "description": "Receive 'Approval in Principle' (AIP), then pay tuition fees and transfer living funds (FTS)."
+            },
+            {
+                "step_order": 5,
+                "title": "Final Visa",
+                "description": "Upload fee receipts to get the final E-Visa."
+            }
+        ]
+    },
+    "university_guide": {
+        "top_universities": [
+            "University of Auckland",
+            "University of Otago",
+            "Victoria University of Wellington",
+            "University of Canterbury",
+            "Massey University",
+            "University of Waikato",
+            "Lincoln University",
+            "Auckland University of Technology (AUT)"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "Semester 1 (February)",
+                "deadline": "October - December"
+            },
+            {
+                "season": "Semester 2 (July)",
+                "deadline": "April - May"
+            }
+        ],
+        "required_exams": [
+            "IELTS / PTE Academic / TOEFL",
+            "Previous Academic Transcripts"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Apply for Admission",
+                "description": "Submit application and documents to the university."
+            },
+            {
+                "step_order": 2,
+                "title": "Offer of Place",
+                "description": "Receive an 'Offer of Place' letter."
+            },
+            {
+                "step_order": 3,
+                "title": "Pay Fees (AIP)",
+                "description": "Usually, you pay fees AFTER 'Approval in Principle' of visa, but some pay upfront."
+            },
+            {
+                "step_order": 4,
+                "title": "Medical & Police",
+                "description": "Prepare medical exam (chest x-ray) and police clearance."
+            }
+        ]
+    },
+    "eligibility": null
+}

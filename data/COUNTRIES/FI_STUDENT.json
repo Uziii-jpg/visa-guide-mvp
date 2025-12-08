@@ -1,0 +1,115 @@
+{
+    "country_code": "FI",
+    "visa_type": "STUDENT",
+    "template_ref": "SCHENGEN_STUDENT",
+    "overrides": {
+        "meta": {
+            "fee_euro_approx": "350 EUR (Online Application)",
+            "processing_time_standard": "1-2 Months"
+        },
+        "documents": {
+            "add": [
+                {
+                    "id": "fi_tuition_proof",
+                    "title": "Proof of Tuition Fee Payment",
+                    "description": "Receipt showing you have paid the tuition fee or have a scholarship.",
+                    "type": "document",
+                    "is_premium": false
+                },
+                {
+                    "id": "fi_insurance",
+                    "title": "Health Insurance",
+                    "description": "Private health insurance covering medical costs up to 40,000 EUR.",
+                    "type": "document",
+                    "is_premium": true
+                }
+            ]
+        },
+        "steps_flow": [
+            {
+                "step_order": 1,
+                "title": "University Admission",
+                "description": "Apply via 'Studyinfo.fi' and accept the study place."
+            },
+            {
+                "step_order": 2,
+                "title": "Apply on Enter Finland",
+                "description": "Create an account on 'Enter Finland' and submit the Residence Permit application."
+            },
+            {
+                "step_order": 3,
+                "title": "Book Appointment",
+                "description": "Book a slot at VFS Global to prove your identity and give biometrics."
+            },
+            {
+                "step_order": 4,
+                "title": "Wait for Decision",
+                "description": "The Finnish Immigration Service (Migri) processes the application."
+            },
+            {
+                "step_order": 5,
+                "title": "Collect Card",
+                "description": "Collect your Residence Permit card from VFS."
+            }
+        ]
+    },
+    "university_guide": {
+        "top_universities": [
+            "University of Helsinki",
+            "Aalto University",
+            "University of Turku",
+            "University of Jyväskylä",
+            "University of Oulu",
+            "Tampere University",
+            "Lappeenranta-Lahti University of Technology (LUT)",
+            "University of Eastern Finland",
+            "Åbo Akademi University",
+            "Hanken School of Economics"
+        ],
+        "application_platforms": [
+            {
+                "name": "University Portals",
+                "url": "N/A",
+                "description": "Applications are submitted directly to each university's online portal."
+            }
+        ],
+        "intake_seasons": [
+            {
+                "season": "Autumn Intake (August/September)",
+                "deadline": "January (Joint Application Period)"
+            },
+            {
+                "season": "Spring Intake (January)",
+                "deadline": "September (Limited programs)"
+            }
+        ],
+        "required_exams": [
+            "IELTS / TOEFL (for English programs)",
+            "SAT (Accepted by some universities like Aalto)",
+            "Entrance Exams (Common for UAS)"
+        ],
+        "pre_visa_steps": [
+            {
+                "step_order": 1,
+                "title": "Joint Application",
+                "description": "Apply for up to 6 programs on Studyinfo.fi."
+            },
+            {
+                "step_order": 2,
+                "title": "Entrance Exams",
+                "description": "Take online or on-site entrance exams if required."
+            },
+            {
+                "step_order": 3,
+                "title": "Accept Offer",
+                "description": "Confirm your study place on Studyinfo.fi."
+            },
+            {
+                "step_order": 4,
+                "title": "Pay Tuition",
+                "description": "Pay the tuition fee to the university."
+            }
+        ]
+    },
+    "eligibility": null
+}
