@@ -2,23 +2,13 @@
 
 import React, { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
-import Script from 'next/script';
 import { useRouter } from 'next/navigation';
-import { doc, updateDoc, Timestamp, arrayUnion } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
-
-declare global {
-    interface Window {
-        Razorpay: any;
-    }
-}
 
 export default function Subscribe() {
     const { user, isPremium } = useAuth();
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [selectedPlan, setSelectedPlan] = useState<'1_year' | '6_months' | '3_months'>('1_year');
-    const [isRazorpayLoaded, setIsRazorpayLoaded] = useState(false);
 
     const PLANS = {
         '1_year': {
@@ -50,102 +40,63 @@ export default function Subscribe() {
             return;
         }
 
-        if (!isRazorpayLoaded) {
-            alert('Payment system is loading, please try again in a moment.');
-            return;
-        }
-
         setLoading(true);
 
         try {
-            // 1. Create Order
-            const response = await fetch('/api/payment/create-order', {
+            // 1. Get PayU Params & Hash
+            const response = await fetch('/api/payment/payu-init', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ planId }),
+                body: JSON.stringify({
+                    planId,
+                    firstname: user.displayName || user.email?.split('@')[0] || 'User',
+                    email: user.email,
+                    phone: '9999999999' // In a real app, ask user for phone
+                }),
             });
 
             const data = await response.json();
 
-            if (!response.ok) throw new Error(data.error || 'Failed to create order');
+            if (!response.ok) throw new Error(data.error || 'Failed to initiate payment');
 
-            // 2. Initialize Razorpay
-            const options = {
-                key: data.keyId,
+            // 2. Submit Form to PayU
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = data.action;
+
+            const params = {
+                key: data.key,
+                txnid: data.txnid,
                 amount: data.amount,
-                currency: data.currency,
-                name: "VisaGuide Premium",
-                description: `${PLANS[planId as keyof typeof PLANS].name} Subscription`,
-                order_id: data.orderId,
-                handler: async function (response: any) {
-                    try {
-                        // 3. Verify Payment
-                        const verifyRes = await fetch('/api/payment/verify', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                razorpay_order_id: response.razorpay_order_id,
-                                razorpay_payment_id: response.razorpay_payment_id,
-                                razorpay_signature: response.razorpay_signature,
-                                planId: planId
-                            }),
-                        });
-
-                        const verifyData = await verifyRes.json();
-
-                        if (verifyData.success) {
-                            // 4. Update Firestore
-                            const userRef = doc(db, 'users', user.uid);
-                            await updateDoc(userRef, {
-                                subscription_tier: 'premium',
-                                subscription_plan: planId,
-                                subscription_expiry: Timestamp.fromDate(new Date(verifyData.expiry)),
-                                payment_history: arrayUnion({
-                                    order_id: response.razorpay_order_id,
-                                    payment_id: response.razorpay_payment_id,
-                                    amount: data.amount / 100,
-                                    date: Timestamp.now(),
-                                    plan: planId
-                                })
-                            });
-
-                            alert('Payment Successful! Welcome to Premium.');
-                            router.push('/profile');
-                        } else {
-                            alert('Payment verification failed. Please contact support.');
-                        }
-                    } catch (error) {
-                        console.error('Verification Error:', error);
-                        alert('Payment verification failed. Please contact support.');
-                    }
-                },
-                prefill: {
-                    name: user.displayName || '',
-                    email: user.email || '',
-                },
-                theme: {
-                    color: "#2563EB",
-                },
+                productinfo: data.productinfo,
+                firstname: data.firstname,
+                email: data.email,
+                phone: data.phone,
+                surl: data.surl,
+                furl: data.furl,
+                hash: data.hash
             };
 
-            const rzp1 = new window.Razorpay(options);
-            rzp1.open();
+            Object.entries(params).forEach(([key, value]) => {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = value as string;
+                form.appendChild(input);
+            });
+
+            document.body.appendChild(form);
+            form.submit();
 
         } catch (error) {
             console.error('Payment Error:', error);
             alert('Something went wrong. Please try again.');
-        } finally {
             setLoading(false);
         }
     };
 
     return (
         <>
-            <Script
-                src="https://checkout.razorpay.com/v1/checkout.js"
-                onLoad={() => setIsRazorpayLoaded(true)}
-            />
-
             <div className="relative flex min-h-screen w-full flex-col items-center p-4 sm:p-6 md:p-8 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display">
                 <div className="layout-content-container flex w-full max-w-5xl flex-1 flex-col items-center gap-10 py-5">
                     <div className="w-full text-center">
@@ -258,7 +209,7 @@ export default function Subscribe() {
                             )}
                         </button>
                         <p className="text-center text-xs text-gray-400 mt-4">
-                            Secured by Razorpay. Cancel anytime.
+                            Secured by PayU. Cancel anytime.
                         </p>
                     </div>
 

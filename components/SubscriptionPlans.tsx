@@ -2,15 +2,6 @@
 
 import React, { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
-import { doc, updateDoc, Timestamp, arrayUnion } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
-import Script from 'next/script';
-
-declare global {
-    interface Window {
-        Razorpay: any;
-    }
-}
 
 const PLANS = [
     {
@@ -46,103 +37,66 @@ const PLANS = [
 export default function SubscriptionPlans() {
     const { user } = useAuth();
     const [loading, setLoading] = useState(false);
-    const [isRazorpayLoaded, setIsRazorpayLoaded] = useState(false);
 
     const handleSubscribe = async (planId: string) => {
         if (!user) return alert('Please login first');
 
-        if (!isRazorpayLoaded) {
-            alert('Payment system is loading, please try again in a moment.');
-            return;
-        }
-
         setLoading(true);
 
         try {
-            // 1. Create Order
-            const orderRes = await fetch('/api/payment/create-order', {
+            // 1. Get Payment Hash & Params
+            const response = await fetch('/api/payment/payu-init', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ planId }),
-            });
-            const orderData = await orderRes.json();
-
-            if (orderData.error) throw new Error(orderData.error);
-
-            // 2. Open Razorpay
-            const options = {
-                key: orderData.keyId,
-                amount: orderData.amount,
-                currency: orderData.currency,
-                name: 'VisaGuide India',
-                description: `Subscription for ${planId}`,
-                order_id: orderData.orderId,
-                handler: async function (response: any) {
-                    // 3. Verify Payment
-                    try {
-                        const verifyRes = await fetch('/api/payment/verify', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                razorpay_order_id: response.razorpay_order_id,
-                                razorpay_payment_id: response.razorpay_payment_id,
-                                razorpay_signature: response.razorpay_signature,
-                                planId: planId,
-                            }),
-                        });
-                        const verifyData = await verifyRes.json();
-
-                        if (verifyData.success) {
-                            // 4. Update Firestore (Client-side for MVP)
-                            const userRef = doc(db, 'users', user.uid);
-                            await updateDoc(userRef, {
-                                subscription_tier: 'premium',
-                                subscription_plan: planId,
-                                subscription_expiry: Timestamp.fromDate(new Date(verifyData.expiry)),
-                                payment_history: arrayUnion({
-                                    order_id: response.razorpay_order_id,
-                                    payment_id: response.razorpay_payment_id,
-                                    amount: orderData.amount / 100,
-                                    date: Timestamp.now(),
-                                    plan: planId
-                                })
-                            });
-
-                            alert('Payment Successful! You are now a Premium member.');
-                            window.location.reload();
-                        } else {
-                            alert('Payment verification failed');
-                        }
-                    } catch (err) {
-                        console.error('Verification error:', err);
-                        alert('Payment verification failed');
-                    }
-                },
-                prefill: {
+                body: JSON.stringify({
+                    planId,
+                    firstname: user.displayName || user.email?.split('@')[0] || 'User',
                     email: user.email,
-                },
-                theme: {
-                    color: '#3399cc',
-                },
+                    phone: '9999999999'
+                }),
+            });
+            const data = await response.json();
+
+            if (data.error) throw new Error(data.error);
+
+            // 2. Submit Form to PayU
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = data.action;
+
+            const params = {
+                key: data.key,
+                txnid: data.txnid,
+                amount: data.amount,
+                productinfo: data.productinfo,
+                firstname: data.firstname,
+                email: data.email,
+                phone: data.phone,
+                surl: data.surl,
+                furl: data.furl,
+                hash: data.hash
             };
 
-            const paymentObject = new window.Razorpay(options);
-            paymentObject.open();
+            Object.entries(params).forEach(([key, value]) => {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = value as string;
+                form.appendChild(input);
+            });
+
+            document.body.appendChild(form);
+            form.submit();
+
         } catch (error) {
             console.error('Payment Error:', error);
             alert('Something went wrong. Please try again.');
-        } finally {
             setLoading(false);
         }
     };
 
     return (
         <>
-            <Script
-                src="https://checkout.razorpay.com/v1/checkout.js"
-                onLoad={() => setIsRazorpayLoaded(true)}
-            />
-
             <div className="flex flex-col gap-8 mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                     {PLANS.map((plan) => (
@@ -200,7 +154,7 @@ export default function SubscriptionPlans() {
 
                 <div className="flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400 opacity-80">
                     <span className="material-symbols-outlined text-lg text-green-500">lock</span>
-                    <span>Secure payment via Razorpay. Cancel anytime.</span>
+                    <span>Secure payment via PayU. Cancel anytime.</span>
                 </div>
             </div>
         </>
