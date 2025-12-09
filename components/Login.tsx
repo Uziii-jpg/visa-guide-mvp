@@ -1,11 +1,8 @@
 "use client";
 import { useAuth } from "@/context/AuthContext";
-import { useState } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Link, useRouter } from "@/i18n/routing";
 import { useLocale } from "next-intl";
-
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export default function Login({ mode = 'login' }: { mode?: 'login' | 'signup' }) {
     const { loginWithGoogle, signupWithEmail, loginWithEmail, user, loading: authLoading } = useAuth();
@@ -19,7 +16,7 @@ export default function Login({ mode = 'login' }: { mode?: 'login' | 'signup' })
 
     useEffect(() => {
         if (user && !authLoading) {
-            router.push(`/${locale}/profile`);
+            router.push('/profile');
         }
     }, [user, authLoading, router, locale]);
 
@@ -167,7 +164,7 @@ export default function Login({ mode = 'login' }: { mode?: 'login' | 'signup' })
                                 <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal text-center">
                                     {isSignUp ? "Already have an account?" : "New to VisaGuide?"}{" "}
                                     <Link
-                                        href={`/${locale}/${isSignUp ? 'login' : 'signup'}`}
+                                        href={`/${isSignUp ? 'login' : 'signup'}`}
                                         className="font-medium text-blue-600 hover:text-blue-700 hover:underline transition-colors"
                                     >
                                         {isSignUp ? "Log in" : "Create an account"}
