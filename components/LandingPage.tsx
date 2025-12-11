@@ -38,10 +38,10 @@ export default function LandingPage() {
                                 />
 
                                 <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mt-4">
-                                    <Link href={`/${locale}/signup`} className="flex-1 flex items-center justify-center h-14 rounded-full bg-primary hover:bg-primary-dark text-white text-lg font-bold shadow-button hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                                    <Link href="/signup" className="flex-1 flex items-center justify-center h-14 rounded-full bg-primary hover:bg-primary-dark text-white text-lg font-bold shadow-button hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
                                         {t('getStarted')}
                                     </Link>
-                                    <Link href={`/${locale}/explore`} className="flex-1 flex items-center justify-center h-14 rounded-full bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark text-text-light dark:text-text-dark text-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300">
+                                    <Link href="/explore" className="flex-1 flex items-center justify-center h-14 rounded-full bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark text-text-light dark:text-text-dark text-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300">
                                         {t('exploreVisas')}
                                     </Link>
                                 </div>
@@ -143,7 +143,7 @@ export default function LandingPage() {
                                 <div className="relative z-10 flex flex-col items-center gap-6">
                                     <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight">{t('ctaTitle')}</h2>
                                     <p className="text-primary-light text-lg max-w-2xl">{t('ctaSubtitle')}</p>
-                                    <Link href={`/${locale}/signup`} className="mt-4 px-8 py-4 bg-white text-primary text-lg font-bold rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300">
+                                    <Link href="/signup" className="mt-4 px-8 py-4 bg-white text-primary text-lg font-bold rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300">
                                         {t('createAccount')}
                                     </Link>
                                     <p className="text-sm text-primary-light opacity-80">{t('noCreditCard')}</p>

@@ -19,11 +19,8 @@ export default function ContactPage() {
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-bold mb-2">Registered Office</h3>
-                            <p>VisaGuide India (MVP)</p>
-                            <p>123 Startup Hub, Tech Park</p>
-                            <p>Bangalore, Karnataka, 560100</p>
-                            <p>India</p>
+                            <h3 className="text-xl font-bold mb-2">Direct Contact</h3>
+                            <p>Email: <a href="mailto:uzairmanjre86@gmail.com" className="text-blue-600 hover:underline">uzairmanjre86@gmail.com</a></p>
                         </div>
                     </div>
                 </div>

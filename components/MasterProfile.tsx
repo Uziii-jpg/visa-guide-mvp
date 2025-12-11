@@ -5,7 +5,7 @@ import { useAuth } from "@/context/AuthContext";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { User } from "@/types";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import { getDoodleAvatarUrl } from "@/lib/avatarUtils";
 

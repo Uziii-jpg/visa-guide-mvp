@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { useAuth } from '@/context/AuthContext';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+import { useRouter, Link } from '@/i18n/routing';
 import MasterProfile from '@/components/MasterProfile';
 
 export default function ProfilePage() {

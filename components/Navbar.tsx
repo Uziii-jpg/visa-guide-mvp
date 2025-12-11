@@ -82,7 +82,7 @@ export default function Navbar() {
                             <span className="text-2xl">🌏</span>
                             <span className="font-bold text-xl text-gray-900 hidden sm:block">{t('brand')}</span>
                         </Link>
-                        <Link href={`/explore`} className="text-gray-600 hover:text-blue-600 font-medium text-sm transition-colors hidden md:block">
+                        <Link href="/explore" className="text-gray-600 hover:text-blue-600 font-medium text-sm transition-colors hidden md:block">
                             {t('explore')}
                         </Link>
                     </div>
@@ -197,7 +197,7 @@ export default function Navbar() {
                                 </div>
                             </div>
                         ) : (
-                            <Link href={`/login`} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors shadow-sm whitespace-nowrap">
+                            <Link href="/login" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors shadow-sm whitespace-nowrap">
                                 {t('logIn')} / {t('signUp')}
                             </Link>
                         )}
@@ -252,7 +252,7 @@ export default function Navbar() {
 
                         <div className="flex flex-col gap-2">
                             <Link
-                                href={`/explore`}
+                                href="/explore"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-50 text-gray-700 font-medium"
                             >

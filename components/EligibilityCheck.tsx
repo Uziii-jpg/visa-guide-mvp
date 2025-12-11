@@ -6,7 +6,7 @@ import { EligibilityCriteria } from '@/types/visaSchema';
 import { useAuth } from '@/context/AuthContext';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/i18n/routing';
 import { calculateEligibilityScore, ScoreBreakdown } from '@/lib/scoreLogic';
 
 interface EligibilityCheckProps {

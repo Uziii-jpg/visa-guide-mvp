@@ -4,7 +4,7 @@ import React from 'react';
 import { RequirementBlock } from '@/types/visaSchema';
 import { useAuth } from '@/context/AuthContext';
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/i18n/routing';
 
 interface VisaRequirementListProps {
     documents: RequirementBlock[];

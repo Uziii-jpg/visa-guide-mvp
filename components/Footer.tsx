@@ -22,8 +22,9 @@ export default function Footer() {
                 </div>
 
                 {/* Copyright */}
-                <div className="text-xs text-gray-400">
-                    &copy; {new Date().getFullYear()} VisaGuide India. All rights reserved.
+                <div className="text-xs text-gray-400 flex flex-col items-center md:items-end gap-1">
+                    <span>&copy; {new Date().getFullYear()} VisaGuide India. All rights reserved.</span>
+                    <span className="opacity-70">Legal Name: UZAIR SHAUKAT MANJRE</span>
                 </div>
             </div>
         </footer>

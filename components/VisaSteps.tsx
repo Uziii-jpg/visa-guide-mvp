@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { VisaStep } from '@/types/visaSchema';
 import { useAuth } from '@/context/AuthContext';
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/i18n/routing';
 
 interface VisaStepsProps {
   steps: VisaStep[];

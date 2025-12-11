@@ -9,7 +9,7 @@ import UniversityGuideTeaser from '@/components/UniversityGuideTeaser';
 import EligibilityCheck from '@/components/EligibilityCheck';
 import VisaTimeline from '@/components/VisaTimeline';
 import CoverLetterGenerator from '@/components/CoverLetterGenerator';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import ViewTracker from '@/components/ViewTracker';
 
 interface PageProps {

@@ -1,22 +1,22 @@
 import React from 'react';
 import { getVisaData } from '@/lib/visaDataFetcher';
 import UniversityGuide from '@/components/UniversityGuide';
-import Link from 'next/link';
-import { redirect } from 'next/navigation';
+import { Link, redirect } from '@/i18n/routing';
 
 interface PageProps {
     params: Promise<{
         country: string;
         type: string;
+        locale: string;
     }>;
 }
 
 export default async function UniversityGuidePage({ params }: PageProps) {
-    const { country, type } = await params;
+    const { country, type, locale } = await params;
 
     // Only for Student visas
     if (type !== 'STUDENT') {
-        redirect(`/visa/${country}/${type}`);
+        redirect({ href: `/visa/${country}/${type}`, locale });
     }
 
     try {

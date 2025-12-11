@@ -1,8 +1,10 @@
 "use client";
 import { useAuth } from "@/context/AuthContext";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useRouter } from "@/i18n/routing";
 import { useLocale } from "next-intl";
+
+import { useEffect } from "react";
 
 export default function Login({ mode = 'login' }: { mode?: 'login' | 'signup' }) {
     const { loginWithGoogle, signupWithEmail, loginWithEmail, user, loading: authLoading } = useAuth();
@@ -16,7 +18,7 @@ export default function Login({ mode = 'login' }: { mode?: 'login' | 'signup' })
 
     useEffect(() => {
         if (user && !authLoading) {
-            router.push('/profile');
+            router.push(`/${locale}/profile`);
         }
     }, [user, authLoading, router, locale]);
 

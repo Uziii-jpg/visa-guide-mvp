@@ -3,7 +3,7 @@
 import React from 'react';
 import { UniversityGuide as UniGuideType } from '@/types/visaSchema';
 import { useAuth } from '@/context/AuthContext';
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/i18n/routing';
 
 interface UniversityGuideProps {
     guide: UniGuideType;
