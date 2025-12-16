@@ -46,102 +46,49 @@ const PLANS = [
 export default function SubscriptionPlans() {
     const { user } = useAuth();
     const [loading, setLoading] = useState(false);
-    const [isRazorpayLoaded, setIsRazorpayLoaded] = useState(false);
+    // const [isRazorpayLoaded, setIsRazorpayLoaded] = useState(false); // Razorpay not needed for PhonePe redirect flow
 
     const handleSubscribe = async (planId: string) => {
         if (!user) return alert('Please login first');
 
-        if (!isRazorpayLoaded) {
-            alert('Payment system is loading, please try again in a moment.');
-            return;
-        }
-
         setLoading(true);
 
         try {
-            // 1. Create Order
-            const orderRes = await fetch('/api/payment/create-order', {
+            // PhonePe Flow
+            const response = await fetch('/api/payment/phonepe/initiate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ planId }),
+                body: JSON.stringify({
+                    planId,
+                    userId: user.uid
+                }),
             });
-            const orderData = await orderRes.json();
 
-            if (orderData.error) throw new Error(orderData.error);
+            const data = await response.json();
 
-            // 2. Open Razorpay
-            const options = {
-                key: orderData.keyId,
-                amount: orderData.amount,
-                currency: orderData.currency,
-                name: 'VisaGuide India',
-                description: `Subscription for ${planId}`,
-                order_id: orderData.orderId,
-                handler: async function (response: any) {
-                    // 3. Verify Payment
-                    try {
-                        const verifyRes = await fetch('/api/payment/verify', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                razorpay_order_id: response.razorpay_order_id,
-                                razorpay_payment_id: response.razorpay_payment_id,
-                                razorpay_signature: response.razorpay_signature,
-                                planId: planId,
-                            }),
-                        });
-                        const verifyData = await verifyRes.json();
+            if (data.error) throw new Error(data.error);
 
-                        if (verifyData.success) {
-                            // 4. Update Firestore (Client-side for MVP)
-                            const userRef = doc(db, 'users', user.uid);
-                            await updateDoc(userRef, {
-                                subscription_tier: 'premium',
-                                subscription_plan: planId,
-                                subscription_expiry: Timestamp.fromDate(new Date(verifyData.expiry)),
-                                payment_history: arrayUnion({
-                                    order_id: response.razorpay_order_id,
-                                    payment_id: response.razorpay_payment_id,
-                                    amount: orderData.amount / 100,
-                                    date: Timestamp.now(),
-                                    plan: planId
-                                })
-                            });
+            if (data.url) {
+                // Redirect to PhonePe
+                window.location.href = data.url;
+            } else {
+                throw new Error('No redirect URL received');
+            }
 
-                            alert('Payment Successful! You are now a Premium member.');
-                            window.location.reload();
-                        } else {
-                            alert('Payment verification failed');
-                        }
-                    } catch (err) {
-                        console.error('Verification error:', err);
-                        alert('Payment verification failed');
-                    }
-                },
-                prefill: {
-                    email: user.email,
-                },
-                theme: {
-                    color: '#3399cc',
-                },
-            };
-
-            const paymentObject = new window.Razorpay(options);
-            paymentObject.open();
         } catch (error) {
             console.error('Payment Error:', error);
             alert('Something went wrong. Please try again.');
-        } finally {
-            setLoading(false);
+            setLoading(false); // Only stop loading on error, otherwise we are redirecting
         }
     };
 
     return (
         <>
-            <Script
+            {/* Razorpay Script removed/commented out for PhonePe */}
+            {/* <Script
                 src="https://checkout.razorpay.com/v1/checkout.js"
                 onLoad={() => setIsRazorpayLoaded(true)}
-            />
+            /> */}
 
             <div className="flex flex-col gap-8 mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
@@ -192,7 +139,7 @@ export default function SubscriptionPlans() {
                                     : 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100'
                                     } disabled:opacity-50 disabled:cursor-not-allowed`}
                             >
-                                {loading ? 'Processing...' : `Choose ${plan.name}`}
+                                {loading ? 'Processing...' : `Pay with PhonePe`}
                             </button>
                         </div>
                     ))}
@@ -200,7 +147,7 @@ export default function SubscriptionPlans() {
 
                 <div className="flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400 opacity-80">
                     <span className="material-symbols-outlined text-lg text-green-500">lock</span>
-                    <span>Secure payment via Razorpay. Cancel anytime.</span>
+                    <span>Secure payment via PhonePe. Cancel anytime.</span>
                 </div>
             </div>
         </>
