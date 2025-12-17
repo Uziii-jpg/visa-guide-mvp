@@ -7,12 +7,8 @@ export function getPhonePeClient() {
     const clientVersion = parseInt((process.env.PHONEPE_CLIENT_VERSION || '1').trim());
     const envStr = (process.env.PHONEPE_ENV || 'SANDBOX').trim().toUpperCase();
 
-    // Fallback to Sandbox Keys for Local Development ONLY
-    if ((!clientId || !clientSecret) && process.env.NODE_ENV !== 'production') {
-        console.log('Using Default Sandbox Credentials for Development');
-        clientId = 'PGTESTPAYUAT';
-        clientSecret = '099eb0cd-02cf-4e2a-8aca-3e6c6aff0399';
-    }
+    // Fallback block removed for security compliance.
+    // Ensure PHONEPE_MERCHANT_ID and PHONEPE_SALT_KEY are set in .env.local
 
     const env = envStr === 'PRODUCTION' ? Env.PRODUCTION : Env.SANDBOX;
 
