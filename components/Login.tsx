@@ -18,7 +18,7 @@ export default function Login({ mode = 'login' }: { mode?: 'login' | 'signup' })
 
     useEffect(() => {
         if (user && !authLoading) {
-            router.push(`/${locale}/profile`);
+            router.push(`/profile`);
         }
     }, [user, authLoading, router, locale]);
 

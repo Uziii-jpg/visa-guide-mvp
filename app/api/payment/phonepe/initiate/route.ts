@@ -29,7 +29,17 @@ export async function POST(req: NextRequest) {
         const merchantTransactionId = `TXN__${userId}__${planId}__${Date.now()}`;
 
         const client = getPhonePeClient();
-        const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || '').trim();
+        let baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || '').trim();
+
+        if (!baseUrl || !baseUrl.startsWith('http')) {
+            console.error('Invalid NEXT_PUBLIC_BASE_URL:', baseUrl);
+            return NextResponse.json({ error: 'Server Configuration Error: NEXT_PUBLIC_BASE_URL is not set properly.' }, { status: 500 });
+        }
+
+        // Remove trailing slash if present
+        if (baseUrl.endsWith('/')) {
+            baseUrl = baseUrl.slice(0, -1);
+        }
         // Explicitly pass transactionId in URL because PhonePe Sandbox (or specific flow) doesn't always append it
         const callbackUrl = `${baseUrl}/api/payment/phonepe/callback?transactionId=${merchantTransactionId}&locale=${locale}`;
 

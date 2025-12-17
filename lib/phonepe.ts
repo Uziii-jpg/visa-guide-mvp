@@ -2,8 +2,8 @@ import { StandardCheckoutClient, Env } from 'pg-sdk-node';
 
 // Function to get the initialized client
 export function getPhonePeClient() {
-    const clientId = (process.env.PHONEPE_CLIENT_ID || process.env.PHONEPE_MERCHANT_ID || 'PGTESTPAYUAT').trim();
-    const clientSecret = (process.env.PHONEPE_CLIENT_SECRET || process.env.PHONEPE_SALT_KEY || '099eb0cd-02cf-4e2a-8aca-3e6c6aff0399').trim();
+    const clientId = (process.env.PHONEPE_CLIENT_ID || process.env.PHONEPE_MERCHANT_ID || '').trim();
+    const clientSecret = (process.env.PHONEPE_CLIENT_SECRET || process.env.PHONEPE_SALT_KEY || '').trim();
     const clientVersion = parseInt((process.env.PHONEPE_CLIENT_VERSION || '1').trim());
     const envStr = (process.env.PHONEPE_ENV || 'SANDBOX').trim().toUpperCase();
 
