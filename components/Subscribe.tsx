@@ -18,7 +18,9 @@ export default function Subscribe() {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [selectedPlan, setSelectedPlan] = useState<'1_year' | '6_months' | '3_months'>('1_year');
-    const [isRazorpayLoaded, setIsRazorpayLoaded] = useState(false);
+
+    // Razorpay not needed
+    // const [isRazorpayLoaded, setIsRazorpayLoaded] = useState(false);
 
     const PLANS = {
         '1_year': {
@@ -50,101 +52,40 @@ export default function Subscribe() {
             return;
         }
 
-        if (!isRazorpayLoaded) {
-            alert('Payment system is loading, please try again in a moment.');
-            return;
-        }
-
         setLoading(true);
 
         try {
-            // 1. Create Order
-            const response = await fetch('/api/payment/create-order', {
+            // PhonePe Flow
+            const response = await fetch('/api/payment/phonepe/initiate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ planId }),
+                body: JSON.stringify({
+                    planId,
+                    userId: user.uid
+                }),
             });
 
             const data = await response.json();
 
-            if (!response.ok) throw new Error(data.error || 'Failed to create order');
+            if (data.error) throw new Error(data.error);
 
-            // 2. Initialize Razorpay
-            const options = {
-                key: data.keyId,
-                amount: data.amount,
-                currency: data.currency,
-                name: "VisaGuide Premium",
-                description: `${PLANS[planId as keyof typeof PLANS].name} Subscription`,
-                order_id: data.orderId,
-                handler: async function (response: any) {
-                    try {
-                        // 3. Verify Payment
-                        const verifyRes = await fetch('/api/payment/verify', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                razorpay_order_id: response.razorpay_order_id,
-                                razorpay_payment_id: response.razorpay_payment_id,
-                                razorpay_signature: response.razorpay_signature,
-                                planId: planId
-                            }),
-                        });
-
-                        const verifyData = await verifyRes.json();
-
-                        if (verifyData.success) {
-                            // 4. Update Firestore
-                            const userRef = doc(db, 'users', user.uid);
-                            await updateDoc(userRef, {
-                                subscription_tier: 'premium',
-                                subscription_plan: planId,
-                                subscription_expiry: Timestamp.fromDate(new Date(verifyData.expiry)),
-                                payment_history: arrayUnion({
-                                    order_id: response.razorpay_order_id,
-                                    payment_id: response.razorpay_payment_id,
-                                    amount: data.amount / 100,
-                                    date: Timestamp.now(),
-                                    plan: planId
-                                })
-                            });
-
-                            alert('Payment Successful! Welcome to Premium.');
-                            router.push('/profile');
-                        } else {
-                            alert('Payment verification failed. Please contact support.');
-                        }
-                    } catch (error) {
-                        console.error('Verification Error:', error);
-                        alert('Payment verification failed. Please contact support.');
-                    }
-                },
-                prefill: {
-                    name: user.displayName || '',
-                    email: user.email || '',
-                },
-                theme: {
-                    color: "#2563EB",
-                },
-            };
-
-            const rzp1 = new window.Razorpay(options);
-            rzp1.open();
+            if (data.url) {
+                // Redirect to PhonePe
+                window.location.href = data.url;
+            } else {
+                throw new Error('No redirect URL received');
+            }
 
         } catch (error) {
             console.error('Payment Error:', error);
             alert('Something went wrong. Please try again.');
-        } finally {
-            setLoading(false);
+            setLoading(false); // Only stop loading on error, otherwise we are redirecting
         }
     };
 
     return (
         <>
-            <Script
-                src="https://checkout.razorpay.com/v1/checkout.js"
-                onLoad={() => setIsRazorpayLoaded(true)}
-            />
+            {/* Razorpay Script Removed */}
 
             <div className="relative flex min-h-screen w-full flex-col items-center p-4 sm:p-6 md:p-8 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display">
                 <div className="layout-content-container flex w-full max-w-5xl flex-1 flex-col items-center gap-10 py-5">
@@ -254,13 +195,14 @@ export default function Subscribe() {
                             ) : isPremium ? (
                                 'Already Premium'
                             ) : (
-                                `Pay ₹${PLANS[selectedPlan].price}`
+                                `Pay with PhonePe (₹${PLANS[selectedPlan].price})`
                             )}
                         </button>
                         <p className="text-center text-xs text-gray-400 mt-4">
-                            Secured by Razorpay. Cancel anytime.
+                            Secured by PhonePe. Cancel anytime.
                         </p>
                     </div>
+
 
 
                 </div>
