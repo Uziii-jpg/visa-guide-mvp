@@ -563,7 +563,23 @@ export default function MasterProfile({ onComplete }: { onComplete?: () => void 
                                                                 {isPremium ? t('premiumMember') : t('freePlan')}
                                                             </span>
                                                             {isPremium && (
-                                                                <span className="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full">{t('active')}</span>
+                                                                <div className="flex flex-col gap-1">
+                                                                    <span className="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full w-fit">{t('active')}</span>
+                                                                    {user && (user as any).subscription_expiry && (
+                                                                        <div className="text-xs text-gray-500 mt-1">
+                                                                            <p>
+                                                                                Started: {
+                                                                                    (user as any).payment_history?.length > 0
+                                                                                        ? new Date((user as any).payment_history.slice(-1)[0].date.seconds * 1000).toLocaleDateString()
+                                                                                        : 'Recent'
+                                                                                }
+                                                                            </p>
+                                                                            <p>
+                                                                                Ends: {new Date((user as any).subscription_expiry.seconds * 1000).toLocaleDateString()}
+                                                                            </p>
+                                                                        </div>
+                                                                    )}
+                                                                </div>
                                                             )}
                                                         </div>
                                                     </div>

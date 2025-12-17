@@ -9,7 +9,7 @@ export default function PrivacyPage() {
 
                 <section className="space-y-2">
                     <h2 className="text-xl font-bold">1. Information We Collect</h2>
-                    <p>We collect information you provide directly to us, such as when you create an account, subscribe, or contact support. This includes your name, email address, and payment information (processed via Razorpay).</p>
+                    <p>We collect information you provide directly to us, such as when you create an account, subscribe, or contact support. This includes your name, email address, and payment information (processed via PhonePe).</p>
                 </section>
 
                 <section className="space-y-2">
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
 
                 <section className="space-y-2">
                     <h2 className="text-xl font-bold">3. Data Security</h2>
-                    <p>We use industry-standard security measures (Firebase Auth, Razorpay Secure) to protect your personal information.</p>
+                    <p>We use industry-standard security measures (Firebase Auth, PhonePe Secure) to protect your personal information.</p>
                 </section>
 
                 <section className="space-y-2">

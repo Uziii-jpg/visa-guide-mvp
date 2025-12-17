@@ -1,31 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
-import crypto from 'crypto';
+import { getPhonePeClient } from '@/lib/phonepe';
+import { StandardCheckoutPayRequest } from 'pg-sdk-node';
 
 export async function POST(req: NextRequest) {
     try {
-        const { planId, userId } = await req.json();
+        const { planId, userId, locale = 'en' } = await req.json();
 
         if (!planId || !userId) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 
-        const merchantId = process.env.PHONEPE_MERCHANT_ID;
-        const saltKey = process.env.PHONEPE_SALT_KEY;
-        const saltIndex = process.env.PHONEPE_SALT_INDEX;
-        const env = process.env.PHONEPE_ENV || 'UAT';
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
-        if (!merchantId || !saltKey || !saltIndex || !baseUrl) {
-            console.error('PhonePe configuration missing');
-            return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
-        }
-
-        const merchantTransactionId = `TXN_${Date.now()}_${planId}`;
-
         // Amount in paise (100 paise = 1 INR)
+        // Corrected prices to match SubscriptionPlans.tsx
         const PLANS: Record<string, number> = {
             '1_year': 250,
-            '6_months': 150,
+            '6_months': 125,
             '3_months': 100,
         };
 
@@ -35,58 +24,44 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ error: 'Invalid plan' }, { status: 400 });
         }
 
-        const callbackUrl = `${baseUrl}/api/payment/phonepe/callback`;
-        // const redirectUrl = `${baseUrl}/api/payment/phonepe/callback`; // We can use the same for redirect to handle the POST return
+        // Encode userId in transactionId: TXN__userId__planId__timestamp
+        // Double underscore separator to avoid conflict with potential underscores in IDs
+        const merchantTransactionId = `TXN__${userId}__${planId}__${Date.now()}`;
 
-        const data = {
-            merchantId: merchantId,
-            merchantTransactionId: merchantTransactionId,
-            merchantUserId: userId,
-            amount: amount,
-            redirectUrl: callbackUrl,
-            redirectMode: 'POST',
-            callbackUrl: callbackUrl, // S2S callback
-            mobileNumber: '9999999999', // Optional: Get from user profile if available
-            paymentInstrument: {
-                type: 'PAY_PAGE'
-            }
-        };
+        const client = getPhonePeClient();
+        const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || '').trim();
+        // Explicitly pass transactionId in URL because PhonePe Sandbox (or specific flow) doesn't always append it
+        const callbackUrl = `${baseUrl}/api/payment/phonepe/callback?transactionId=${merchantTransactionId}&locale=${locale}`;
 
-        const payload = JSON.stringify(data);
-        const payloadMain = Buffer.from(payload).toString('base64');
-        const stringToSign = payloadMain + '/pg/v1/pay' + saltKey;
-        const checksum = crypto.createHash('sha256').update(stringToSign).digest('hex') + '###' + saltIndex;
+        // Create metadata following user's example if needed, but keeping it simple for now
 
-        const phonePeUrl = env === 'PROD'
-            ? 'https://api.phonepe.com/apis/hermes/pg/v1/pay'
-            : 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay';
+        const request = StandardCheckoutPayRequest.builder()
+            .merchantOrderId(merchantTransactionId)
+            .amount(amount)
+            .redirectUrl(callbackUrl)
+            .build();
 
-        const response = await fetch(phonePeUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-VERIFY': checksum,
-                'accept': 'application/json'
-            },
-            body: JSON.stringify({
-                request: payloadMain
-            })
+        console.log('--- PHONEPE SDK INITIATE ---');
+        console.log('Order ID:', merchantTransactionId);
+        console.log('Amount:', amount);
+        console.log('Callback:', callbackUrl);
+
+        const response = await client.pay(request);
+
+        console.log('SDK Response:', response);
+
+        // Map SDK response to our frontend expectation
+        return NextResponse.json({
+            url: response.redirectUrl,
+            merchantTransactionId
         });
 
-        const responseData = await response.json();
-
-        if (responseData.success) {
-            return NextResponse.json({
-                url: responseData.data.instrumentResponse.redirectInfo.url,
-                merchantTransactionId
-            });
-        } else {
-            console.error('PhonePe Init Error:', responseData);
-            return NextResponse.json({ error: responseData.message || 'Payment initiation failed' }, { status: 500 });
-        }
-
-    } catch (error) {
-        console.error('Error initiating PhonePe payment:', error);
-        return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    } catch (error: any) {
+        console.error('PhonePe SDK Error:', error);
+        // SDK throws specific error object, try to extract msg
+        return NextResponse.json({
+            error: error.message || 'Payment initiation failed',
+            details: error
+        }, { status: 500 });
     }
 }

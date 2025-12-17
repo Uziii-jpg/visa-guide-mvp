@@ -18,13 +18,17 @@ export default function Footer() {
                     <Link href="/terms" className="hover:text-blue-600 transition-colors">Terms & Conditions</Link>
                     <Link href="/privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</Link>
                     <Link href="/refund" className="hover:text-blue-600 transition-colors">Refund Policy</Link>
-                    <Link href="/shipping" className="hover:text-blue-600 transition-colors">Shipping Policy</Link>
                 </div>
 
-                {/* Copyright */}
+                {/* Copyright & Proprietor Info */}
                 <div className="text-xs text-gray-400 flex flex-col items-center md:items-end gap-1">
                     <span>&copy; {new Date().getFullYear()} VisaGuide India. All rights reserved.</span>
-                    <span className="opacity-70">Legal Name: UZAIR SHAUKAT MANJRE</span>
+                    <div className="flex flex-col items-center md:items-end opacity-70 leading-relaxed">
+                        <span>Proprietor: UZAIR SHAUKAT MANJRE</span>
+                        <span>Email: manjreu@gmail.com</span>
+                        <span>Contact: 9898034231</span>
+                        <span>Address: 4 sejal soc fateghunj vadodadar</span>
+                    </div>
                 </div>
             </div>
         </footer>

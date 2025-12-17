@@ -5,18 +5,15 @@ import { useAuth } from '@/context/AuthContext';
 import { doc, updateDoc, Timestamp, arrayUnion } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import Script from 'next/script';
+import { useLocale } from 'next-intl';
 
-declare global {
-    interface Window {
-        Razorpay: any;
-    }
-}
+
 
 const PLANS = [
     {
         id: '3_months',
         name: 'Quarterly',
-        price: 75,
+        price: 100,
         duration: '3 Months',
         features: ['Basic Visa Guides', '3 Months Access'],
         color: 'bg-blue-50 border-blue-200',
@@ -46,7 +43,7 @@ const PLANS = [
 export default function SubscriptionPlans() {
     const { user } = useAuth();
     const [loading, setLoading] = useState(false);
-    // const [isRazorpayLoaded, setIsRazorpayLoaded] = useState(false); // Razorpay not needed for PhonePe redirect flow
+    const locale = useLocale();
 
     const handleSubscribe = async (planId: string) => {
         if (!user) return alert('Please login first');
@@ -60,7 +57,8 @@ export default function SubscriptionPlans() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     planId,
-                    userId: user.uid
+                    userId: user.uid,
+                    locale
                 }),
             });
 
@@ -84,11 +82,7 @@ export default function SubscriptionPlans() {
 
     return (
         <>
-            {/* Razorpay Script removed/commented out for PhonePe */}
-            {/* <Script
-                src="https://checkout.razorpay.com/v1/checkout.js"
-                onLoad={() => setIsRazorpayLoaded(true)}
-            /> */}
+
 
             <div className="flex flex-col gap-8 mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">

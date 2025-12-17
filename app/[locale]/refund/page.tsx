@@ -25,6 +25,7 @@ export default function RefundPage() {
                         <li>You were charged incorrectly due to a system error.</li>
                     </ul>
                     <p>To request a refund, please contact support@visaguide.live within 5 days of the transaction.</p>
+                    <p className="mt-2 font-medium">Once the refund is approved, the amount will be credited to the original payment method within 7-10 business days.</p>
                 </section>
             </div>
         </div>

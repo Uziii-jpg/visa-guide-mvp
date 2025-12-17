@@ -4,23 +4,20 @@ import React, { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import Script from 'next/script';
 import { useRouter } from '@/i18n/routing';
+import { useLocale } from 'next-intl';
 import { doc, updateDoc, Timestamp, arrayUnion } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 
-declare global {
-    interface Window {
-        Razorpay: any;
-    }
-}
+
 
 export default function Subscribe() {
     const { user, isPremium } = useAuth();
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [selectedPlan, setSelectedPlan] = useState<'1_year' | '6_months' | '3_months'>('1_year');
+    const locale = useLocale();
 
-    // Razorpay not needed
-    // const [isRazorpayLoaded, setIsRazorpayLoaded] = useState(false);
+
 
     const PLANS = {
         '1_year': {
@@ -61,7 +58,8 @@ export default function Subscribe() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     planId,
-                    userId: user.uid
+                    userId: user.uid,
+                    locale
                 }),
             });
 
@@ -85,7 +83,7 @@ export default function Subscribe() {
 
     return (
         <>
-            {/* Razorpay Script Removed */}
+
 
             <div className="relative flex min-h-screen w-full flex-col items-center p-4 sm:p-6 md:p-8 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display">
                 <div className="layout-content-container flex w-full max-w-5xl flex-1 flex-col items-center gap-10 py-5">
