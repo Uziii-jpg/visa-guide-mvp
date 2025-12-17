@@ -5,7 +5,7 @@
     "overrides": {
         "meta": {
             "fee_euro_approx": "30 SGD (approx. 1900 INR) + Agent Fee",
-            "fee_inr_approx": 2500,
+            "fee_inr_approx": 1900,
             "processing_time_standard": "3-5 Working Days",
             "max_stay": "30 Days (Multiple Entry valid for 2 years often granted)",
             "photo_spec": "Matte finish, white background, 35x45mm (Strictly checked)"

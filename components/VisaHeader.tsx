@@ -49,7 +49,19 @@ export default function VisaHeader({ countryCode, visaType, meta, availableTypes
                                                 <span className="text-2xl">💰</span>
                                                 <div>
                                                         <p className="text-xs text-blue-200 uppercase font-bold">{t('fee')}</p>
-                                                        <p className="font-bold text-lg">~€{meta.fee_euro_approx || meta.fee_euro_adult}</p>
+                                                        <div className="flex flex-col">
+                                                                <p className="font-bold text-lg">
+                                                                        {meta.fee_inr_approx
+                                                                                ? `₹${meta.fee_inr_approx.toLocaleString('en-IN')}`
+                                                                                : `~€${meta.fee_euro_approx || meta.fee_euro_adult}`
+                                                                        }
+                                                                </p>
+                                                                {meta.fee_inr_approx && (
+                                                                        <p className="text-xs text-blue-300">
+                                                                                (~€{meta.fee_euro_approx || meta.fee_euro_adult})
+                                                                        </p>
+                                                                )}
+                                                        </div>
                                                 </div>
                                         </div>
                                         <div className="bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl border border-white/10 flex items-center gap-3 hover:bg-white/20 transition-all">

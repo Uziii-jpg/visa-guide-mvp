@@ -31,6 +31,12 @@ export async function POST(req: NextRequest) {
         const client = getPhonePeClient();
         let baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || '').trim();
 
+        // Fallback for local development
+        if (!baseUrl && process.env.NODE_ENV !== 'production') {
+            baseUrl = 'http://localhost:3000';
+            console.log('Using default localhost base URL for development');
+        }
+
         if (!baseUrl || !baseUrl.startsWith('http')) {
             console.error('Invalid NEXT_PUBLIC_BASE_URL:', baseUrl);
             return NextResponse.json({ error: 'Server Configuration Error: NEXT_PUBLIC_BASE_URL is not set properly.' }, { status: 500 });

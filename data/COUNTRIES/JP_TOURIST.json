@@ -5,7 +5,7 @@
     "overrides": {
         "meta": {
             "fee_euro_approx": "Approx. 500 INR (Visa Fee) + 650 INR (VFS Charge)",
-            "fee_inr_approx": 1150,
+            "fee_inr_approx": 500,
             "processing_time_standard": "4-7 Working Days",
             "max_stay": "15-90 Days (Single/Double/Multiple)",
             "photo_spec": "45x45mm, White background, Matte finish"

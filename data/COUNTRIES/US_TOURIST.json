@@ -7,7 +7,8 @@
             "processing_time_standard": "High wait times: 10-14 months for interviews, 4-7 months for waivers.",
             "max_stay": "Up to 6 months per visit (determined at port of entry)",
             "passport_validity": "6 months beyond intended period of stay",
-            "photo_spec": "2x2 inches (51x51mm), white background, recent (last 6 months)"
+            "photo_spec": "2x2 inches (51x51mm), white background, recent (last 6 months)",
+            "fee_inr_approx": 15540
         },
         "documents": [
             {

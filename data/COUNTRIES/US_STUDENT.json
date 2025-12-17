@@ -7,7 +7,8 @@
             "processing_time_standard": "~60 days (varies by consulate and season)",
             "max_stay": "Duration of Status (D/S)",
             "passport_validity": "6 months beyond intended stay",
-            "min_funds_requirement": "Tuition + Living Expenses (approx. $20,000 - $50,000 USD)"
+            "min_funds_requirement": "Tuition + Living Expenses (approx. $20,000 - $50,000 USD)",
+            "fee_inr_approx": 45000
         },
         "documents": [
             {

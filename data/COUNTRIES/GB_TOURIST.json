@@ -8,7 +8,8 @@
             "max_stay": "Up to 6 months",
             "passport_validity": "Valid for the whole of your stay",
             "photo_spec": "45mm x 35mm, cream/grey background (UK standard)",
-            "min_funds_requirement": "Sufficient to cover all costs (no fixed amount)"
+            "min_funds_requirement": "Sufficient to cover all costs (no fixed amount)",
+            "fee_inr_approx": 12500
         },
         "documents": [
             {
