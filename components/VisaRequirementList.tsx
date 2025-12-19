@@ -13,6 +13,10 @@ interface VisaRequirementListProps {
 export default function VisaRequirementList({ documents }: VisaRequirementListProps) {
     const { user, isPremium } = useAuth();
     const router = useRouter();
+
+    // TEMPORARY: Hide documents section for PhonePe approval
+    return null;
+
     // const isPremium = false; // REMOVED: Now using context value
 
     const getDocIcon = (title: string) => {
