@@ -24,7 +24,7 @@ export default function TermsPage() {
 
                 <section className="space-y-2">
                     <h2 className="text-xl font-bold">4. Payments</h2>
-                    <p>All payments are processed securely via PhonePe. Premium subscriptions grant access to valid visa guides for the specified duration.</p>
+                    <p>All payments are processed securely. Premium subscriptions grant access to valid visa guides for the specified duration.</p>
                 </section>
 
                 <section className="space-y-2">
