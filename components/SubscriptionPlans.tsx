@@ -6,6 +6,7 @@ import { doc, updateDoc, Timestamp, arrayUnion } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import Script from 'next/script';
 import { useLocale } from 'next-intl';
+import { useRouter } from '@/i18n/routing';
 
 
 
@@ -44,6 +45,8 @@ export default function SubscriptionPlans() {
     const { user } = useAuth();
     const [loading, setLoading] = useState(false);
     const locale = useLocale();
+    const [qrData, setQrData] = useState<{ image: string, txnId: string } | null>(null);
+    const router = useRouter();
 
     const handleSubscribe = async (planId: string) => {
         if (!user) return alert('Please login first');
@@ -51,8 +54,8 @@ export default function SubscriptionPlans() {
         setLoading(true);
 
         try {
-            // Ekqr Flow
-            const response = await fetch('/api/payment/ekqr/initiate', {
+            // Decentro Flow
+            const response = await fetch('/api/payment/decentro/initiate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -66,11 +69,35 @@ export default function SubscriptionPlans() {
 
             if (data.error) throw new Error(data.error);
 
-            if (data.url) {
-                // Redirect to Ekqr
-                window.location.href = data.url;
+            if (data.qrImage) {
+                setQrData({ image: data.qrImage, txnId: data.decentroTxnId });
+                // Start polling
+                const pollInterval = setInterval(async () => {
+                    try {
+                        const statusRes = await fetch('/api/payment/decentro/status', {
+                            method: 'POST',
+                            body: JSON.stringify({ decentroTxnId: data.decentroTxnId })
+                        });
+                        const statusData = await statusRes.json();
+                        // Decentro Status: PENDING, SUCCESS, FAILED
+                        const txStatus = statusData.data?.transaction_status;
+
+                        if (txStatus === 'SUCCESS') {
+                            clearInterval(pollInterval);
+                            router.push(`/payment/status?status=SUCCESS&planId=${planId}&txnId=${data.decentroTxnId}`);
+                        } else if (txStatus === 'FAILED' || txStatus === 'EXPIRED') {
+                            clearInterval(pollInterval);
+                            alert('Payment Failed or Expired');
+                            setQrData(null);
+                            setLoading(false);
+                        }
+                    } catch (e) {
+                        console.error('Polling error', e);
+                    }
+                }, 3000);
+
             } else {
-                throw new Error('No redirect URL received');
+                throw new Error('No QR Code received');
             }
 
         } catch (error) {
@@ -143,6 +170,31 @@ export default function SubscriptionPlans() {
                     <span className="material-symbols-outlined text-lg text-green-500">lock</span>
                     <span>Secure payment. Cancel anytime.</span>
                 </div>
+
+                {qrData && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+                        <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-2xl max-w-md w-full flex flex-col items-center animate-in fade-in zoom-in duration-300">
+                            <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Scan to Pay</h3>
+                            <p className="text-gray-500 mb-6 text-center">Open any UPI app and scan the QR code to complete your payment.</p>
+
+                            <div className="bg-white p-4 rounded-xl border-2 border-dashed border-gray-200 mb-6">
+                                <img src={qrData.image} alt="Payment QR" className="w-64 h-64 object-contain" />
+                            </div>
+
+                            <div className="flex items-center gap-2 text-blue-600 mb-6">
+                                <span className="animate-spin text-xl">◌</span>
+                                <span className="font-semibold">Waiting for payment...</span>
+                            </div>
+
+                            <button
+                                onClick={() => { setQrData(null); setLoading(false); }}
+                                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm font-medium transition-colors"
+                            >
+                                Cancel Transaction
+                            </button>
+                        </div>
+                    </div>
+                )}
             </div>
         </>
     );

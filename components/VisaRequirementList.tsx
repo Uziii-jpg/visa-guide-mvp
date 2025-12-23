@@ -14,10 +14,7 @@ export default function VisaRequirementList({ documents }: VisaRequirementListPr
     const { user, isPremium } = useAuth();
     const router = useRouter();
 
-    // TEMPORARY: Hide documents section for PhonePe approval
-    return null;
-
-    // const isPremium = false; // REMOVED: Now using context value
+    // Documents section restored
 
     const getDocIcon = (title: string) => {
         if (!title) return '📄';

@@ -2,13 +2,8 @@
 
 import React, { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
-import Script from 'next/script';
 import { useRouter } from '@/i18n/routing';
 import { useLocale } from 'next-intl';
-import { doc, updateDoc, Timestamp, arrayUnion } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
-
-
 
 export default function Subscribe() {
     const { user, isPremium } = useAuth();
@@ -16,8 +11,6 @@ export default function Subscribe() {
     const [loading, setLoading] = useState(false);
     const [selectedPlan, setSelectedPlan] = useState<'1_year' | '6_months' | '3_months'>('1_year');
     const locale = useLocale();
-
-
 
     const PLANS = {
         '1_year': {
@@ -43,48 +36,36 @@ export default function Subscribe() {
         }
     };
 
-    const handlePayment = async (planId: string) => {
+    const handlePayment = (planId: string) => {
         if (!user) {
             router.push('/login?redirect=/subscribe');
             return;
         }
 
-        setLoading(true);
+        // Safe access to phone
+        // @ts-ignore
+        const phone = user.personal_details?.phone_number || '';
+        const email = user.email || '';
 
-        try {
-            // Ekqr Flow
-            const response = await fetch('/api/payment/ekqr/initiate', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    planId,
-                    userId: user.uid,
-                    locale
-                }),
-            });
+        // Static Payment Page URLs provided by user
+        const LINKS: Record<string, string> = {
+            '1_year': 'https://rzp.io/rzp/C41oG6cd',
+            '6_months': 'https://rzp.io/rzp/v1UgcQb',
+            '3_months': 'https://rzp.io/rzp/eH7T8Ycc'
+        };
 
-            const data = await response.json();
-
-            if (data.error) throw new Error(data.error);
-
-            if (data.url) {
-                // Redirect to Ekqr
-                window.location.href = data.url;
-            } else {
-                throw new Error('No redirect URL received');
-            }
-
-        } catch (error) {
-            console.error('Payment Error:', error);
-            alert('Something went wrong. Please try again.');
-            setLoading(false);
+        const baseUrl = LINKS[planId];
+        if (baseUrl) {
+            // Pre-fill email and phone
+            const finalUrl = `${baseUrl}?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`;
+            window.location.href = finalUrl;
+        } else {
+            alert('Payment link not found for this plan.');
         }
     };
 
     return (
         <>
-
-
             <div className="relative flex min-h-screen w-full flex-col items-center p-4 sm:p-6 md:p-8 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display">
                 <div className="layout-content-container flex w-full max-w-5xl flex-1 flex-col items-center gap-10 py-5">
                     <div className="w-full text-center">
@@ -200,8 +181,6 @@ export default function Subscribe() {
                             Secured payment via UPI. Cancel anytime.
                         </p>
                     </div>
-
-
 
                 </div>
             </div>
