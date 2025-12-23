@@ -16,7 +16,7 @@ export async function GET(req: NextRequest) {
             count: users.length,
             users: users
         });
-    } catch (error) {
+    } catch (error: any) {
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 }
