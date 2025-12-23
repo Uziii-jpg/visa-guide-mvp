@@ -30,8 +30,7 @@
     "types": [
       "node",
       "react",
-      "react-dom",
-      "crypto-js"
+      "react-dom"
     ]
   },
   "include": [

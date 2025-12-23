@@ -50,6 +50,7 @@ export default function MasterProfile({ onComplete }: { onComplete?: () => void 
             dob: "",
             gender: "Male",
             citizenship: "IN",
+            phone_number: "", // [NEW]
             residence_state: "",
             passport_number: "",
             passport_expiry: "",
@@ -278,6 +279,16 @@ export default function MasterProfile({ onComplete }: { onComplete?: () => void 
                                                         className="w-full rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 px-4 py-3 outline-none focus:border-blue-500 transition-colors"
                                                         value={(formData.personal_details?.dob as string) || ""}
                                                         onChange={(e) => updateNestedData("personal_details", "dob", e.target.value)}
+                                                    />
+                                                </div>
+                                                <div className="flex flex-col gap-2">
+                                                    <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">Phone Number</label>
+                                                    <input
+                                                        type="tel"
+                                                        className="w-full rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 px-4 py-3 outline-none focus:border-blue-500 transition-colors"
+                                                        value={formData.personal_details?.phone_number || ""}
+                                                        onChange={(e) => updateNestedData("personal_details", "phone_number", e.target.value)}
+                                                        placeholder="+91 9876543210"
                                                     />
                                                 </div>
                                                 <div className="flex flex-col gap-2">

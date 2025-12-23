@@ -17,6 +17,7 @@ export interface User {
         full_name_passport: string;
         dob: string; // Changed to string for easier form handling
         gender?: 'Male' | 'Female' | 'Other';
+        phone_number: string; // [NEW] Added for payments/contact
         citizenship: string; // Default 'IN'
         residence_state: string; // CRITICAL: Determines Consulate Jurisdiction
         passport_number: string;

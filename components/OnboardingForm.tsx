@@ -25,6 +25,7 @@ export default function OnboardingForm({ onComplete }: { onComplete: () => void 
         personal_details: {
             full_name_passport: user?.displayName || "",
             citizenship: "IN",
+            phone_number: "", // [NEW]
             residence_state: "",
             passport_number: "",
             marital_status: "single",
@@ -158,6 +159,16 @@ export default function OnboardingForm({ onComplete }: { onComplete: () => void 
                                                 value={formData.personal_details?.dob as any}
                                                 onChange={(e) => updateNestedData("personal_details", "dob", e.target.value)}
                                                 className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 outline-none transition-all bg-white text-gray-900 font-medium"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-semibold text-gray-800 mb-2">Phone Number</label>
+                                            <input
+                                                type="tel"
+                                                value={formData.personal_details?.phone_number || ''}
+                                                onChange={(e) => updateNestedData("personal_details", "phone_number", e.target.value)}
+                                                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 outline-none transition-all bg-white text-gray-900 placeholder-gray-500 font-medium"
+                                                placeholder="9876543210"
                                             />
                                         </div>
                                         <div>

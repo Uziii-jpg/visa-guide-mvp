@@ -51,8 +51,8 @@ export default function SubscriptionPlans() {
         setLoading(true);
 
         try {
-            // PhonePe Flow
-            const response = await fetch('/api/payment/phonepe/initiate', {
+            // Ekqr Flow
+            const response = await fetch('/api/payment/ekqr/initiate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -67,7 +67,7 @@ export default function SubscriptionPlans() {
             if (data.error) throw new Error(data.error);
 
             if (data.url) {
-                // Redirect to PhonePe
+                // Redirect to Ekqr
                 window.location.href = data.url;
             } else {
                 throw new Error('No redirect URL received');
@@ -76,7 +76,7 @@ export default function SubscriptionPlans() {
         } catch (error) {
             console.error('Payment Error:', error);
             alert('Something went wrong. Please try again.');
-            setLoading(false); // Only stop loading on error, otherwise we are redirecting
+            setLoading(false);
         }
     };
 
@@ -133,7 +133,7 @@ export default function SubscriptionPlans() {
                                     : 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100'
                                     } disabled:opacity-50 disabled:cursor-not-allowed`}
                             >
-                                {loading ? 'Processing...' : `Pay with PhonePe`}
+                                {loading ? 'Processing...' : `Pay Now`}
                             </button>
                         </div>
                     ))}
@@ -141,7 +141,7 @@ export default function SubscriptionPlans() {
 
                 <div className="flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400 opacity-80">
                     <span className="material-symbols-outlined text-lg text-green-500">lock</span>
-                    <span>Secure payment via PhonePe. Cancel anytime.</span>
+                    <span>Secure payment. Cancel anytime.</span>
                 </div>
             </div>
         </>

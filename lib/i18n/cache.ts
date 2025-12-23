@@ -1,6 +1,6 @@
 import NodeCache from 'node-cache';
 import Redis from 'ioredis';
-import CryptoJS from 'crypto-js';
+import crypto from 'crypto';
 
 // In-memory cache for development / fallback
 const localCache = new NodeCache({ stdTTL: 60 * 60 * 24 }); // 24 hours
@@ -23,7 +23,7 @@ export async function getCachedTranslations(
     }
 
     for (const str of strings) {
-        const hash = CryptoJS.MD5(str).toString();
+        const hash = crypto.createHash('md5').update(str).digest('hex');
         const key = `tr:${targetLang}:${hash}`;
 
         // 1. Check Local Cache
@@ -62,7 +62,7 @@ export async function setCachedTranslations(
     const pipeline = redis ? redis.pipeline() : null;
 
     for (const [original, translated] of translations.entries()) {
-        const hash = CryptoJS.MD5(original).toString();
+        const hash = crypto.createHash('md5').update(original).digest('hex');
         const key = `tr:${targetLang}:${hash}`;
 
         // Set Local

@@ -52,8 +52,8 @@ export default function Subscribe() {
         setLoading(true);
 
         try {
-            // PhonePe Flow
-            const response = await fetch('/api/payment/phonepe/initiate', {
+            // Ekqr Flow
+            const response = await fetch('/api/payment/ekqr/initiate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -68,7 +68,7 @@ export default function Subscribe() {
             if (data.error) throw new Error(data.error);
 
             if (data.url) {
-                // Redirect to PhonePe
+                // Redirect to Ekqr
                 window.location.href = data.url;
             } else {
                 throw new Error('No redirect URL received');
@@ -77,7 +77,7 @@ export default function Subscribe() {
         } catch (error) {
             console.error('Payment Error:', error);
             alert('Something went wrong. Please try again.');
-            setLoading(false); // Only stop loading on error, otherwise we are redirecting
+            setLoading(false);
         }
     };
 
@@ -193,11 +193,11 @@ export default function Subscribe() {
                             ) : isPremium ? (
                                 'Already Premium'
                             ) : (
-                                `Pay with PhonePe (₹${PLANS[selectedPlan].price})`
+                                `Pay Now (₹${PLANS[selectedPlan].price})`
                             )}
                         </button>
                         <p className="text-center text-xs text-gray-400 mt-4">
-                            Secured by PhonePe. Cancel anytime.
+                            Secured payment via UPI. Cancel anytime.
                         </p>
                     </div>
 

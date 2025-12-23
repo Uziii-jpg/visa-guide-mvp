@@ -30,58 +30,37 @@ function PaymentStatusContent() {
                 return;
             }
 
-            if (paymentStatus === 'SUCCESS') {
+            if (paymentStatus === 'SUCCESS' || txnId) { // Check if we have indications of a transaction
                 try {
-                    // Update Firestore
-                    // NOTE: Ideally this should be done via webhook/API to be secure,
-                    // but for MVP as per SubscriptionPlans.tsx, we are doing it client-side.
-                    // Verification was done in the Callback API route before redirecting here,
-                    // so we trust the 'SUCCESS' param for now (User could technically spoof URL but it's MVP).
-
-                    // To be safer, we should probably have the API do the update.
-                    // BUT, the implementation plan said: "If `status === 'SUCCESS'`, update Firestore User document (replicating existing logic...)"
-
-                    const now = new Date();
-                    let expiryDate = new Date();
-                    if (planId === '1_year') expiryDate.setFullYear(now.getFullYear() + 1);
-                    else if (planId === '6_months') expiryDate.setMonth(now.getMonth() + 6);
-                    else if (planId === '3_months') expiryDate.setMonth(now.getMonth() + 3);
-
-                    // Amount calculation for history
-                    const PLANS: Record<string, number> = {
-                        '1_year': 250,
-                        '6_months': 150,
-                        '3_months': 100,
-                    };
-                    const amount = PLANS[planId || ''] || 0;
-
-                    const userRef = doc(db, 'users', user.uid);
-                    await updateDoc(userRef, {
-                        subscription_tier: 'premium',
-                        subscription_plan: planId,
-                        subscription_expiry: Timestamp.fromDate(expiryDate),
-                        payment_history: arrayUnion({
-                            order_id: txnId,
-                            payment_id: txnId, // PhonePe doesn't give separate payment ID in this flow easily without looking up
-                            amount: amount,
-                            date: Timestamp.now(),
-                            plan: planId,
-                            provider: 'phonepe'
+                    // Call our Verification API
+                    const response = await fetch('/api/payment/ekqr/verify', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            txnId: txnId,
+                            txnDate: searchParams.get('txnDate'),
+                            userId: user.uid
                         })
                     });
 
-                    setStatus('success');
-                    setMessage('Payment successful! Your subscription is active.');
+                    const data = await response.json();
 
-                    // Redirect after 3 seconds
-                    setTimeout(() => {
-                        router.push('/profile');
-                    }, 3000);
+                    if (data.success) {
+                        setStatus('success');
+                        setMessage('Payment successful! Your subscription is active.');
+
+                        // Redirect after 3 seconds
+                        setTimeout(() => {
+                            router.push('/profile');
+                        }, 3000);
+                    } else {
+                        throw new Error(data.error || 'Verification failed');
+                    }
 
                 } catch (error) {
-                    console.error('Error updating profile:', error);
+                    console.error('Error verifying payment:', error);
                     setStatus('failure');
-                    setMessage('Payment successful but failed to update profile. Please contact support.');
+                    setMessage('Payment verification failed. Please check your dashboard or contact support.');
                 }
             } else {
                 setStatus('failure');
